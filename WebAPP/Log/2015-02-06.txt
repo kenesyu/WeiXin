@@ -1,0 +1,69 @@
+﻿2015/2/6 星期五 12:46:08     ============ 单次支付开始 ===============
+
+2015/2/6 星期五 12:46:08     传递支付参数：OrderSN=20150206124555、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=ovTALuEgDT2sxXOcGwJ_rBgipgtY
+
+2015/2/6 星期五 12:46:08     WeiPay 页面  sign：F5420780C1B1C9F6D9732DC0CDE1DEB9
+
+2015/2/6 星期五 12:46:08     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip><notify_url><![CDATA[http://dede.dlyssoft.com/WebApp/WXPay/Notify.aspx]]></notify_url><body><![CDATA[商品描述]]></body><appid><![CDATA[wxa3696600232dd38d]]></appid><attach><![CDATA[test]]></attach><total_fee>1</total_fee><nonce_str><![CDATA[069059b7ef840f0c74a814ec9237b6ec]]></nonce_str><out_trade_no><![CDATA[20150206124555]]></out_trade_no><openid><![CDATA[ovTALuEgDT2sxXOcGwJ_rBgipgtY]]></openid><mch_id><![CDATA[1227576402]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[F5420780C1B1C9F6D9732DC0CDE1DEB9]]></sign></xml>
+
+2015/2/6 星期五 12:46:09     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa3696600232dd38d]]></appid>
+<mch_id><![CDATA[1227576402]]></mch_id>
+<nonce_str><![CDATA[ARh3NKvyI5HuoJf7]]></nonce_str>
+<sign><![CDATA[7DC47F52368B1B44F28B70C5C2F6B596]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015020612450579450d7cb00707689827]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015/2/6 星期五 12:46:09     WeiPay 页面  package：prepay_id=wx2015020612450579450d7cb00707689827
+
+2015/2/6 星期五 12:46:09     WeiPay 页面  paySign：F37B7ED3BC8F738E2BD3AC202F134AEB
+
+2015/2/6 星期五 13:06:39     ============ 单次支付开始 ===============
+
+2015/2/6 星期五 13:06:40     传递支付参数：OrderSN=20150206130625、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=ovTALuEgDT2sxXOcGwJ_rBgipgtY
+
+2015/2/6 星期五 13:06:41     WeiPay 页面  sign：925C932221434D2AE1D20C1AEDEFD023
+
+2015/2/6 星期五 13:06:41     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip><notify_url><![CDATA[http://dede.dlyssoft.com/WebApp/WXPay/Notify.aspx]]></notify_url><body><![CDATA[商品描述]]></body><appid><![CDATA[wxa3696600232dd38d]]></appid><attach><![CDATA[test]]></attach><total_fee>1</total_fee><nonce_str><![CDATA[0353ab4cbed5beae847a7ff6e220b5cf]]></nonce_str><out_trade_no><![CDATA[20150206130625]]></out_trade_no><openid><![CDATA[ovTALuEgDT2sxXOcGwJ_rBgipgtY]]></openid><mch_id><![CDATA[1227576402]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[925C932221434D2AE1D20C1AEDEFD023]]></sign></xml>
+
+2015/2/6 星期五 13:06:42     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa3696600232dd38d]]></appid>
+<mch_id><![CDATA[1227576402]]></mch_id>
+<nonce_str><![CDATA[0ud4CQhcGwcAlwrJ]]></nonce_str>
+<sign><![CDATA[871D173A0546F6554722CCCE8F8A0F39]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015020613053870d2eb66b60500694288]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015/2/6 星期五 13:06:42     WeiPay 页面  package：prepay_id=wx2015020613053870d2eb66b60500694288
+
+2015/2/6 星期五 13:06:42     WeiPay 页面  paySign：263201CE7EB911D455A2CEE35E97A469
+
+2015/2/6 星期五 13:10:17     ============ 单次支付开始 ===============
+
+2015/2/6 星期五 13:10:17     传递支付参数：OrderSN=20150206131013、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=ovTALuEgDT2sxXOcGwJ_rBgipgtY
+
+2015/2/6 星期五 13:10:17     WeiPay 页面  sign：3699E22EAB0F2043289258C0B9791BB7
+
+2015/2/6 星期五 13:10:17     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip><notify_url><![CDATA[http://dede.dlyssoft.com/WebApp/WXPay/Notify.aspx]]></notify_url><body><![CDATA[商品描述]]></body><appid><![CDATA[wxa3696600232dd38d]]></appid><attach><![CDATA[test]]></attach><total_fee>1</total_fee><nonce_str><![CDATA[8dd48d6a2e2cad213179a3992c0be53c]]></nonce_str><out_trade_no><![CDATA[20150206131013]]></out_trade_no><openid><![CDATA[ovTALuEgDT2sxXOcGwJ_rBgipgtY]]></openid><mch_id><![CDATA[1227576402]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[3699E22EAB0F2043289258C0B9791BB7]]></sign></xml>
+
+2015/2/6 星期五 13:10:18     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa3696600232dd38d]]></appid>
+<mch_id><![CDATA[1227576402]]></mch_id>
+<nonce_str><![CDATA[v7Qh8CCpGIaiN37K]]></nonce_str>
+<sign><![CDATA[3288CE493A5AD410977D49992076E4CA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201502061309141c71c7b20d0000667126]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015/2/6 星期五 13:10:18     WeiPay 页面  package：prepay_id=wx201502061309141c71c7b20d0000667126
+
+2015/2/6 星期五 13:10:18     WeiPay 页面  paySign：AC5CE1FC9F33C5712AF8BCF88B486553
+
