@@ -102,47 +102,67 @@ namespace WeixinMpSdkTestWeb
             Logger.WriteTxtLog(msg.MessageBody, contentFile);
             //System.Web.HttpContext.Current.Response.Write(replyMsg.ToXmlString());
             Logger.WriteTxtLog(msg.MsgType.ToString());
-            switch (msg.MsgType)
+
+            if (msg.MsgType == MsgType.Event)
             {
-                case MsgType.Text:
-                    return ProcessTextMessage(msg as TextReceiveMessage, args);
-                case MsgType.Image:
-                    return ProcessImageMessage(msg as ImageReceiveMessage, args);
-                case MsgType.Link:
-                    return ProcessLinkMessage(msg as LinkReceiveMessage, args);
-                case MsgType.Location:
-                    return ProcessLocationMessage(msg as LocationReceiveMessage, args);
-                case MsgType.UnKnown:
-                    return ProcessNotHandlerMsg(msg, args);
-                case MsgType.Video:
-                    return ProcessVideoMessage(msg as VideoReceiveMessage, args);
-                case MsgType.Voice:
-                    return ProcessVoiceMessage(msg as VoiceReceiveMessage, args);
-                case MsgType.VoiceResult:
-                    return ProcessVoiceMessage(msg as VoiceReceiveMessage, args);
-                case MsgType.Event:
-                    EventMessage evtMsg = msg as EventMessage;
-                    Logger.WriteTxtLog(evtMsg.EventType.ToString());
-                    switch (evtMsg.EventType)
-                    {
-                        case EventType.Click:
-                            return ProcessMenuEvent(msg as MenuEventMessage, args);
-                        case EventType.Location:
-                            return ProcessUploadLocationEvent(msg as UploadLocationEventMessage, args);
-                        case EventType.Scan:
-                            return ProcessScanEvent(msg as ScanEventMessage, args);
-                        case EventType.subscribe:
-                            return ProcessSubscribeEvent(msg as SubscribeEventMessage, args);
-                        case EventType.UnKnown:
-                            return ProcessNotHandlerMsg(msg, args);
-                        case EventType.UnSubscribe:
-                            return ProcessUnSubscribeEvent(msg as UnSubscribeEventMessage, args);
-                        default:
-                            return ProcessNotHandlerMsg(msg, args);
-                    }
-                default:
-                    return ProcessNotHandlerMsg(msg, args);
+                EventMessage evtMsg = msg as EventMessage;
+                if (evtMsg.EventType == EventType.Click) {
+                    ProcessMenuEvent(msg as MenuEventMessage, args);
+                }
+                else if (evtMsg.EventType == EventType.subscribe)
+                {
+                    ProcessSubscribeEvent(msg as SubscribeEventMessage, args);
+                }
             }
+            else {
+                MessageHandler.TransferToAutoCustomer(msg.ToUserName, msg.FromUserName);
+            }
+            return true;
+
+
+
+
+            //switch (msg.MsgType)
+            //{
+            //    case MsgType.Text:
+            //        return ProcessTextMessage(msg as TextReceiveMessage, args);
+            //    case MsgType.Image:
+            //        return ProcessImageMessage(msg as ImageReceiveMessage, args);
+            //    case MsgType.Link:
+            //        return ProcessLinkMessage(msg as LinkReceiveMessage, args);
+            //    case MsgType.Location:
+            //        return ProcessLocationMessage(msg as LocationReceiveMessage, args);
+            //    case MsgType.UnKnown:
+            //        return ProcessNotHandlerMsg(msg, args);
+            //    case MsgType.Video:
+            //        return ProcessVideoMessage(msg as VideoReceiveMessage, args);
+            //    case MsgType.Voice:
+            //        return ProcessVoiceMessage(msg as VoiceReceiveMessage, args);
+            //    case MsgType.VoiceResult:
+            //        return ProcessVoiceMessage(msg as VoiceReceiveMessage, args);
+            //    case MsgType.Event:
+            //        EventMessage evtMsg = msg as EventMessage;
+            //        Logger.WriteTxtLog(evtMsg.EventType.ToString());
+            //        switch (evtMsg.EventType)
+            //        {
+            //            case EventType.Click:
+            //                return ProcessMenuEvent(msg as MenuEventMessage, args);
+            //            case EventType.Location:
+            //                return ProcessUploadLocationEvent(msg as UploadLocationEventMessage, args);
+            //            case EventType.Scan:
+            //                return ProcessScanEvent(msg as ScanEventMessage, args);
+            //            case EventType.subscribe:
+            //                return ProcessSubscribeEvent(msg as SubscribeEventMessage, args);
+            //            case EventType.UnKnown:
+            //                return ProcessNotHandlerMsg(msg, args);
+            //            case EventType.UnSubscribe:
+            //                return ProcessUnSubscribeEvent(msg as UnSubscribeEventMessage, args);
+            //            default:
+            //                return ProcessNotHandlerMsg(msg, args);
+            //        }
+            //    default:
+            //        return ProcessNotHandlerMsg(msg, args);
+            //}
         }
 
         /// 

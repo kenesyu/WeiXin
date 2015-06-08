@@ -7,6 +7,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 using WeiXin.WexinAPI;
+using Weixin.Mp.Sdk;
 
 namespace WebAPP.BussinessService
 {
@@ -59,7 +60,9 @@ namespace WebAPP.BussinessService
             string content = sr.ReadToEnd();
             string err = string.Empty;
 
-            msg = "已经为您转接人工客服请稍后";
+
+            //MessageHandler.TransferToAutoCustomer("gh_a21a5cfa913f", openid);
+            msg = "已经为您转接人工客服";
             return msg;
         }
     }

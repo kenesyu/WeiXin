@@ -469,6 +469,7 @@ namespace Weixin.Mp.Sdk
 
 
         public static void TransferToAutoCustomer(string fromUserName, string toUserName) {
+            Logger.WriteTxtLog("转客服:" + fromUserName + "-" + toUserName);
             TransferAutoCustomer msg = new TransferAutoCustomer()
             {
                 CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),

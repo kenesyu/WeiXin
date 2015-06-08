@@ -46,7 +46,7 @@ namespace WeiXin
 
             string[] subkeyText1 = { "找教练", "找场馆","找协会"};
             string[] subkeyText2 = { "运动场", "协会"};
-            string[] subkeyText3 = { "关于我们","历史消息", "体育活动", };
+            string[] subkeyText3 = { "关于我们","历史消息" };
 
             #region ==== SubMenu 1 ====
             List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey1 = new List<Weixin.Mp.Sdk.Domain.Button>();
@@ -63,11 +63,12 @@ namespace WeiXin
                 else if (s == "找场馆")
                 {
                     clicktype = "view";
-                    clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd";
+                    clickurl = hosturl + "/webapp/gym_list.aspx"; //"http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd";
                 }
-                else if (s == "找协会") {
+                else if (s == "找协会")
+                {
                     clicktype = "view";
-                    clickurl = hosturl + "/webapp/gym_list.aspx";
+                    clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd";
                 }
 
                 Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
@@ -76,7 +77,7 @@ namespace WeiXin
                     name = s,
                     sub_button = null,
                     type = clicktype,
-                    url = "http://dede.dlyssoft.com/WebApp/list.aspx?r=&s=" + keyIndex
+                    url = clickurl    //"http://dede.dlyssoft.com/WebApp/list.aspx?r=&s=" + keyIndex
                 };
                 subBtnForKey1.Add(subBtn);
                 keyIndex++;
@@ -119,13 +120,8 @@ namespace WeiXin
             {
                 var clicktype = "click";
                 var clickurl = "http://";
-                if (s == "体育活动")
-                { 
-                    clicktype = "view";
-                    //clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=202219664&idx=1&sn=017a59ad65960e0d4c43082f3c21b9e9#rd";
-                    
-                }
-                else if (s == "关于我们")
+                
+                if (s == "关于我们")
                 {
                     clicktype = "view";
                     clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=202148672&idx=1&sn=0233ae5a7415fdbb93235f5fa1b18522#rd";
@@ -152,7 +148,7 @@ namespace WeiXin
             Weixin.Mp.Sdk.Domain.Button btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn1",
-                name = "找一找",
+                name = "找运动",
                 //url = hosturl + "/WebApp/list.aspx",
                 type = "click",
                 sub_button = subBtnForKey1
@@ -162,7 +158,7 @@ namespace WeiXin
             btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn2",
-                name = "问一问",
+                name = "问客服",
                 url = "httpbig",
                 type = "click",
                 //sub_button = subBtnForKey2
@@ -172,7 +168,7 @@ namespace WeiXin
             btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn3",
-                name = "看一看",
+                name = "资  讯",
                 url = "httpbig",
                 type = "click",
                 sub_button = subBtnForKey3
