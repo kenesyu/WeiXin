@@ -28,7 +28,7 @@ namespace WeiXin
         {
             string token = "yuze";  //您在公众平台填写的token
 
-            ///MessageHandler.Valid(token);
+            //MessageHandler.Valid(token);
 
             //if (MessageHandler.CheckSignature(token))
             //{
@@ -245,8 +245,7 @@ namespace WeixinMpSdkTestWeb
             #endregion
 
             //发送1条图文信息测试看
-            //List<NewsReplyMessageItem> items = new List(NewsReplyMessageItem);
-            //List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+            List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
 
             //NewsReplyMessageItem itm = new NewsReplyMessageItem()
             //{
@@ -421,13 +420,17 @@ namespace WeixinMpSdkTestWeb
         {
             //这里回应1条文本消息，当然您也可以回应其他消息
             Logger.WriteTxtLog("关注开始");
-            MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + ConfigurationManager.AppSettings["AppID"].ToString() + "&redirect_uri=http://dede.dlyssoft.com/userauth/userauth.aspx&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect\">大连地区用户领取现金红包</a> ");
+
+            //MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + ConfigurationManager.AppSettings["AppID"].ToString() + "&redirect_uri=http://dede.dlyssoft.com/userauth/userauth.aspx&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect\">大连地区用户领取现金红包</a> ");
+            MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"" + ConfigurationManager.AppSettings["Host"].ToString() + "/webapp/SubscribeRedPack.aspx\">点此领取现金红包</a>");
+            
+            
             #region SendRedPack
-            Logger.WriteTxtLog("SendRedPack");
-            if (msg.ToUserName == "ovTALuEgDT2sxXOcGwJ_rBgipgtY" || msg.FromUserName == "ovTALuEgDT2sxXOcGwJ_rBgipgtY")
-            {
-                SendRedBack(msg.FromUserName);
-            }
+            //Logger.WriteTxtLog("SendRedPack");
+            //if (msg.ToUserName == "ovTALuEgDT2sxXOcGwJ_rBgipgtY" || msg.FromUserName == "ovTALuEgDT2sxXOcGwJ_rBgipgtY")
+            //{
+            //    SendRedBack(msg.FromUserName);
+            //}
             #endregion
             return true;
         }
@@ -543,15 +546,54 @@ namespace WeixinMpSdkTestWeb
         public bool ProcessMenuEvent(MenuEventMessage msg, params object[] args)
         {
             //这里回应1条文本消息，当然您也可以回应其他消息
-            switch (msg.EventKey.ToString())
+            string key = msg.EventKey.ToString();
+            if (key == "btn2") {
+                MessageHandler.TransferToAutoCustomer(msg.ToUserName, msg.FromUserName);
+                return true;
+            }
+            else if (key == "subkey2")
             {
-                case "btn2":
-                    //接入客服
-                    MessageHandler.TransferToAutoCustomer(msg.ToUserName, msg.FromUserName);
-                    break;
-                default:
-                    MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "您触发了自定义事件" + msg.EventKey.ToString());
-                    break;
+                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+                NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                {
+                    Description = "大连市体育协会",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAL7HQspXmSM4RamsgfYSh2eEKQjqicICdt9pwcfY41RCptzXrJLA0KE9DFbg3N8aU4DpGN4NecE1Q/0?wx_fmt=jpeg",
+                    Title = "大连市体育协会"
+                };
+
+                NewsReplyMessage replyMsg = new NewsReplyMessage()
+                {
+                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
+                    FromUserName = msg.ToUserName,
+                    ToUserName = msg.FromUserName,
+                    Articles = items
+                };
+
+                items.Add(itm);
+                MessageHandler.SendReplyMessage(replyMsg);
+            }
+            else if (key == "subkey3")
+            {
+                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+                NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                {
+                    Description = "“大连运动健身网微信公众平台”是大连易是网络科技有限公司于2014年10月推出的大连本土市民运动健身公共信息服务平台。",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=202148672&idx=1&sn=0233ae5a7415fdbb93235f5fa1b18522#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrC3tKKw5jqHpp18AqlXPYljfDA4C2FwYus1ZtQtc8mzZ1wJRCicptIUJE93w6lVsTsg3MDg43LRWfA/0?wx_fmt=jpeg",
+                    Title = "关于我们"
+                };
+
+                NewsReplyMessage replyMsg = new NewsReplyMessage()
+                {
+                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
+                    FromUserName = msg.ToUserName,
+                    ToUserName = msg.FromUserName,
+                    Articles = items
+                };
+
+                items.Add(itm);
+                MessageHandler.SendReplyMessage(replyMsg);
             }
             return true;
         }

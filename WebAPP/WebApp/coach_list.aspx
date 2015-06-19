@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" CodeBehind="list.aspx.cs" Inherits="WebAPP.WebApp.list" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="coach_list.aspx.cs" Inherits="WebAPP.WebApp.coach_list" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,12 +27,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    <section class="panel">
+        <div>
+            <section class="panel">
         <header class="panel-heading">&nbsp;
             教练列表
-         <span class="tools pull-right">
-            <div class="btn-group" id="btn1" style="position: fixed; top:2; right:105px;z-index:10;">
+            <span class="tools pull-right">
+            <div class="btn-group" id="btn1">
                 <button data-toggle="dropdown" id="btnSport" searKey="" class="btn btn-primary dropdown-toggle btn-sm" type="button">所有项目<span class="caret"></span></button>
                 <ul role="menu" class="dropdown-menu" id="selSport">
                     <asp:Repeater ID="repMenuSports" runat="server">
@@ -45,7 +45,7 @@
                     </asp:Repeater>
                 </ul>
             </div>
-            <div class="btn-group" id="btn2" style="position:fixed; top:2;right:15px; z-index:10">
+            <div class="btn-group" id="btn2" >
                 <button data-toggle="dropdown" id="btnRegion" searKey="" class="btn btn-primary dropdown-toggle btn-sm" type="button">全部区域<span class="caret"></span></button>
                 <ul role="menu" class="dropdown-menu" id="selRegion">
                     <asp:Repeater ID="repMenuRegion" runat="server">
@@ -60,28 +60,47 @@
             </div>
         </span>
         </header>
-        <div class="panel-body" id="MessageDiv" style="overflow:auto; bottom:0; top:43px">
-            <div class="timeline-messages">
-                <asp:Repeater ID="BindList" runat="server">
-                    <ItemTemplate>
-                        <!-- Comment -->
-                        <div class="msg-time-chat">
-                            <a href="details.aspx?id=<%# Eval("ID") %>" class="message-img"><img class="avatar" src="../img/avatar/<%# Eval("Avatar") %>" alt=""></a>
-                            <div class="message-body msg-in">
-                                <span class="arrow"></span>
-                                <div class="text">
-                                    <p class="attribution"><a href="details.aspx?id=<%# Eval("ID") %>"><%# Eval("CoachName") %></a> <%# Eval("Sex") %>, <%# Eval("RegionName") %>, <%# Eval("SportName")%></p>
-                                    <p><%# Eval("Signature")%> </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /comment -->
-                    </ItemTemplate>
-                </asp:Repeater>
-             </div>
+        <div class="panel-body" id="MessageDiv" style="overflow:auto; bottom:0; top:40px">
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
+            <p>fdsfsdafsadfsadfsdafasdfasdf<p>
         </div>
     </section>
-    </div>
+        </div>
     </form>
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -101,7 +120,7 @@
             if (r != null) return unescape(r[2]); return null; //返回参数值
         }
 
-        function Search(obj,objTo) {
+        function Search(obj, objTo) {
             $(objTo).text($(obj).text());
             $(objTo).attr("searKey", $(obj).attr("key"));
 
@@ -122,7 +141,7 @@
             var r = getUrlParam('r');
             var s = getUrlParam('s');
             //alert("r:" + r + "s:" + s)
-            if (r != "" && r!= undefined) {
+            if (r != "" && r != undefined) {
                 $("#btnRegion").attr("searKey", r);
                 $("#btnRegion").text($("#selRegion").find("a[key='" + r + "']").eq(0).text());
             }
@@ -130,12 +149,12 @@
                 $("#btnSport").attr("searKey", s);
                 $("#btnSport").text($("#selSport").find("a[key='" + s + "']").eq(0).text());
             }
-            var right = 10 + 10 + $("#btn2").width();
+            var right = 10 + 5 + $("#btn2").width();
             $("#btn1").css("right", right);
         }
         SetSearch();
-        $("#MessageDiv").css("max-height", $(window).height() - 60);
+        $("#MessageDiv").css("max-height", $(window).height() - 40);
         $("#MessageDiv").css("max-width", $(window).width());
-  </script>
+    </script>
 </body>
 </html>

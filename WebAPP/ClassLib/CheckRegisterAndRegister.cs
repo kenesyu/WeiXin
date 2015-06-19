@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Web.Script.Serialization;
 using System.IO;
+using Weixin.Mp.Sdk.Util;
 
 namespace WebAPP.ClassLib
 {
@@ -19,11 +20,12 @@ namespace WebAPP.ClassLib
                 var url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri=" + System.Web.HttpUtility.UrlEncode(backurl) + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", appid);
                 HttpContext.Current.Response.Redirect(url);
                 return null;
+                Logger.WriteTxtLog("NoCode");
             }
             else
             {
                 //Response.Write("您已绑定");
-
+                Logger.WriteTxtLog("GOOD");
                 var client = new System.Net.WebClient();
                 client.Encoding = System.Text.Encoding.UTF8;
 
@@ -68,10 +70,11 @@ namespace WebAPP.ClassLib
                         new SqlParameter("@headimgurl",userInfo["headimgurl"]),
 
                     }, true);
+                    Logger.WriteTxtLog("OK");
                 }
                 catch (Exception ex)
                 {
-                    HttpContext.Current.Response.Write(ex.Message.ToString());
+                    Logger.WriteTxtLog(ex.Message);
                     //throw ex;
                 }
 

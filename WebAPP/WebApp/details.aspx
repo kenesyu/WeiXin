@@ -90,7 +90,7 @@
                 <p>年龄：<asp:Label ID="lblAge" runat="server" Text="lblAge"></asp:Label><p/>
                 <p>区域：<asp:Label ID="lblRegion" runat="server" Text="lblRegion"></asp:Label><p/>
                 <p>微信：<%=lblWeiXin%></p>
-                <p>电话：<a href="tel:<%=lblTel %>"><%=lblTel%></a> &nbsp;<a href="javascript:void(null)" onclick="CustomerService.ConnectCustomerService('<%=openid %>')">人工咨询</a>
+                <p>电话：<a href="tel:<%=lblTel %>"><%=lblTel%></a> &nbsp;
                         </p>
                 <p>运动项目：<asp:Label ID="lblSportName" runat="server" Text="lblSportName"></asp:Label><p/>
                 <p>详细信息：<asp:Label ID="lblInfo" runat="server" Text="lblInfo"></asp:Label><p/>

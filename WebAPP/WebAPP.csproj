@@ -1759,6 +1759,7 @@
     <Content Include="ScriptsLib\Core\IsTech_form.js" />
     <Content Include="ScriptsLib\CustomerServices.js" />
     <Content Include="ScriptsLib\WxPayService.js" />
+    <Content Include="WebApp\coach_list.aspx" />
     <Content Include="WebApp\gym_details.aspx" />
     <Content Include="WebApp\Styles\Site.css" />
     <Content Include="Global.asax" />
@@ -1776,6 +1777,7 @@
     <Content Include="WebApp\gym_list.aspx" />
     <Content Include="WebApp\list.aspx" />
     <Content Include="WebApp\Product.aspx" />
+    <Content Include="WebApp\SubscribeRedPack.aspx" />
     <Content Include="WebApp\WXPay\Notify.aspx" />
     <Content Include="WebApp\WXPay\Send.aspx" />
     <Content Include="WebApp\WXPay\SendRedPack.aspx" />
@@ -1811,6 +1813,13 @@
     <Compile Include="UserAuth\UserAuth.aspx.designer.cs">
       <DependentUpon>UserAuth.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebApp\coach_list.aspx.cs">
+      <DependentUpon>coach_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\coach_list.aspx.designer.cs">
+      <DependentUpon>coach_list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebApp\details.aspx.cs">
       <DependentUpon>details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1845,6 +1854,13 @@
     </Compile>
     <Compile Include="WebApp\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\SubscribeRedPack.aspx.cs">
+      <DependentUpon>SubscribeRedPack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\SubscribeRedPack.aspx.designer.cs">
+      <DependentUpon>SubscribeRedPack.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebApp\WXPay\Notify.aspx.cs">
       <DependentUpon>Notify.aspx</DependentUpon>
@@ -2175,8 +2191,8 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62621</DevelopmentServerPort>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2222</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

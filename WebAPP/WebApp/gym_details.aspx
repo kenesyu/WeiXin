@@ -87,7 +87,7 @@
             </span>
             </header>
             <div class="panel-body">
-                <p>电话：<asp:Label ID="lblTel" runat="server" Text=""></asp:Label>&nbsp;&nbsp;<a href="javascript:void(null)" onclick="CustomerService.ConnectCustomerService('<%=openid %>')">人工咨询</a></p>
+                <p>电话：<asp:Label ID="lblTel" runat="server" Text=""></asp:Label>&nbsp;&nbsp;<%--<a href="javascript:void(null)" onclick="CustomerService.ConnectCustomerService('<%=openid %>')">人工咨询</a>--%></p>
                 <p>地址：<asp:Label ID="lblAddress" runat="server" Text=""></asp:Label></p>
                 <p>类型：<asp:Label ID="lblType" runat="server" Text=""></asp:Label></p>
                 <p>区域：<asp:Label ID="lblRegion" runat="server" Text=""></asp:Label></p>
