@@ -1,0 +1,96 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="left.aspx.cs" Inherits="WebAPP.Adm.left" %>
+
+<!DOCTYPE htm PUBLIC "-//W3C//DTD Xhtm 1.0 Transitional//EN" "http://www.w3.org/TR/xhtm1/DTD/xhtm1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtm">
+<head>
+    <meta http-equiv="Content-Type" content="text/htm; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson li").click(function () {
+                $(".menuson li.active").removeClass("active")
+                $(this).addClass("active");
+            });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('ul').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('ul').slideUp();
+                } else {
+                    $(this).next('ul').slideDown();
+                }
+            });
+        })	
+    </script>
+</head>
+<body style="background: #f0f9fd;">
+    <div class="lefttop">
+        <span></span><a href="index.htm" target="rightFrame">首页</a></div>
+    <dl class="leftmenu">
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico01.png" /></span>教练管理
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="jl_list.aspx" target="rightFrame">添加教练</a><i></i></li>
+                <li><cite></cite><a href="ss_baoxiu.htm" target="rightFrame">教练列表</a><i></i></li>
+                <!--        <li><cite></cite><a href="imgtable.htm" target="rightFrame">图片数据表</a><i></i></li>
+        <li><cite></cite><a href="form.htm" target="rightFrame">添加编辑</a><i></i></li>
+        <li><cite></cite><a href="imglist.htm" target="rightFrame">图片列表</a><i></i></li>
+        <li><cite></cite><a href="imglist1.htm" target="rightFrame">自定义</a><i></i></li>
+        <li><cite></cite><a href="tools.htm" target="rightFrame">常用工具</a><i></i></li>
+        <li><cite></cite><a href="filelist.htm" target="rightFrame">信息管理</a><i></i></li>
+        <li><cite></cite><a href="tab.htm" target="rightFrame">Tab页</a><i></i></li>
+        <li><cite></cite><a href="error.htm" target="rightFrame">404页面</a><i></i></li>-->
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico02.png" /></span>组织管理
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="zz_search.htm" target="rightFrame">体育组织查询</a><i></i></li>
+                <li><cite></cite><a href="zz_weihui.htm" target="rightFrame">体育组织维护</a><i></i></li>
+                <li><cite></cite><a href="zz_gongwen.htm" target="rightFrame">发送电子公文</a><i></i></li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico03.png" /></span>活动管理</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="hd_shangbao.htm" target="rightFrame">活动上报</a><i></i></li>
+                <li><cite></cite><a href="hd_shenpi.htm" target="rightFrame">活动审批</a><i></i></li>
+                <li><cite></cite><a href="hd_list.htm" target="rightFrame">活动列表</a><i></i></li>
+                <!--        <li><cite></cite><a href="#">其他</a><i></i></li>-->
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico04.png" /></span>日常办公</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="oa_message.htm" target="rightFrame">消息通知</a><i></i></li>
+                <li><cite></cite><a href="oa_file.htm" target="rightFrame">文件管理</a><i></i></li>
+<!--                <li><cite></cite><a href="#">收发文件</a><i></i></li>-->
+                <li><cite></cite><a href="oa_list.htm" target="rightFrame">日程管理</a><i></i></li>
+            </ul>
+        </dd>
+
+        <dd><div class="title"><span><img src="images/leftico03.png" /></span>系统设置</div>
+        <ul class="menuson">
+            <li><cite></cite><a href="xt_mima.htm" target="rightFrame">密码修改</a><i></i></li>
+            <li><cite></cite><a href="#">权限设置</a><i></i></li>
+<!--            <li><cite></cite><a href="#">活动列表</a><i></i></li>-->
+    <!--        <li><cite></cite><a href="#">其他</a><i></i></li>-->
+        </ul>    
+        </dd>  
+    </dl>
+</body>
+</html>

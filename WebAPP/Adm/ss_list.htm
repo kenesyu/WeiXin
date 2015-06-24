@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".click").click(function () {
+            $("#aaa").fadeIn(200);
+        });
+
+        $(".tiptop a").click(function () {
+            $("#aaa").fadeOut(200);
+        });
+
+        $(".click1").click(function () {
+            $("#bbb").fadeIn(200);
+        });
+
+        $("#bclose a").click(function () {
+            $("#bbb").fadeOut(200);
+        })
+
+        //        $(".click1").click(function () {
+        //            $(".tip1").fadeIn(200);
+        //        });
+
+        //        $(".tiptop1 a").click(function () {
+        //            $(".tip1").fadeOut(200);
+        //        });
+    });
+</script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 100  
+	});
+	$(".select3").uedSelect({
+		width : 167
+	});
+});
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">设施管理</a></li>
+    <li><a href="#">数据列表</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">待维修</a></li> 
+    <li><a href="#tab2">维修中</a></li> 
+    <li><a href="#tab3">已维修</a></li> 
+  	</ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    
+    
+    <ul class="seachform">
+    
+    <li>地址<input name="" type="text" class="scinput" /></li>
+    <li><label>管辖单位</label>  
+    <div class="vocation">
+        <select class="select3">             <option>--请选择--</option>             <option selected="selected">中山区</option>             <option>西岗区</option>             <option>沙河口区</option>             <option>甘井子区</option>         </select>
+    </div>
+    </li>
+    
+    <li><label>设施类型</label>  
+    <div class="vocation">
+        <select class="select3">         <option>--请选择--</option>         <option>轨道棋</option>         <option>活动室</option>         <option>健身广场</option>         <option>健身步道</option>         <option>健身场馆</option>         <option>健身公园</option>         <option  selected="selected">健身器材</option>         </select>
+    </div>
+    </li>
+    
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+    
+    </ul>
+    
+    
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>编号<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>标题</th>
+        <th>管辖单位</th>
+        <th>设施类型</th>
+        <th>地址</th>
+        <th>报修人</th>
+        <th>损毁情况</th>
+        <th>上报时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="click">
+            <td><input name="" type="checkbox" value="" /></td>
+            <td>20130908</td>
+            <td>中山区炮台山市民健身公园</td>
+            <td>中山区</td>
+            <td>健身公园</td>
+            <td>迎宾路北大连港南山体</td>
+            <td>中山区街道</td>
+            <td>木围栏缺失1米</td>
+            <td>2013-09-09 15:05</td>
+        </tr> 
+        
+        <tr class="click">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+    
+        <tr class="click">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+
+        <tr class="click">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+
+        <tr class="click">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+        </tbody>
+    </table>
+    
+   
+  
+    
+    </div>  
+    
+  	<div id="tab2" class="tabson">
+    
+    
+    <ul class="seachform">
+    
+    <li>地址<input name="" type="text" class="scinput" /></li>
+    <li><label>管辖单位</label>  
+    <div class="vocation">
+        <select class="select3">             <option>--请选择--</option>             <option selected="selected">中山区</option>             <option>西岗区</option>             <option>沙河口区</option>             <option>甘井子区</option>         </select>
+    </div>
+    </li>
+    
+    <li><label>设施类型</label>  
+    <div class="vocation">
+        <select class="select3">         <option>--请选择--</option>         <option>轨道棋</option>         <option>活动室</option>         <option>健身广场</option>         <option>健身步道</option>         <option>健身场馆</option>         <option>健身公园</option>         <option  selected="selected">健身器材</option>         </select>
+    </div>
+    </li>
+    
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+    
+    </ul>
+    
+    
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>编号<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>标题</th>
+        <th>管辖单位</th>
+        <th>设施类型</th>
+        <th>地址</th>
+        <th>报修人</th>
+        <th>处理人</th>
+        <th>损毁情况</th>
+        <th>上报时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="click1">
+            <td><input name="" type="checkbox" value="" /></td>
+            <td>20130908</td>
+            <td>中山区炮台山市民健身公园</td>
+            <td>中山区</td>
+            <td>健身公园</td>
+            <td>迎宾路北大连港南山体</td>
+            <td>中山区街道</td>
+            <td>施工单位A</td>
+            <td>木围栏缺失1米</td>
+            <td>2013-09-09 15:05</td>
+        </tr> 
+        
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位B</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+    
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位C</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位A</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位C</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+        </tr> 
+        </tbody>
+    </table>
+    
+    </div>  
+
+    <div id="tab3" class="tabson">
+     <ul class="seachform">
+    
+    <li>地址<input name="" type="text" class="scinput" /></li>
+    <li><label>管辖单位</label>  
+    <div class="vocation">
+        <select class="select3">             <option>--请选择--</option>             <option selected="selected">中山区</option>             <option>西岗区</option>             <option>沙河口区</option>             <option>甘井子区</option>         </select>
+    </div>
+    </li>
+    
+    <li><label>设施类型</label>  
+    <div class="vocation">
+        <select class="select3">         <option>--请选择--</option>         <option>轨道棋</option>         <option>活动室</option>         <option>健身广场</option>         <option>健身步道</option>         <option>健身场馆</option>         <option>健身公园</option>         <option  selected="selected">健身器材</option>         </select>
+    </div>
+    </li>
+    
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+    
+    </ul>
+    
+    
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>编号<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>标题</th>
+        <th>管辖单位</th>
+        <th>设施类型</th>
+        <th>地址</th>
+        <th>报修人</th>
+        <th>处理人</th>
+        <th>损毁情况</th>
+        <th>上报时间</th>
+        <th>维修情况</th>
+        <th>维修时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="click1">
+            <td><input name="" type="checkbox" value="" /></td>
+            <td>20130908</td>
+            <td>中山区炮台山市民健身公园</td>
+            <td>中山区</td>
+            <td>健身公园</td>
+            <td>迎宾路北大连港南山体</td>
+            <td>中山区街道</td>
+            <td>施工单位A</td>
+            <td>木围栏缺失1米</td>
+            <td>2013-09-09 15:05</td>
+            <td>已修好</td>
+            <td>2013-09-10 15:05</td>
+        </tr> 
+        
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位B</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+                    <td>已修好</td>
+            <td>2013-09-10 15:05</td>
+        </tr> 
+    
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位C</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+                    <td>已修好</td>
+            <td>2013-09-10 15:05</td>
+        </tr> 
+
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位A</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+                    <td>已修好</td>
+            <td>2013-09-10 15:05</td>
+        </tr> 
+
+        <tr class="click1">
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>中山区炮台山市民健身公园</td>
+        <td>中山区</td>
+        <td>健身公园</td>
+        <td>迎宾路北大连港南山体</td>
+        <td>中山区街道</td>
+        <td>施工单位C</td>
+        <td>木围栏缺失1米</td>
+        <td>2013-09-09 15:05</td>
+                    <td>已修好</td>
+            <td>2013-09-10 15:05</td>
+        </tr> 
+        </tbody>
+    </table>   
+ 
+    </div>  
+       
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+        
+    </div>
+
+
+</body>
+
+<div class="tip" id="aaa">
+    <div class="tiptop"><span>提示信息</span><a></a></div>
+        
+    <div class="tipinfo">
+    <span><img src="images/ticon.png" /></span>
+    <div class="tipright">
+    <p>是否确认对该报修信息进行处理？</p>
+    <cite>
+    <select class="select3">
+        <option>---请选择处理人---</option>
+        <option>处理人A</option>
+        <option>处理人B</option>
+        <option>施工单位A</option>
+        <option>施工单位B</option>
+    </select>
+    </cite>
+    </div>
+    </div>
+    <div class="tipbtn">
+    <input name="" type="button"  class="sure" value="确定" onclick='alert("报 修信息以转发相关人员进行处理");$(".tip").fadeOut(200);' />&nbsp;
+    <input name="" type="button"  class="cancel" value="取消" onclick='$(".tip").fadeOut(200);' />
+    </div>
+</div>
+
+<div class="tip" id="bbb">
+    <div class="tiptop" id="bclose"><span>提示信息</span><a></a></div>
+        
+    <div class="tipinfo" style="height:150px">
+    <span><img src="images/ticon.png" /></span>
+    <div class="tipright">
+<!--    <p>是否确认对该报修信息进行处理？</p>-->
+    <cite>
+    <select class="select3">
+        <option>---请选择---</option>
+        <option selected="selected">已处理</option>
+        <option>未处理</option>
+    </select>
+    <p>
+        <textarea rows="5" style="border:1px solid #e0e0e0" >健身器材损坏，现已修复！</textarea>
+    </p>
+    </cite>
+    </div>
+    </div>
+    <div class="tipbtn">
+    <input name="" type="button"  class="sure" value="确定" onclick='$(".tip").fadeOut(200);' />&nbsp;
+    <input name="" type="button"  class="cancel" value="取消" onclick='$(".tip").fadeOut(200);' />
+    </div>
+</div>
+
+</html>

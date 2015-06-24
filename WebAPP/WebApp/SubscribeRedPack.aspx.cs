@@ -90,7 +90,7 @@ namespace WebAPP.WebApp
                     this.lblmessage.Text = dt.Rows[0]["details"].ToString();
                 }
 
-                this.repList.DataSource = dbHelper.ExecuteDataTable("select * from T_RedPack a inner join T_UserInfo  b on  a.openid = b.openid where amount > 0 order by amount desc"); ;
+                this.repList.DataSource = dbHelper.ExecuteDataTable("select top 10 * from T_RedPack a inner join T_UserInfo  b on  a.openid = b.openid where amount > 0 order by amount desc"); ;
                 this.repList.DataBind();
 
                 dbHelper.Dispose();

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".click").click(function () {
+            $("#aaa").fadeIn(200);
+        });
+
+        $(".tiptop a").click(function () {
+            $("#aaa").fadeOut(200);
+        });
+
+        $(".click1").click(function () {
+            $("#bbb").fadeIn(200);
+        });
+
+        $("#bclose a").click(function () {
+            $("#bbb").fadeOut(200);
+        })
+
+        //        $(".click1").click(function () {
+        //            $(".tip1").fadeIn(200);
+        //        });
+
+        //        $(".tiptop1 a").click(function () {
+        //            $(".tip1").fadeOut(200);
+        //        });
+    });
+</script>
+  
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        $(".select1").uedSelect({
+            width: 345
+        });
+        $(".select2").uedSelect({
+            width: 100
+        });
+        $(".select3").uedSelect({
+            width: 167
+        });
+    });
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">系统设置</a></li>
+    <li><a href="#">密码修改</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div id="tab2" class="tabson">
+    
+    <div class="formbody">
+    
+    <div class="formtitle"><span>密码修改</span></div>
+    
+    <ul class="forminfo">
+    <li><label>当前密码</label><input name="" type="password" class="dfinput" /><i></i></li>
+    <li><label>新密码</label><input name="" type="password" class="dfinput" /><i></i></li>
+    <li><label>确认密码</label><input name="" type="password" class="dfinput" /><i></i></li>
+    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认" onclick="alert('密码已修改成功请牢记！');location.href='index.htm'"/></li>
+    </ul>
+    
+    
+    </div>
+    
+   
+    </div>    
+	</div> 
+ 
+	<script type="text/javascript">
+	    $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+        $('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+        
+    </div>
+
+
+</body>
+
+<div class="tip" id="aaa">
+    <div class="tiptop"><span>详细</span><a></a></div>
+        
+    <div class="tipinfo">
+<!--    <span><img src="images/ticon.png" /></span>-->
+    <div class="tipright" >
+    <p>据中办、国办1996年公布的关于举办已故党和国家领导同志诞辰纪念活动的通知，“发表纪念文章”属于纪念活动方式之一。据新京报记者不完全统计，纪念邓小平诞辰100周年和110周年两次活动，已有至少12位党和国家领导人撰文回忆邓小平。</p>
+    <cite>
+    </cite>
+    </div>
+    </div>
+    <div class="tipbtn">
+    <input name="" type="button"  class="sure" value="关闭" onclick='$(".tip").fadeOut(200);' />&nbsp;
+<!--    <input name="" type="button"  class="cancel" value="取消" onclick='$(".tip").fadeOut(200);' />-->
+    </div>
+</div>
+
+<div class="tip" id="bbb">
+    <div class="tiptop" id="bclose"><span>提示信息</span><a></a></div>
+        
+    <div class="tipinfo" style="height:150px;margin-left:10px">
+    <span><img src="images/ticon.png" /></span>
+    <div class="tipright" style=" margin-left:10px">
+<!--    <p>是否确认对该报修信息进行处理？</p>-->
+    <cite>
+    <select class="select3">
+        <option>---请选择---</option>
+        <option selected="selected">已处理</option>
+        <option>未处理</option>
+    </select>
+    <p>
+        <textarea rows="5" style="border:1px solid #e0e0e0" >健身器材损坏，现已修复！</textarea>
+    </p>
+    </cite>
+    </div>
+    </div>
+    <div class="tipbtn">
+    <input name="" type="button"  class="sure" value="确定" onclick='$(".tip").fadeOut(200);' />&nbsp;
+    <input name="" type="button"  class="cancel" value="取消" onclick='$(".tip").fadeOut(200);' />
+    </div>
+</div>
+
+</html>

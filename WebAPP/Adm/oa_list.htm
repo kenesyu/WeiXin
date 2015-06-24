@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+<script type="text/javascript" src="/Script/Control/DateTime/WdatePicker.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/script/Control/DateTime/skin/WdatePicker.css" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".click").click(function () {
+            $("#aaa").fadeIn(200);
+        });
+
+        $(".tiptop a").click(function () {
+            $("#aaa").fadeOut(200);
+        });
+
+        $(".click1").click(function () {
+            $("#bbb").fadeIn(200);
+        });
+
+        $("#bclose a").click(function () {
+            $("#bbb").fadeOut(200);
+        })
+
+        //        $(".click1").click(function () {
+        //            $(".tip1").fadeIn(200);
+        //        });
+
+        //        $(".tiptop1 a").click(function () {
+        //            $(".tip1").fadeOut(200);
+        //        });
+    });
+</script>
+  
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        $(".select1").uedSelect({
+            width: 345
+        });
+        $(".select2").uedSelect({
+            width: 100
+        });
+        $(".select3").uedSelect({
+            width: 167
+        });
+    });
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">日常办公</a></li>
+    <li><a href="#">日程管理</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">日程列表</a></li> 
+<!--    <li><a href="#tab2">待审批</a></li> 
+    <li><a href="#tab3">已维修</a></li> -->
+  	</ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    
+    
+    <ul class="seachform">
+    
+    <li><label>时间</label><input name="" type="text" id="txtTime" class="scinput" /></li>
+    <li><label>事项</label><input name="" type="text" class="scinput" />
+    </li>
+    
+    <li><label>提醒我</label>  
+    <div class="vocation">
+        <input type="checkbox" checked="checked" class="sccheckbox" />
+    </div>
+    </li>
+    
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="添加"/></li>
+    
+    </ul>
+    
+    
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th>日期</th>
+        <th>事项</th>
+        <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="click">
+            <td>2014-09-01 09:30:00</td>
+            <td>去XX地 开会</td>
+            <td>取消</td>
+        </tr> 
+        </tbody>
+    </table>
+    
+   
+  
+    
+    </div>  
+    
+      
+	</div> 
+ 
+	<script type="text/javascript">
+	    $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+        $('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+        
+    </div>
+
+
+</body>
+
+</html>
