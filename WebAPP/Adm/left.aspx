@@ -49,8 +49,8 @@
         </dd>
         <dd><div class="title"><span><img src="images/leftico03.png" /></span>系统设置</div>
         <ul class="menuson">
-            <li><cite></cite><a href="xt_mima.htm" target="rightFrame">密码修改</a><i></i></li>
-            <li><cite></cite><a href="#">权限设置</a><i></i></li>
+<%--            <li><cite></cite><a href="xt_mima.htm" target="rightFrame">密码修改</a><i></i></li>
+            <li><cite></cite><a href="#">权限设置</a><i></i></li>--%>
 <!--            <li><cite></cite><a href="#">活动列表</a><i></i></li>-->
     <!--        <li><cite></cite><a href="#">其他</a><i></i></li>-->
         </ul>    

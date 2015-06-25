@@ -254,6 +254,7 @@
     <Content Include="Adm\images\user.png" />
     <Content Include="Adm\images\userbg.png" />
     <Content Include="Adm\index.aspx" />
+    <Content Include="Adm\jl_add.aspx" />
     <Content Include="Adm\jl_list.aspx" />
     <Content Include="Adm\js\cloud.js" />
     <Content Include="Adm\js\format+zh_CN,default,corechart.I.js" />
@@ -1731,6 +1732,15 @@
     <Content Include="assets\nestable\index.html" />
     <Content Include="assets\nestable\jquery.nestable.css" />
     <Content Include="assets\nestable\jquery.nestable.js" />
+    <Content Include="assets\uploadify\Change Log.txt" />
+    <Content Include="assets\uploadify\jquery.uploadify.js" />
+    <Content Include="assets\uploadify\jquery.uploadify.min.js" />
+    <Content Include="assets\uploadify\license.txt" />
+    <Content Include="assets\uploadify\uploadify-cancel.png" />
+    <Content Include="assets\uploadify\uploadify.css" />
+    <Content Include="assets\uploadify\uploadify.swf" />
+    <Content Include="assets\uploadify\__MACOSX\._Change Log.txt" />
+    <Content Include="assets\uploadify\__MACOSX\._uploadify.swf" />
     <Content Include="assets\xchart\d3.v3.js" />
     <Content Include="assets\xchart\d3.v3.min.js" />
     <Content Include="assets\xchart\xcharts.css" />
@@ -2010,6 +2020,13 @@
     <Compile Include="Adm\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adm\jl_add.aspx.cs">
+      <DependentUpon>jl_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\jl_add.aspx.designer.cs">
+      <DependentUpon>jl_add.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adm\jl_list.aspx.cs">
       <DependentUpon>jl_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2058,6 +2075,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handler\UploadAvatar.cs" />
+    <Compile Include="Handler\UploadMulti.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -2410,6 +2429,9 @@
     <None Include="assets\morris.js-0.4.3\spec\support\placeholder.coffee" />
     <None Include="assets\nestable\.DS_Store" />
     <None Include="assets\nestable\README.md" />
+    <None Include="assets\uploadify\check-exists.php" />
+    <None Include="assets\uploadify\index.php" />
+    <None Include="assets\uploadify\uploadify.php" />
     <None Include="assets\xchart\LICENSE" />
     <None Include="assets\xchart\README.md" />
     <None Include="css\.DS_Store" />
