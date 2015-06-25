@@ -26,6 +26,12 @@
             });
         })	
     </script>
+    <style>
+        .span 
+        {
+            margin:0;padding:0;display:block;
+        }
+    </style>
 </head>
 <body style="background: #f0f9fd;">
     <div class="lefttop">
@@ -37,52 +43,10 @@
                     <img src="images/leftico01.png" /></span>教练管理
             </div>
             <ul class="menuson">
-                <li><cite></cite><a href="jl_list.aspx" target="rightFrame">添加教练</a><i></i></li>
-                <li><cite></cite><a href="ss_baoxiu.htm" target="rightFrame">教练列表</a><i></i></li>
-                <!--        <li><cite></cite><a href="imgtable.htm" target="rightFrame">图片数据表</a><i></i></li>
-        <li><cite></cite><a href="form.htm" target="rightFrame">添加编辑</a><i></i></li>
-        <li><cite></cite><a href="imglist.htm" target="rightFrame">图片列表</a><i></i></li>
-        <li><cite></cite><a href="imglist1.htm" target="rightFrame">自定义</a><i></i></li>
-        <li><cite></cite><a href="tools.htm" target="rightFrame">常用工具</a><i></i></li>
-        <li><cite></cite><a href="filelist.htm" target="rightFrame">信息管理</a><i></i></li>
-        <li><cite></cite><a href="tab.htm" target="rightFrame">Tab页</a><i></i></li>
-        <li><cite></cite><a href="error.htm" target="rightFrame">404页面</a><i></i></li>-->
+                <li><cite></cite><a href="jl_list.aspx" target="rightFrame">教练列表</a><i></i></li>
+                <li><cite></cite><a href="jl_add.aspx" target="rightFrame">添加教练</a><i></i></li>
             </ul>
         </dd>
-        <dd>
-            <div class="title">
-                <span>
-                    <img src="images/leftico02.png" /></span>组织管理
-            </div>
-            <ul class="menuson">
-                <li><cite></cite><a href="zz_search.htm" target="rightFrame">体育组织查询</a><i></i></li>
-                <li><cite></cite><a href="zz_weihui.htm" target="rightFrame">体育组织维护</a><i></i></li>
-                <li><cite></cite><a href="zz_gongwen.htm" target="rightFrame">发送电子公文</a><i></i></li>
-            </ul>
-        </dd>
-        <dd>
-            <div class="title">
-                <span>
-                    <img src="images/leftico03.png" /></span>活动管理</div>
-            <ul class="menuson">
-                <li><cite></cite><a href="hd_shangbao.htm" target="rightFrame">活动上报</a><i></i></li>
-                <li><cite></cite><a href="hd_shenpi.htm" target="rightFrame">活动审批</a><i></i></li>
-                <li><cite></cite><a href="hd_list.htm" target="rightFrame">活动列表</a><i></i></li>
-                <!--        <li><cite></cite><a href="#">其他</a><i></i></li>-->
-            </ul>
-        </dd>
-        <dd>
-            <div class="title">
-                <span>
-                    <img src="images/leftico04.png" /></span>日常办公</div>
-            <ul class="menuson">
-                <li><cite></cite><a href="oa_message.htm" target="rightFrame">消息通知</a><i></i></li>
-                <li><cite></cite><a href="oa_file.htm" target="rightFrame">文件管理</a><i></i></li>
-<!--                <li><cite></cite><a href="#">收发文件</a><i></i></li>-->
-                <li><cite></cite><a href="oa_list.htm" target="rightFrame">日程管理</a><i></i></li>
-            </ul>
-        </dd>
-
         <dd><div class="title"><span><img src="images/leftico03.png" /></span>系统设置</div>
         <ul class="menuson">
             <li><cite></cite><a href="xt_mima.htm" target="rightFrame">密码修改</a><i></i></li>

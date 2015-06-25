@@ -29,7 +29,7 @@
 .paginator .cpb {border:1px solid #F50;font-weight:700;color:#F50;background-color:#ffeee5;}
 .paginator a:hover {border:solid 1px #F50;color:#f60;text-decoration:none;}
 .paginator a,.paginator a:visited,.paginator .cpb,.paginator a:hover  
-{float:left;height:16px;line-height:16px;min-width:10px;_width:10px;margin-right:5px;text-align:center;
+{ float:left;height:16px;line-height:16px;min-width:10px;_width:10px;margin-right:5px;text-align:center;
  white-space:nowrap;font-size:12px;font-family:Arial,SimSun;padding:0 3px;}
 
 
@@ -52,6 +52,8 @@
         $("#bclose a").click(function () {
             $("#bbb").fadeOut(200);
         })
+
+       
 
         //        $(".click1").click(function () {
         //            $(".tip1").fadeIn(200);
@@ -105,9 +107,9 @@
         <asp:Repeater ID="repList" runat="server">
             <ItemTemplate>
          <%--       <tr class="click">--%>
-                <tr class="click">
+                <tr>
                     <td align="center"><input name="" type="checkbox" value="" /></td>
-                    <td><img src="/img/avatar/<%# Eval("avatar") %>" width="100px" height="100px" /></td>
+                    <td width="130px" align="center"><img src="/img/avatar/<%# Eval("avatar") %>" width="100px" height="100px" /></td>
                     <td><%# Eval("CoachName") %></td>
                     <td><%# Eval("Sex") %></td>
                     <td>健身公园</td>
@@ -120,7 +122,7 @@
         </asp:Repeater>
         <tr>
             <td colspan="9" align="center">
-                <webdiyer:AspNetPager ID="AspNetPager1" CssClass="pagin" runat="server" 
+                <webdiyer:AspNetPager ID="AspNetPager1" CssClass="" runat="server" 
                     onpagechanging="AspNetPager1_PageChanging">
                 </webdiyer:AspNetPager>
             </td>
@@ -185,4 +187,9 @@
     </div>
 </div>
 
+<script>
+    $("#AspNetPager1").find("span").each(function (idx) {
+        $(this).replaceWith("<a style='" + $(this).attr("style") + "'>" + $(this).html() + "</a>")
+    })
+</script>
 </html>
