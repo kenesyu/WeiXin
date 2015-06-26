@@ -112,11 +112,17 @@
                     <td width="130px" align="center"><img src="/img/avatar/<%# Eval("avatar") %>" width="100px" height="100px" /></td>
                     <td><%# Eval("CoachName") %></td>
                     <td><%# Eval("Sex") %></td>
-                    <td>健身公园</td>
+                    <td><%# Eval("SportName") %></td>
                     <td><%# Eval("Tel") %></td>
                     <td><%# Eval("Weixin") %></td>
                     <td><%# Convert.ToDateTime(Eval("JoinDate")).ToString("yyyy-MM-dd") %></td>
-                    <td></td>
+                    <td align="center">
+                        <div class="tools" align="center">
+    	                    <ul class="toolbar">
+                            <li onclick="javascript:location.href='jl_add.aspx?id=<%# Eval("id") %>'"><span><img src="images/t02.png" /></span>修改</li>
+                            </ul>
+                        </div>
+                    </td>
                 </tr>
             </ItemTemplate>
         </asp:Repeater>
@@ -129,7 +135,6 @@
         </tr>
         </tbody>
     </table>
-
     </div>        
 	</div> 
         

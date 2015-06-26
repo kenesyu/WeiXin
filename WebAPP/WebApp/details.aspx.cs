@@ -32,10 +32,10 @@ namespace WebAPP.WebApp
                 if (Request.QueryString["ID"] != null && Request.QueryString["ID"].ToString() != "")
                 {
                     BindData(Request.QueryString["ID"].ToString());
-                    CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
-                    Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
-                    //ViewState.Add("openid", userinfo["openid"].ToString());
-                    openid = userinfo["openid"].ToString();
+                    //CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
+                    //Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
+                    ////ViewState.Add("openid", userinfo["openid"].ToString());
+                    //openid = userinfo["openid"].ToString();
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace WebAPP.WebApp
                 ViewCount = dtInfo.Rows[0]["Views"].ToString();
                 lblSportName.Text = dtInfo.Rows[0]["SportName"].ToString();
                 sportname = dtInfo.Rows[0]["SportName"].ToString();
-                lblInfo.Text = dtInfo.Rows[0]["Info"].ToString();
+                lblInfo.Text = dtInfo.Rows[0]["Info"].ToString().Replace("\r\n","<br/>");
                 //ViewState.Add("message", "我对" + dtInfo.Rows[0]["SportName"].ToString() + "教练[" + dtInfo.Rows[0]["CoachName"].ToString() + "]感兴趣想要咨询");
                 dbhelper.ExecuteNonQuery("update T_Coachs set Views = (isnull(Views,0) + 1) where  ID =" + ID);
             }

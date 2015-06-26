@@ -27,9 +27,9 @@ namespace WebAPP.WebApp
                 if (Request.QueryString["gymid"] != null && Request.QueryString["gymid"].ToString() != "")
                 {
                     BindData(Request.QueryString["gymid"].ToString());
-                    CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
-                    Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
-                    openid = userinfo["openid"].ToString();
+                    //CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
+                    //Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
+                    //openid = userinfo["openid"].ToString();
                 }
             }
         }

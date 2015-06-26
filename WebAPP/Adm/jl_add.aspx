@@ -28,38 +28,42 @@
     <div class="formtitle"><span>教练信息</span></div>
     
     <ul class="forminfo">
-    <input id="txtcoachid" runat="server" type="text" value="0" />
+    <input id="txtcoachid" runat="server" type="text" style="display:none" value="0" />
     <li><label>姓名</label><input id="txtCoachName" runat="server" type="text" class="dfinput" value="" /></li>
     <li><label>性别</label>
-    					<select class="dfinput">                         <option>--请选择-- </option>                         <option selected="selected">男</option>                         <option>女</option>                     </select>
+    					<select id="selSex" runat="server" class="dfinput">                         <option>--请选择-- </option>                         <option selected="selected" value="男">男</option>                         <option value="女">女</option>                     </select>
     </li>
     <li>
         <div id="queue"></div>
 		<input id="file_upload" name="file_upload" type="file" multiple="false" />
-        <img id="imgAvatar" src="" width="100px" height="100px"><label>头像</label><input type="text" id="txtAvatar" runat="server" style="" />
+        <img id="imgAvatar" runat="server" src="" width="100" height="100"><label>头像</label><input type="text" style="display:none" id="txtAvatar" runat="server"/>
     </li>
     <li><label>简介</label><input name="" runat="server" id="txtSignature" type="text" class="dfinput" value="" /></li>
     <li><label>运动项目</label><select id="selSoports" runat="server" class="dfinput">         <option>--请选择-- </option>     </select></li>
-    <li><label>区域</label><asp:CheckBoxList ID="CheckBoxList1" runat="server" 
+    <li><label>区域</label><asp:CheckBoxList ID="chkRegion" runat="server" 
             RepeatColumns="5" RepeatDirection="Horizontal" Width="276px">
         </asp:CheckBoxList>
         </li>
-    <li><label>年龄</label><input name="" type="text" class="dfinput" /></li>
-    <li><label>电话</label><input name="" type="text" class="dfinput" /></li>
-    <li><label>微信</label><input name="" type="text" class="dfinput" /></li>
+    <li><label>年龄</label><input id="txtAge" runat="server" type="text" class="dfinput" /></li>
+    <li><label>电话</label><input id="txtTel" runat="server" type="text" class="dfinput" /></li>
+    <li><label>微信</label><input id="txtWeiXin" runat="server" type="text" class="dfinput" /></li>
+    <li><label>服务期</label>
+        <select class="dfinput" runat="server" id="selTimes">             <option value="0">--请选择-- </option>             <option value="1">1个月</option>             <option value="2">2个月</option>             <option value="3">3个月</option>             <option value="4">4个月</option>             <option value="5">5个月</option>             <option value="6">6个月</option>             <option value="7">7个月</option>             <option value="8">8个月</option>             <option value="9">9个月</option>             <option value="10">10个月</option>             <option value="11">11个月</option>             <option value="12">12个月</option>         </select>
+    </li>
     <li><label>详细信息</label>
-    <textarea rows="5" style="border-top:solid 1px #a7b5bc; border-left:solid 1px #a7b5bc; border-right:solid 1px #ced9df; border-bottom:solid 1px #ced9df; background:url(../images/inputbg.gif) repeat-x; line-height:20px; overflow:hidden;width:80%">
+    <textarea rows="5" id="txtinfo" runat="server" style="border-top:solid 1px #a7b5bc; border-left:solid 1px #a7b5bc; border-right:solid 1px #ced9df; border-bottom:solid 1px #ced9df; background:url(../images/inputbg.gif) repeat-x; line-height:20px; overflow:hidden;width:80%">
     </textarea></li>
     <li>
     <div id="queue1"></div>
 		<input id="file_upload1" name="file_upload1" type="file" multiple="false" />
-        <label>个人相册</label><input id="txtCoachPhoto" value="0" type="text" runat="server" />
+        <label>个人相册</label><input id="txtCoachPhoto" value="0" type="text" style="display:none" runat="server" />
+        <label><asp:Button runat="server" CssClass="btn" ID="btnClear" Text="清空相册" 
+            onclick="btnClear_Click" /></label><input id="Text1" value="0" type="text" style="display:none" runat="server" />
     </li>
     <li><label></label><asp:Button ID="btnSave" runat="server" Text="保存" CssClass="btn" 
             onclick="btnSave_Click" /></li>
     </ul>
     </div>
-    
     <script>
         $(function () {
             var id = $("#txtcoachid").val();

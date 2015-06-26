@@ -30,7 +30,7 @@ namespace WebAPP.Adm
             }
 
             SqlParameter[] splist = new SqlParameter[]{
-                new SqlParameter("@TableName","T_Coachs"),
+                new SqlParameter("@TableName","V_Coachs"),
                 new SqlParameter("@ReFieldsStr","*"),
                 new SqlParameter("@OrderString","ID desc"),
                 new SqlParameter("@WhereString",strWhere),
