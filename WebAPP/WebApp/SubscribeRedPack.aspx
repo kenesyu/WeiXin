@@ -11,7 +11,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>关注有礼</title>
+    <title>感谢关注</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
                               </div>
 
                               <ul class="nav nav-pills nav-stacked">
-                                  <li><a href="javascript:;"><asp:Label ID="lblmessage" runat="server"></asp:Label></li>
+                                  <li><a href="javascript:;"><asp:Label ID="lblmessage" runat="server" Text = "感谢您的关注，本次活动已经结束，小伙伴们不要气馁，敬请期待近期其它活动内容。"></asp:Label></li>
                               </ul>
 
                           </section>

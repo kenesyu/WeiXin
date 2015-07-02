@@ -421,67 +421,28 @@ namespace WeixinMpSdkTestWeb
             //这里回应1条文本消息，当然您也可以回应其他消息
             Logger.WriteTxtLog("关注开始");
 
-            //MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + ConfigurationManager.AppSettings["AppID"].ToString() + "&redirect_uri=http://dede.dlyssoft.com/userauth/userauth.aspx&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect\">大连地区用户领取现金红包</a> ");
-            MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"" + ConfigurationManager.AppSettings["Host"].ToString() + "/webapp/SubscribeRedPack.aspx\">点此领取现金红包</a>");
-            
-            
-            #region SendRedPack
-            //Logger.WriteTxtLog("SendRedPack");
-            //if (msg.ToUserName == "ovTALuEgDT2sxXOcGwJ_rBgipgtY" || msg.FromUserName == "ovTALuEgDT2sxXOcGwJ_rBgipgtY")
-            //{
-            //    SendRedBack(msg.FromUserName);
-            //}
-            #endregion
-            return true;
-        }
-
-        public void SendRedBack(string openId)
-        {
-            Logger.WriteTxtLog("SendRedPack 进来了");
-
-            DataBaseHelper dbhelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
-            int count = Convert.ToInt32(dbhelper.ExecuteDataTable("select count(*) from T_RedPack where openid = '" + openId + "' and RedBackName = '关注'").Rows[0][0].ToString());
-            Logger.WriteTxtLog("sql:" + "select count(*) from T_RedPack where openid = '" + openId + "' and RedBackName = '关注'");
-            Logger.WriteTxtLog("count:" + count);
-            Logger.WriteTxtLog("openId:" + openId);
-            if (count == 0)
+            List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+            NewsReplyMessageItem itm = new NewsReplyMessageItem()
             {
-                Logger.WriteTxtLog("发红包");
-                WeiXin.Models.PayWeiXin model = new WeiXin.Models.PayWeiXin();
-                PayForWeiXinHelp PayHelp = new PayForWeiXinHelp();
-                string result = string.Empty;
-                //传入OpenId
-                //string openId = "ovTALuEgDT2sxXOcGwJ_rBgipgtY";//Request.Form["openId"].ToString();
-                //传入红包金额(单位分)
-                //string amount = "100";//Request.Form["amount"] == null ? "" : Request.Form["amount"].ToString();
-                //接叐收红包的用户 用户在wxappid下的openid 
-                model.re_openid = openId;//"oFIYdszuDXVqVCtwZ-yIcbIS262k";
-                //付款金额，单位分 
-                model.total_amount = int.Parse("100");
-                //最小红包金额，单位分 
-                model.min_value = int.Parse("100");
-                //最大红包金额，单位分 
-                model.max_value = int.Parse("100");
-                //调用方法
-                string postData = PayHelp.DoDataForPayWeiXin(model);
-                try
-                {
-                    result = PayHelp.PayForWeiXin(postData);
-                }
-                catch (Exception ex)
-                {
-                    Logger.WriteTxtLog(ex.Message);
-                }
-                XmlDocument doc = new XmlDocument();
-                doc.LoadXml(result);
-                string jsonResult = JsonConvert.SerializeXmlNode(doc);
-                //Response.ContentType = "application/json";
-                Logger.WriteTxtLog(jsonResult);
+                Description = "大连市体育协会",
+                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206365005&idx=1&sn=c64543336b24fa0aa8bc52a617771fc1#rd",
+                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAMYibVehCGRpts2FjvdcficmYgrt50d3WHuTXv9P4yJp7Q2SY91FicLIUbaR1L1HqnhTAbQx2nyhAIQ/0?wx_fmt=jpeg",
+                Title = "尊敬的用户您好，感谢您关注“大连运动健身网”微信公众平台，我们将竭诚为您服务。"
+            };
 
-                dbhelper.ExecuteNonQuery("insert into T_RedPack (OpenID,CreateTime,Amount,RedBackName) values ('" + openId + "',GETDATE(),100,'关注')");
-                Logger.WriteTxtLog("完成");
-            }
-            dbhelper.Dispose();
+            NewsReplyMessage replyMsg = new NewsReplyMessage()
+            {
+                CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
+                FromUserName = msg.ToUserName,
+                ToUserName = msg.FromUserName,
+                Articles = items
+            };
+
+            items.Add(itm);
+            MessageHandler.SendReplyMessage(replyMsg);
+
+            //MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"" + ConfigurationManager.AppSettings["Host"].ToString() + "/webapp/SubscribeRedPack.aspx\">点此领取现金红包</a>");
+            return true;
         }
 
         /// 

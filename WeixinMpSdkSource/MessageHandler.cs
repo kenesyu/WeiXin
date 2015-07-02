@@ -443,6 +443,7 @@ namespace Weixin.Mp.Sdk
         /// <returns>是否成功</returns>
         public static void SendReplyMessage(ReplyMessage msg)
         {
+            Logger.WriteTxtLog(msg.ToXmlString());
             System.Web.HttpContext.Current.Response.Write(msg.ToXmlString());
         }
 
