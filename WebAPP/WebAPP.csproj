@@ -1910,6 +1910,7 @@
     <Content Include="img\gymLogo\10.jpg" />
     <Content Include="img\left-arrow.png" />
     <Content Include="img\lock-bg.jpg" />
+    <Content Include="img\logo.jpg" />
     <Content Include="img\mail-avatar.jpg" />
     <Content Include="img\mask-square.png" />
     <Content Include="img\mask.png" />
@@ -1988,7 +1989,14 @@
     <Content Include="ScriptsLib\CustomerServices.js" />
     <Content Include="ScriptsLib\WxPayService.js" />
     <Content Include="WebApp\coach_list.aspx" />
+    <Content Include="WebApp\files\icon_loading_white22c04a.gif" />
+    <Content Include="WebApp\files\moon264d72.js" />
+    <Content Include="WebApp\files\not_in_mm2637ae.css" />
+    <Content Include="WebApp\files\page_mp_article_improve265a3c.css" />
+    <Content Include="WebApp\files\page_mp_article_improve_combo26590f.css" />
+    <Content Include="WebApp\files\version4video26eb5e.js" />
     <Content Include="WebApp\gym_details.aspx" />
+    <Content Include="WebApp\hd.aspx" />
     <Content Include="WebApp\Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="UserAuth\UserAuth.aspx" />
@@ -2119,6 +2127,13 @@
     </Compile>
     <Compile Include="WebApp\gym_list.aspx.designer.cs">
       <DependentUpon>gym_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\hd.aspx.cs">
+      <DependentUpon>hd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\hd.aspx.designer.cs">
+      <DependentUpon>hd.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebApp\list.aspx.cs">
       <DependentUpon>list.aspx</DependentUpon>
@@ -2442,6 +2457,10 @@
     <None Include="img\file-search\.DS_Store" />
     <None Include="img\gallery\.DS_Store" />
     <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
+    <None Include="WebApp\files\640" />
+    <None Include="WebApp\files\640%281%29" />
+    <None Include="WebApp\files\640%282%29" />
+    <None Include="WebApp\files\qrcode" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataBaseHelper\DBHelper.csproj">
