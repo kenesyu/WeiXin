@@ -245,7 +245,7 @@ namespace WeixinMpSdkTestWeb
             #endregion
 
             //发送1条图文信息测试看
-            List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+            //List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
 
             //NewsReplyMessageItem itm = new NewsReplyMessageItem()
             //{
@@ -424,9 +424,9 @@ namespace WeixinMpSdkTestWeb
             List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
             NewsReplyMessageItem itm = new NewsReplyMessageItem()
             {
-                Description = "大连市体育协会",
+                Description = "",
                 Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206365005&idx=1&sn=c64543336b24fa0aa8bc52a617771fc1#rd",
-                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAMYibVehCGRpts2FjvdcficmYgrt50d3WHuTXv9P4yJp7Q2SY91FicLIUbaR1L1HqnhTAbQx2nyhAIQ/0?wx_fmt=jpeg",
+                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrC4sPfXLziawXuG8fqVMUkfShUyvXUicCqlxkukYdAUuQUicIoyfcQwsMvZuuBVgWPBCBSRu0BviapUTQ/0?wx_fmt=jpeg",
                 Title = "尊敬的用户您好，感谢您关注“大连运动健身网”微信公众平台，我们将竭诚为您服务。"
             };
 
@@ -517,10 +517,10 @@ namespace WeixinMpSdkTestWeb
                 List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
                 NewsReplyMessageItem itm = new NewsReplyMessageItem()
                 {
-                    Description = "大连市体育协会",
-                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd",
-                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAL7HQspXmSM4RamsgfYSh2eEKQjqicICdt9pwcfY41RCptzXrJLA0KE9DFbg3N8aU4DpGN4NecE1Q/0?wx_fmt=jpeg",
-                    Title = "大连市体育协会"
+                    Description = "周末时光去哪里，戳我告诉你。",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206893190&idx=1&sn=5f715ed72750cde75871d4cf15c78ac6#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrB6QSl5een9lAOQGyvSc49VIFLOfhztJBlFXicibuQyOzYJER9S6aj7UyQO3LdhxeWGN8DG7sv1QLUQ/0?wx_fmt=jpeg",
+                    Title = "嘘，这是一份神秘的邀请函"
                 };
 
                 NewsReplyMessage replyMsg = new NewsReplyMessage()
@@ -535,6 +535,37 @@ namespace WeixinMpSdkTestWeb
                 MessageHandler.SendReplyMessage(replyMsg);
             }
             else if (key == "subkey3")
+            {
+                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+
+                NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                {
+                    //Description = "汽车描述1",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206871537&idx=1&sn=4c811e2c760abc09bca2bf928b01306c#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrBOtXcdqJjgVNAM1JI9qjTwaH7AN5j1BLoQVkAZWgoGG5XfTnjb3gmSy7AYw4yPL9HuA1XwkMia6sA/0?wx_fmt=jpeg",
+                    Title = "大连运动健身网活动集锦"
+                };
+                items.Add(itm);
+
+                itm = new NewsReplyMessageItem()
+                {
+                    //Description = "汽车描述2",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206871537&idx=2&sn=00a0fa8d8764092b98109aa4ff00a2c8#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrBOtXcdqJjgVNAM1JI9qjTwNCA2rm0LTwtvWAHib6JwZH3OWklqGiaJCkvU0W5k1gnCJrEOpvw0ORyg/0?wx_fmt=jpeg",
+                    Title = "7月第一期，运动趴首秀"
+                };
+                items.Add(itm);
+
+                NewsReplyMessage replyMsg = new NewsReplyMessage()
+                {
+                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
+                    FromUserName = msg.ToUserName,
+                    ToUserName = msg.FromUserName,
+                    Articles = items
+                };
+                MessageHandler.SendReplyMessage(replyMsg);
+            }
+            else if (key == "subkey4")
             {
                 List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
                 NewsReplyMessageItem itm = new NewsReplyMessageItem()
@@ -556,6 +587,30 @@ namespace WeixinMpSdkTestWeb
                 items.Add(itm);
                 MessageHandler.SendReplyMessage(replyMsg);
             }
+            else if (key == "subkey5")
+            {
+                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+                NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                {
+                    Description = "不够牛，不够叼，不够美，不够精，就别戳我了！！！",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206902104&idx=1&sn=e98881bad586e5424d2a6dc8a1c32b5d#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrA5FLVbicZfg9bQMbJ7K6PUtenNWFuxtUmP0N6RiaWgJpu3IYKxr2Ka56PjFUDSLpTa95rPmpY7wOWQ/0?wx_fmt=jpeg",
+                    Title = "非牛人，不要点"
+                };
+
+                NewsReplyMessage replyMsg = new NewsReplyMessage()
+                {
+                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
+                    FromUserName = msg.ToUserName,
+                    ToUserName = msg.FromUserName,
+                    Articles = items
+                };
+
+                items.Add(itm);
+                MessageHandler.SendReplyMessage(replyMsg);
+            }
+
+
             return true;
         }
 

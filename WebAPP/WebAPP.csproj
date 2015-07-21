@@ -124,6 +124,7 @@
     <Content Include="Adm\editor\skins\tinymce.css" />
     <Content Include="Adm\editor\skins\tinymce.gif" />
     <Content Include="Adm\editor\skins\ul.gif" />
+    <Content Include="Adm\hd_bmlist.aspx" />
     <Content Include="Adm\hd_list.htm" />
     <Content Include="Adm\hd_shangbao.htm" />
     <Content Include="Adm\hd_shenpi.htm" />
@@ -1997,6 +1998,7 @@
     <Content Include="WebApp\files\version4video26eb5e.js" />
     <Content Include="WebApp\gym_details.aspx" />
     <Content Include="WebApp\hd.aspx" />
+    <Content Include="WebApp\HDBM.aspx" />
     <Content Include="WebApp\Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="UserAuth\UserAuth.aspx" />
@@ -2019,8 +2021,16 @@
     <Content Include="WebApp\WXPay\SendRedPack.aspx" />
     <Content Include="WebApp\WXPay\SendTempMessage.aspx" />
     <Content Include="WebApp\WXPay\WeiPay.aspx" />
+    <Content Include="WebApp\WXPay\WeiPayHD.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adm\hd_bmlist.aspx.cs">
+      <DependentUpon>hd_bmlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\hd_bmlist.aspx.designer.cs">
+      <DependentUpon>hd_bmlist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adm\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2135,6 +2145,13 @@
     <Compile Include="WebApp\hd.aspx.designer.cs">
       <DependentUpon>hd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebApp\HDBM.aspx.cs">
+      <DependentUpon>HDBM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\HDBM.aspx.designer.cs">
+      <DependentUpon>HDBM.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebApp\list.aspx.cs">
       <DependentUpon>list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2190,6 +2207,13 @@
     </Compile>
     <Compile Include="WebApp\WXPay\WeiPay.aspx.designer.cs">
       <DependentUpon>WeiPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\WXPay\WeiPayHD.aspx.cs">
+      <DependentUpon>WeiPayHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\WXPay\WeiPayHD.aspx.designer.cs">
+      <DependentUpon>WeiPayHD.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

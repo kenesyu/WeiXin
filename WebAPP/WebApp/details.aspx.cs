@@ -44,7 +44,7 @@ namespace WebAPP.WebApp
         {
             DataBaseHelper dbhelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
             DataTable dtInfo = dbhelper.ExecuteDataTable("select * from V_Coachs where id =" + ID);
-            DataTable dtPicList = dbhelper.ExecuteDataTable("select * from T_CoachPhoto where CoachID =" + ID);
+            DataTable dtPicList = dbhelper.ExecuteDataTable("select * from T_CoachPhoto where CoachID =" + ID + " order by id asc");
             this.repPicList.DataSource = dtPicList;
             this.repPicList.DataBind();
 

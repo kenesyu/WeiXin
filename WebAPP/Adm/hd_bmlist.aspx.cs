@@ -11,11 +11,12 @@ using System.Data;
 
 namespace WebAPP.Adm
 {
-    public partial class jl_list : System.Web.UI.Page
+    public partial class hd_bmlist : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) {
+            if (!IsPostBack)
+            {
                 BindData(1);
             }
         }
@@ -25,14 +26,15 @@ namespace WebAPP.Adm
             int PageSize = 10;
             DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
             string strWhere = string.Empty;
-            if (this.txtName.Value.Trim() != "") {
-                strWhere += " coachname = '" + this.txtName.Value.ToString() + "'";
-            }
+            //if (this.txtName.Value.Trim() != "")
+            //{
+            //    strWhere += " coachname = '" + this.txtName.Value.ToString() + "'";
+            //}
 
             SqlParameter[] splist = new SqlParameter[]{
-                new SqlParameter("@TableName","V_Coachs"),
+                new SqlParameter("@TableName","V_HDBMList"),
                 new SqlParameter("@ReFieldsStr","*"),
-                new SqlParameter("@OrderString","ID desc"),
+                new SqlParameter("@OrderString","ordid desc"),
                 new SqlParameter("@WhereString",strWhere),
                 new SqlParameter("@PageSize",PageSize),
                 new SqlParameter("@PageIndex",Page),
@@ -40,11 +42,13 @@ namespace WebAPP.Adm
             };
 
             splist[6].Direction = ParameterDirection.Output;
-            DataTable dt = dbHelper.ExecuteDataTable("dtList", "Proc_ShowList", splist,true);
+            DataTable dt = dbHelper.ExecuteDataTable("dtList", "Proc_ShowList", splist, true);
 
             this.repList.DataSource = dt;
             this.repList.DataBind();
+
             dbHelper.Dispose();
+
             this.AspNetPager1.RecordCount = Convert.ToInt32(splist[6].Value.ToString()); //(int)(dbHelper.ExecuteScalar("select count(*) from T_Coachs"));
             this.AspNetPager1.PageSize = PageSize;
         }
@@ -57,6 +61,27 @@ namespace WebAPP.Adm
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             BindData(1);
+        }
+
+        protected void btn1_Click(object sender, EventArgs e)
+        {
+            DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            dbHelper.ExecuteNonQuery("update T_HD set isopen = 0 where id =1");
+            dbHelper.Dispose();
+        }
+
+        protected void btn2_Click(object sender, EventArgs e)
+        {
+            DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            dbHelper.ExecuteNonQuery("update T_HD set isopen = 0 where id =2");
+            dbHelper.Dispose();
+        }
+
+        protected void btn3_Click(object sender, EventArgs e)
+        {
+            DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            dbHelper.ExecuteNonQuery("update T_HD set isopen = 0 where id =3");
+            dbHelper.Dispose();
         }
     }
 }

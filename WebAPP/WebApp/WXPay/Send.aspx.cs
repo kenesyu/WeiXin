@@ -31,7 +31,7 @@ namespace WeiPayWeb
         {
             if (!this.IsPostBack)
             {
-                this.txtBody.Text = "商品描述";
+                this.txtBody.Text = "高尔夫体验券";
                 this.txtOrderSN.Text = DateTime.Now.ToString("yyyyMMddHHmmss");
                 this.txtOther.Text = "test";
                 this.txtPrice.Text = "1";

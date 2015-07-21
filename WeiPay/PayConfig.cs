@@ -44,19 +44,19 @@ namespace WeiPay
         /// 支付起点页面地址，也就是send.aspx页面完整地址
         /// 用于获取用户OpenId，支付的时候必须有用户OpenId，如果已知可以不用设置
         /// </summary>
-        public static string SendUrl = "http://dede.dlyssoft.com/WebApp/WXPay/Send.aspx"; 
+        public static string SendUrl = "http://mp.dlydjsw.com/WebApp/WXPay/Send.aspx"; 
 
         /// <summary>
         /// 支付页面，请注意测试阶段设置授权目录，在微信公众平台中“微信支付”---“开发配置”--修改测试目录   
-        /// 注意目录的层次，比如我的：http://dede.dlyssoft.com/WXPay/
+        /// 注意目录的层次，比如我的：http://mp.dlydjsw.com/WXPay/
         /// </summary>
-        public static string PayUrl = "http://dede.dlyssoft.com/WebApp/WXPay/WeiPay.aspx"; 
+        public static string PayUrl = "http://mp.dlydjsw.com/WebApp/WXPay/WeiPay.aspx"; 
         
         /// <summary>
         ///  支付通知页面，请注意测试阶段设置授权目录，在微信公众平台中“微信支付”---“开发配置”--修改测试目录   
         /// 支付完成后的回调处理页面,替换成notify_url.asp所在路径
         /// </summary>
-        public static string NotifyUrl = "http://dede.dlyssoft.com/WebApp/WXPay/Notify.aspx"; 
+        public static string NotifyUrl = "http://mp.dlydjsw.com/WebApp/WXPay/Notify.aspx"; 
 
 
     }

@@ -46,7 +46,7 @@ namespace WeiXin
 
             string[] subkeyText1 = { "找教练"};
             string[] subkeyText2 = { "运动场", "协会"};
-            string[] subkeyText3 = { "找协会","关于我们","历史消息" };
+            string[] subkeyText3 = { "本期活动","往期活动","关于我们","招贤纳士" };
 
             #region ==== SubMenu 1 ====
             List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey1 = new List<Weixin.Mp.Sdk.Domain.Button>();
@@ -116,21 +116,6 @@ namespace WeiXin
             {
                 var clicktype = "click";
                 var clickurl = "http://";
-                
-                if (s == "关于我们")
-                {
-                    //clicktype = "view";
-                    //clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=202148672&idx=1&sn=0233ae5a7415fdbb93235f5fa1b18522#rd";
-                }
-                else if (s == "历史消息") {
-                    clicktype = "view";
-                    clickurl = "http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=MzA4Nzc0MTExNw==#wechat_webview_type=1&wechat_redirect";
-                }
-                else if (s == "找协会")
-                {
-                    //clicktype = "view";
-                    //clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd";
-                }
 
                 Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
                 {
