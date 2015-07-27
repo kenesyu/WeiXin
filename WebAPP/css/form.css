@@ -1,0 +1,59 @@
+.ui-btn {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 18px;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  text-decoration: none;
+  display: block;
+  color: #3388cc;
+  background: none;
+}
+.ui-btn:active {
+  box-shadow: 0 0 5px #3388cc;
+  background: #2DCCFF;
+  color: #ffffff;
+}
+/*竖直排列*/
+.ui-groupp-btn {
+  width: 100%;
+  hpeight: auto;
+  border: 1px solid #000000;
+  border-radius: 24px;
+  overflow: hidden ;
+}
+.ui-groupp-btn .ui-btn {
+  border: 1px solid #000000;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  border-bottom: 0;
+}
+.ui-btn:first-child {
+  border-top: 0 ;
+}
+/*水平排列*/
+.ui-group-btn {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  border-radius: 24px;
+  overflow: hidden ;
+}
+.ui-group-btn .ui-btn {
+  border: 1px solid #000000;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  border-bottom: 0;
+  float: left;
+  border-right: 1px solid #000000;
+  border-top: none;
+}
+.ui-btn:first-child {
+  border-top: 0 ;
+}
+/*清除浮动*/

@@ -1757,6 +1757,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\form.css" />
     <Content Include="css\gallery.css" />
     <Content Include="css\image-crop.css" />
     <Content Include="css\navbar-fixed-top.css" />
@@ -2020,6 +2021,7 @@
     <Content Include="WebApp\SubscribeRedPack.aspx" />
     <Content Include="WebApp\test.aspx" />
     <Content Include="WebApp\WXPay\Notify.aspx" />
+    <Content Include="WebApp\WXPay\Products.aspx" />
     <Content Include="WebApp\WXPay\Send.aspx" />
     <Content Include="WebApp\WXPay\SendRedPack.aspx" />
     <Content Include="WebApp\WXPay\SendTempMessage.aspx" />
@@ -2196,6 +2198,13 @@
     </Compile>
     <Compile Include="WebApp\WXPay\Notify.aspx.designer.cs">
       <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\WXPay\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\WXPay\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebApp\WXPay\Send.aspx.cs">
       <DependentUpon>Send.aspx</DependentUpon>
