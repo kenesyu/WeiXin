@@ -45,6 +45,7 @@
   <ItemGroup>
     <Reference Include="AspNetPager, Version=7.2.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllReference\AspNetPager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
@@ -124,6 +125,7 @@
     <Content Include="Adm\editor\skins\tinymce.css" />
     <Content Include="Adm\editor\skins\tinymce.gif" />
     <Content Include="Adm\editor\skins\ul.gif" />
+    <Content Include="Adm\gzh_bqhd.aspx" />
     <Content Include="Adm\hd_bmlist.aspx" />
     <Content Include="Adm\hd_list.htm" />
     <Content Include="Adm\hd_shangbao.htm" />
@@ -2016,6 +2018,7 @@
     <Content Include="WebApp\list.aspx" />
     <Content Include="WebApp\Product.aspx" />
     <Content Include="WebApp\SubscribeRedPack.aspx" />
+    <Content Include="WebApp\test.aspx" />
     <Content Include="WebApp\WXPay\Notify.aspx" />
     <Content Include="WebApp\WXPay\Send.aspx" />
     <Content Include="WebApp\WXPay\SendRedPack.aspx" />
@@ -2024,6 +2027,13 @@
     <Content Include="WebApp\WXPay\WeiPayHD.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adm\gzh_bqhd.aspx.cs">
+      <DependentUpon>gzh_bqhd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\gzh_bqhd.aspx.designer.cs">
+      <DependentUpon>gzh_bqhd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adm\hd_bmlist.aspx.cs">
       <DependentUpon>hd_bmlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2172,6 +2182,13 @@
     </Compile>
     <Compile Include="WebApp\SubscribeRedPack.aspx.designer.cs">
       <DependentUpon>SubscribeRedPack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebApp\WXPay\Notify.aspx.cs">
       <DependentUpon>Notify.aspx</DependentUpon>

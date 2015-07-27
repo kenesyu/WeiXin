@@ -73,26 +73,26 @@ namespace WeiXin
         public void SendTextCustomMessageTest(string ToUser)
         {
 
-            IMpClient mpClient = new MpClient();
-            AccessTokenGetRequest request = new AccessTokenGetRequest()
-            {
-                AppIdInfo = new AppIdInfo() { AppID = ConfigurationManager.AppSettings["AppID"].ToString(), AppSecret = ConfigurationManager.AppSettings["AppSecret"].ToString() }
-            };
-            AccessTokenGetResponse response = mpClient.Execute(request);
-            if (response.IsError)
-            {
-                Console.WriteLine("获取令牌环失败..");
-                return;
-            }
-            var response2 = MessageHandler.SendTextCustomMessage(response.AccessToken.AccessToken, ToUser, "圣诞快乐！！");
-            if (response2.IsError)
-            {
-                Response.Write("发送失败");
-            }
-            else
-            {
-                Response.Write("发送成功");
-            }
+            //IMpClient mpClient = new MpClient();
+            //AccessTokenGetRequest request = new AccessTokenGetRequest()
+            //{
+            //    AppIdInfo = new AppIdInfo() { AppID = ConfigurationManager.AppSettings["AppID"].ToString(), AppSecret = ConfigurationManager.AppSettings["AppSecret"].ToString() }
+            //};
+            //AccessTokenGetResponse response = mpClient.Execute(request);
+            //if (response.IsError)
+            //{
+            //    Console.WriteLine("获取令牌环失败..");
+            //    return;
+            //}
+            //var response2 = MessageHandler.SendTextCustomMessage(response.AccessToken.AccessToken, ToUser, "圣诞快乐！！");
+            //if (response2.IsError)
+            //{
+            //    Response.Write("发送失败");
+            //}
+            //else
+            //{
+            //    Response.Write("发送成功");
+            //}
         }
     }
 }

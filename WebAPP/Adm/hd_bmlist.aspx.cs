@@ -17,7 +17,15 @@ namespace WebAPP.Adm
         {
             if (!IsPostBack)
             {
-                BindData(1);
+                if (Session["Login"] == null || Session["Login"].ToString() == "")
+                {
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+
+                    BindData(1);
+                }
             }
         }
 

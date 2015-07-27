@@ -16,6 +16,10 @@ namespace WebAPP.Adm
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
+                if (Session["Login"] == null || Session["Login"].ToString() == "")
+                {
+                    Response.Redirect("Login.aspx");
+                }
                 BindData(1);
             }
         }

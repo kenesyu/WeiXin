@@ -18,6 +18,7 @@ using WeiXin.Helper;
 using DBHelper;
 using System.Xml;
 using Newtonsoft.Json;
+using System.Data;
 
 namespace WeiXin
 {
@@ -514,14 +515,32 @@ namespace WeixinMpSdkTestWeb
             }
             else if (key == "subkey2")
             {
+                //本期活动
+
+                DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+                DataTable dt = dbHelper.ExecuteDataTable("select * from T_HD_Current order by IndexOrder");
                 List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
-                NewsReplyMessageItem itm = new NewsReplyMessageItem()
-                {
-                    Description = "周末时光去哪里，戳我告诉你。",
-                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206893190&idx=1&sn=5f715ed72750cde75871d4cf15c78ac6#rd",
-                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrB6QSl5een9lAOQGyvSc49VIFLOfhztJBlFXicibuQyOzYJER9S6aj7UyQO3LdhxeWGN8DG7sv1QLUQ/0?wx_fmt=jpeg",
-                    Title = "嘘，这是一份神秘的邀请函"
-                };
+
+                for (int i = 0; i < dt.Rows.Count; i++) {
+                    NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                    {
+                        Description = dt.Rows[i]["Descriptions"].ToString(),
+                        Url = dt.Rows[i]["Url"].ToString(),
+                        PicUrl = dt.Rows[i]["PicUrl"].ToString(),
+                        Title = dt.Rows[i]["Title"].ToString()
+                    };
+                    items.Add(itm);
+                }
+                dbHelper.Dispose();
+
+                //List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+                //NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                //{
+                //    Description = "入伏一过，三伏天步步逼近，如此高温，周末你是不是宅在家里，然后“健康”就跟隔壁老王出去玩了？",
+                //    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206932752&idx=1&sn=c019a07e4b792a89ca9db52eab1ef4a9#rd",
+                //    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAsbcaeV5xXxOQfoF7NoQrxgMwg3Wm7nIQKxB5f8cb4bZIrm0paahuP3wpibhJ72MiaI04clgttd9gA/0?wx_fmt=jpeg",
+                //    Title = "再宅，你的健康就跟人跑了"
+                //};
 
                 NewsReplyMessage replyMsg = new NewsReplyMessage()
                 {
@@ -531,7 +550,7 @@ namespace WeixinMpSdkTestWeb
                     Articles = items
                 };
 
-                items.Add(itm);
+                //items.Add(itm);
                 MessageHandler.SendReplyMessage(replyMsg);
             }
             else if (key == "subkey3")
@@ -541,9 +560,19 @@ namespace WeixinMpSdkTestWeb
                 NewsReplyMessageItem itm = new NewsReplyMessageItem()
                 {
                     //Description = "汽车描述1",
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206962114&idx=1&sn=04f6542cc971ebb39b5c2910a6a2b3b2#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAasic0wM17lCN7kKDBoVorst3MlJx9z54vcz9IjunJbozXJDmr0Vs5AerWfggosKpLakkhlYkhOzQ/0?wx_fmt=jpeg",
+                    Title = "妹子没了。7月第三期活动回顾"
+                };
+                items.Add(itm);
+
+
+                itm = new NewsReplyMessageItem()
+                {
+                    //Description = "汽车描述1",
                     Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206871537&idx=1&sn=4c811e2c760abc09bca2bf928b01306c#rd",
                     PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrBOtXcdqJjgVNAM1JI9qjTwaH7AN5j1BLoQVkAZWgoGG5XfTnjb3gmSy7AYw4yPL9HuA1XwkMia6sA/0?wx_fmt=jpeg",
-                    Title = "大连运动健身网活动集锦"
+                    Title = "盛夏光年。7月第二期活动回顾"
                 };
                 items.Add(itm);
 
@@ -552,7 +581,7 @@ namespace WeixinMpSdkTestWeb
                     //Description = "汽车描述2",
                     Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206871537&idx=2&sn=00a0fa8d8764092b98109aa4ff00a2c8#rd",
                     PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrBOtXcdqJjgVNAM1JI9qjTwNCA2rm0LTwtvWAHib6JwZH3OWklqGiaJCkvU0W5k1gnCJrEOpvw0ORyg/0?wx_fmt=jpeg",
-                    Title = "7月第一期，运动趴首秀"
+                    Title = "本趴首秀。7月第一期活动回顾"
                 };
                 items.Add(itm);
 

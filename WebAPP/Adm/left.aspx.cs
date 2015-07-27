@@ -11,7 +11,10 @@ namespace WebAPP.Adm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Login"] == null || Session["Login"].ToString() == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }
