@@ -1,0 +1,55 @@
+﻿2015/7/28 星期二 11:47:55     ============ 单次支付开始 ===============
+
+2015/7/28 星期二 11:47:55     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2015/7/28 星期二 11:47:55     WeiPay 页面  sign：780A6B9B83473BB46B2ADE17C428F3F7
+
+2015/7/28 星期二 11:48:38     ============ 单次支付开始 ===============
+
+2015/7/28 星期二 11:48:39     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2015/7/28 星期二 11:48:56     WeiPay 页面  sign：8EE51A197994EBE9033D509EE7B7A385
+
+2015/7/28 星期二 11:49:47     ============ 单次支付开始 ===============
+
+2015/7/28 星期二 11:49:47     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2015/7/28 星期二 11:49:47     WeiPay 页面  sign：479154AFDF57A6499EAD1040D73B5BB3
+
+2015/7/28 星期二 11:50:39     ============ 单次支付开始 ===============
+
+2015/7/28 星期二 11:50:39     传递支付参数：OrderSN=20150728114115、Body=滑冰、TotalFee=49、Attach=No、UserOpenId=ovTALuEgDT2sxXOcGwJ_rBgipgtY
+
+2015/7/28 星期二 11:50:55     WeiPay 页面  sign：12129F4EF1E42C747C7D837B4C1F9B79
+
+2015/7/28 星期二 11:50:58     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip><notify_url><![CDATA[http://mp.dlydjsw.com/WebApp/WXPay/Notify.aspx]]></notify_url><body><![CDATA[滑冰]]></body><appid><![CDATA[wxa3696600232dd38d]]></appid><attach><![CDATA[No]]></attach><total_fee><![CDATA[49]]></total_fee><nonce_str><![CDATA[c75b6f114c23a4d7ea11331e7c00e73c]]></nonce_str><out_trade_no><![CDATA[20150728114115]]></out_trade_no><openid><![CDATA[ovTALuEgDT2sxXOcGwJ_rBgipgtY]]></openid><mch_id><![CDATA[1227576402]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[12129F4EF1E42C747C7D837B4C1F9B79]]></sign></xml>
+
+2015/7/28 星期二 11:51:05     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa3696600232dd38d]]></appid>
+<mch_id><![CDATA[1227576402]]></mch_id>
+<nonce_str><![CDATA[a6ns5xWZYDgN0dSw]]></nonce_str>
+<sign><![CDATA[0F7F3F620C5C29B75911F55255E476AA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201507281149091062f365e60057682465]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015/7/28 星期二 11:51:12     WeiPay 页面  package：prepay_id=wx201507281149091062f365e60057682465
+
+2015/7/28 星期二 11:51:20     WeiPay 页面  paySign：C6B647F5D6E65BFFCDABF8567DC418BA
+
+2015/7/28 星期二 12:11:53     ============ 单次支付开始 ===============
+
+2015/7/28 星期二 12:11:53     传递支付参数：OrderSN=20150728120834、Body=高尔夫体验券、TotalFee=1、Attach=test、UserOpenId=
+
+2015/7/28 星期二 12:11:53     WeiPay 页面  sign：B27092A5F789265B306A0183F94785BA
+
+2015/7/28 星期二 12:11:53     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip><notify_url><![CDATA[http://mp.dlydjsw.com/WebApp/WXPay/Notify.aspx]]></notify_url><body><![CDATA[高尔夫体验券]]></body><appid><![CDATA[wxa3696600232dd38d]]></appid><attach><![CDATA[test]]></attach><total_fee>1</total_fee><nonce_str><![CDATA[1651cf0d2f737d7adeab84d339dbabd3]]></nonce_str><out_trade_no><![CDATA[20150728120834]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1227576402]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[B27092A5F789265B306A0183F94785BA]]></sign></xml>
+
+2015/7/28 星期二 12:11:53     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[JSAPI支付必须传openid]]></return_msg>
+</xml>
+
+2015/7/28 星期二 12:11:53     WeiPay 页面  paySign：8B8696DEE49D18AD7F79EF570E62452D
+

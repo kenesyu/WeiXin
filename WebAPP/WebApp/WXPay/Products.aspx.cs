@@ -35,6 +35,7 @@ namespace WebAPP.WebApp.WXPay
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
+                GetUserOpenId();
                 BindData();
             }
         }
@@ -51,83 +52,10 @@ namespace WebAPP.WebApp.WXPay
                     this.lblDetails.Text = dt.Rows[0]["Details"].ToString();
                     this.TotalFee = (Convert.ToDecimal(dt.Rows[0]["ProductPrice"]) * 100).ToString();
                     dbHelper.Dispose();
-
-
-                    GetUserOpenId();
-                    LogUtil.WriteLog("============ 单次支付开始 ===============");
-                    LogUtil.WriteLog(string.Format("传递支付参数：OrderSN={0}、Body={1}、TotalFee={2}、Attach={3}、UserOpenId={4}",
-                    this.OrderSN, this.Body, this.TotalFee, this.Attach, this.UserOpenId));
-
-
-                    #region 支付操作============================
-
-
-                    #region 基本参数===========================
-                    //时间戳 
-                    TimeStamp = TenpayUtil.getTimestamp();
-                    //随机字符串 
-                    NonceStr = TenpayUtil.getNoncestr();
-
-                    //创建支付应答对象
-                    var packageReqHandler = new RequestHandler(Context);
-                    //初始化
-                    packageReqHandler.init();
-
-                    //设置package订单参数  具体参数列表请参考官方pdf文档，请勿随意设置
-                    packageReqHandler.setParameter("body", this.Body); //商品信息 127字符
-                    packageReqHandler.setParameter("appid", PayConfig.AppId);
-                    packageReqHandler.setParameter("mch_id", PayConfig.MchId);
-                    packageReqHandler.setParameter("nonce_str", NonceStr.ToLower());
-                    packageReqHandler.setParameter("notify_url", PayConfig.NotifyUrl);
-                    packageReqHandler.setParameter("openid", this.UserOpenId);
-                    packageReqHandler.setParameter("out_trade_no", this.OrderSN); //商家订单号
-                    packageReqHandler.setParameter("spbill_create_ip", Page.Request.UserHostAddress); //用户的公网ip，不是商户服务器IP
-                    packageReqHandler.setParameter("total_fee", this.TotalFee); //商品金额,以分为单位(money * 100).ToString()
-                    packageReqHandler.setParameter("trade_type", "JSAPI");
-                    if (!string.IsNullOrEmpty(this.Attach))
-                        packageReqHandler.setParameter("attach", "test");//自定义参数 127字符
-
-                    #endregion
-
-                    #region sign===============================
-                    Sign = packageReqHandler.CreateMd5Sign("key", PayConfig.AppKey);
-                    LogUtil.WriteLog("WeiPay 页面  sign：" + Sign);
-                    #endregion
-
-                    #region 获取package包======================
-                    packageReqHandler.setParameter("sign", Sign);
-
-                    string data = packageReqHandler.parseXML();
-                    LogUtil.WriteLog("WeiPay 页面  package（XML）：" + data);
-
-                    string prepayXml = HttpUtil.Send(data, "https://api.mch.weixin.qq.com/pay/unifiedorder");
-                    LogUtil.WriteLog("WeiPay 页面  package（Back_XML）：" + prepayXml);
-
-                    //获取预支付ID
-                    var xdoc = new XmlDocument();
-                    xdoc.LoadXml(prepayXml);
-                    XmlNode xn = xdoc.SelectSingleNode("xml");
-                    XmlNodeList xnl = xn.ChildNodes;
-                    if (xnl.Count > 7)
-                    {
-                        PrepayId = xnl[7].InnerText;
-                        Package = string.Format("prepay_id={0}", PrepayId);
-                        LogUtil.WriteLog("WeiPay 页面  package：" + Package);
-                    }
-                    #endregion
-
-                    #region 设置支付参数 输出页面  该部分参数请勿随意修改 ==============
-                    var paySignReqHandler = new RequestHandler(Context);
-                    paySignReqHandler.setParameter("appId", PayConfig.AppId);
-                    paySignReqHandler.setParameter("timeStamp", TimeStamp);
-                    paySignReqHandler.setParameter("nonceStr", NonceStr);
-                    paySignReqHandler.setParameter("package", Package);
-                    paySignReqHandler.setParameter("signType", "MD5");
-                    PaySign = paySignReqHandler.CreateMd5Sign("key", PayConfig.AppKey);
-
-                    LogUtil.WriteLog("WeiPay 页面  paySign：" + PaySign);
-                    #endregion
-                    #endregion
+                    this.OrderSN = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    this.Body = dt.Rows[0]["ProductName"].ToString();
+                    this.Attach = "No";
+                    this.txtid.Value = Request.QueryString["id"].ToString();
                 }
                 else
                 {
@@ -147,7 +75,7 @@ namespace WebAPP.WebApp.WXPay
             string code = Request.QueryString["code"];
             if (string.IsNullOrEmpty(code))
             {
-                string code_url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_base&state=lk#wechat_redirect", PayConfig.AppId, Request.Url.ToString());
+                string code_url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=snsapi_base&state=lk#wechat_redirect", PayConfig.AppId, string.Format(PayConfig.SendUrl, Request.QueryString["id"].ToString()));
                 Response.Redirect(code_url);
             }
             else
@@ -172,11 +100,26 @@ namespace WebAPP.WebApp.WXPay
                 returnStr = HttpUtil.Send("", url);
                 LogUtil.WriteLog("Send 页面  returnStr：" + returnStr);
 
-                this.UserOpenId = obj.openid;
+                this.txtOpenID.Value = obj.openid;
+
 
                 LogUtil.WriteLog(" ============ 结束 获取微信用户相关信息 =====================");
                 #endregion
             }
+        }
+
+        protected void BtnSave_Click(object sender, EventArgs e)
+        {
+            //设置支付数据
+            PayModel model = new PayModel();
+            model.OrderSN = this.OrderSN;
+            model.TotalFee = int.Parse(this.lblPrice.Text);
+            model.Body = this.lblProductName.Text;
+            model.Attach = this.txtid.Value; //不能有中午
+            model.OpenId = this.txtOpenID.Value;
+
+            //跳转到 WeiPay.aspx 页面，请设置函数中WeiPay.aspx的页面地址
+            this.Response.Redirect(model.ToString());
         }
     }
 }

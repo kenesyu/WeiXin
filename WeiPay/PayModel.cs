@@ -82,7 +82,7 @@ namespace WeiPay
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("WeiPay.aspx?");
+            sb.Append("ConfirmPay.aspx?");
             sb.AppendFormat("&OrderSN={0}", OrderSN);
             sb.AppendFormat("&Body={0}", Body);
             sb.AppendFormat("&TotalFee={0}", TotalFee);

@@ -2020,13 +2020,14 @@
     <Content Include="WebApp\Product.aspx" />
     <Content Include="WebApp\SubscribeRedPack.aspx" />
     <Content Include="WebApp\test.aspx" />
+    <Content Include="WebApp\WXPay\ConfirmPay.aspx" />
     <Content Include="WebApp\WXPay\Notify.aspx" />
     <Content Include="WebApp\WXPay\Products.aspx" />
     <Content Include="WebApp\WXPay\Send.aspx" />
     <Content Include="WebApp\WXPay\SendRedPack.aspx" />
     <Content Include="WebApp\WXPay\SendTempMessage.aspx" />
     <Content Include="WebApp\WXPay\WeiPay.aspx" />
-    <Content Include="WebApp\WXPay\WeiPayHD.aspx" />
+    <Content Include="WebApp\WeiPayHD.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adm\gzh_bqhd.aspx.cs">
@@ -2192,6 +2193,13 @@
     <Compile Include="WebApp\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebApp\WXPay\ConfirmPay.aspx.cs">
+      <DependentUpon>ConfirmPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\WXPay\ConfirmPay.aspx.designer.cs">
+      <DependentUpon>ConfirmPay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebApp\WXPay\Notify.aspx.cs">
       <DependentUpon>Notify.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2234,11 +2242,11 @@
     <Compile Include="WebApp\WXPay\WeiPay.aspx.designer.cs">
       <DependentUpon>WeiPay.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebApp\WXPay\WeiPayHD.aspx.cs">
+    <Compile Include="WebApp\WeiPayHD.aspx.cs">
       <DependentUpon>WeiPayHD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebApp\WXPay\WeiPayHD.aspx.designer.cs">
+    <Compile Include="WebApp\WeiPayHD.aspx.designer.cs">
       <DependentUpon>WeiPayHD.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

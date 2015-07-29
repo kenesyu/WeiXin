@@ -8,6 +8,12 @@ using System.IO;
 using System.Text;
 using WeiXin.WexinAPI;
 using Weixin.Mp.Sdk;
+using Weixin.Mp.Sdk.Request;
+using System.Configuration;
+using Weixin.Mp.Sdk.Response;
+using Weixin.Mp.Sdk.Domain;
+using DBHelper;
+using System.Data.SqlClient;
 
 namespace WebAPP.BussinessService
 {
@@ -109,6 +115,43 @@ namespace WebAPP.BussinessService
 
             msg = "报名成功";
             return msg;
+        }
+
+        [WebMethod]
+        public string SentKey(string openid, string code,string productid)
+        {
+
+            DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            dbHelper.ExecuteNonQuery("insert into  T_Product_Pay (ProductID,openid,createTime,tradecode) values (@productid,@openid,GETDATE(),@code)", new SqlParameter[]{
+                new SqlParameter("@productid",productid),
+                new SqlParameter("@openid",openid),
+                new SqlParameter("@code",code)
+            });
+            dbHelper.Dispose();
+
+
+
+            IMpClient mpClient = new MpClient();
+            AccessTokenGetRequest request = new AccessTokenGetRequest()
+            {
+                AppIdInfo = new AppIdInfo() { AppID = ConfigurationManager.AppSettings["AppID"].ToString(), AppSecret = ConfigurationManager.AppSettings["AppSecret"].ToString() }
+            };
+            AccessTokenGetResponse response = mpClient.Execute(request);
+            if (response.IsError)
+            {
+                Console.WriteLine("获取令牌环失败..");
+                return "false";
+            }
+            var response2 = MessageHandler.SendTextCustomMessage(response.AccessToken.AccessToken, openid, "您好你的交易号为【" + code + "】,凭此交易码即可低值消费，如有疑问可联线在线客服或致电客服电话0411-82780807");
+            if (response2.IsError)
+            {
+                return "false";
+            }
+            else
+            {
+                return "true";
+            }
+        
         }
     }
 }
