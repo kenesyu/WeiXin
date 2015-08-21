@@ -34,7 +34,7 @@ namespace WebAPP.Adm
             DataTable dt = dbHelper.ExecuteDataTable("select * from T_HD_Current order by indexOrder");
             foreach (DataRow dr in dt.Rows)
             {
-               retHtml +="<tr>";
+               retHtml +="<tr isdata='true'>";
                retHtml +="    <td width=\"20%\"><input type=\"text\" class=\"dfinput\" style=\"width:95%\" value=\""+dr["Title"].ToString()+"\" /></td>";
                retHtml +="    <td width=\"20%\"><input type=\"text\" class=\"dfinput\" style=\"width:95%\" value=\""+dr["Descriptions"].ToString()+"\" /></td>";
                retHtml +="    <td width=\"20%\"><input type=\"text\" class=\"dfinput\" style=\"width:95%\" value=\""+dr["PicUrl"].ToString()+"\" /></td>";

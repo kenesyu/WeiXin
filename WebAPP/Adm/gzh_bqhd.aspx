@@ -7,6 +7,10 @@
 <title>无标题文档</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.js" ></script>
+<script src="../ScriptsLib/Core/IsTech_core.js" ></script>
+<script src="../ScriptsLib/Core/IsTech_form.js" ></script>
+<script src="js/jquery.js" ></script>
+<script src="../ScriptsLib/AdmServices.js?ver=20150821_2"></script>
 </head>
 <body>
 
@@ -38,7 +42,11 @@
         <%=retHtml%>
         </tbody>
     </table>
-    
+    <table class="tablelist">
+        <tr>
+            <td align="center"><input type="button" value="保存" onclick="AdmServices.SaveCurrentHD()" class="btn"></td>
+        </tr>
+    </table>
     </div>
 <script>
     function removetr(obj) {
@@ -52,7 +60,7 @@
     }
 
     function addtr() {
-        var temp = "<tr><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td><input type='text' class='dfinput' /></td><td><input type='button' class='btn' value='移除' onclick='removetr(this);' /></td></tr> ";
+        var temp = "<tr isdata='true'><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td><input type='text' class='dfinput' /></td><td><input type='button' class='btn' value='移除' onclick='removetr(this);' /></td></tr> ";
         $("#tbList").append(temp);
     }
 

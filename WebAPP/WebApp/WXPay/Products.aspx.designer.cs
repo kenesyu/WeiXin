@@ -13,13 +13,13 @@ namespace WebAPP.WebApp.WXPay {
     public partial class Products {
         
         /// <summary>
-        /// from1 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm from1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// lblProductName 控件。
@@ -67,12 +67,12 @@ namespace WebAPP.WebApp.WXPay {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtid;
         
         /// <summary>
-        /// BtnSave 控件。
+        /// Button1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSave;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

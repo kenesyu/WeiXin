@@ -1750,6 +1750,7 @@
     <Content Include="assets\xchart\xcharts.js" />
     <Content Include="assets\xchart\xcharts.min.css" />
     <Content Include="assets\xchart\xcharts.min.js" />
+    <Content Include="BussinessService\AdmService.asmx" />
     <Content Include="BussinessService\CustomerService.asmx" />
     <Content Include="BussinessService\WxPayService.asmx" />
     <Content Include="css\bootstrap-reset.css" />
@@ -1757,9 +1758,12 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font.css" />
     <Content Include="css\form.css" />
     <Content Include="css\gallery.css" />
+    <Content Include="css\grayscale.css" />
     <Content Include="css\image-crop.css" />
+    <Content Include="css\main.css" />
     <Content Include="css\navbar-fixed-top.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\owl.theme.css" />
@@ -1769,8 +1773,22 @@
     <Content Include="css\table-responsive.css" />
     <Content Include="css\tasks.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="font\demo.css" />
+    <Content Include="font\demo.html" />
+    <Content Include="font\iconfont.css" />
+    <Content Include="font\iconfont.svg" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\22.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="img\333.jpg" />
+    <Content Include="img\4.jpg" />
     <Content Include="img\404_icon.png" />
+    <Content Include="img\44.jpg" />
+    <Content Include="img\4444.jpg" />
     <Content Include="img\500_icon.png" />
+    <Content Include="img\55.jpg" />
+    <Content Include="img\87-100G0104F10.jpg" />
     <Content Include="img\arrow-up.png" />
     <Content Include="img\avatar-mini.jpg" />
     <Content Include="img\avatar-mini2.jpg" />
@@ -1803,6 +1821,7 @@
     <Content Include="img\avatar\7.jpg" />
     <Content Include="img\avatar\8.jpg" />
     <Content Include="img\avatar\9.jpg" />
+    <Content Include="img\black.png" />
     <Content Include="img\chart-texture.jpg" />
     <Content Include="img\chat-avatar.jpg" />
     <Content Include="img\chat-avatar2.jpg" />
@@ -1886,6 +1905,8 @@
     <Content Include="img\coachpic\8.jpg" />
     <Content Include="img\coachpic\9.jpg" />
     <Content Include="img\customSelect-arrow.gif" />
+    <Content Include="img\dlwqzx.jpg" />
+    <Content Include="img\downloads-bg.jpg" />
     <Content Include="img\file-search\ai.png" />
     <Content Include="img\file-search\doc.png" />
     <Content Include="img\file-search\email.png" />
@@ -1912,10 +1933,15 @@
     <Content Include="img\gallery\7.jpg" />
     <Content Include="img\gymLogo\1.jpg" />
     <Content Include="img\gymLogo\10.jpg" />
+    <Content Include="img\huodong.jpg" />
+    <Content Include="img\intro-bg.jpg" />
+    <Content Include="img\jianshen.jpg" />
     <Content Include="img\left-arrow.png" />
     <Content Include="img\lock-bg.jpg" />
     <Content Include="img\logo.jpg" />
+    <Content Include="img\logo.png" />
     <Content Include="img\mail-avatar.jpg" />
+    <Content Include="img\map-marker.png" />
     <Content Include="img\mask-square.png" />
     <Content Include="img\mask.png" />
     <Content Include="img\nav-expand.png" />
@@ -1936,10 +1962,16 @@
     <Content Include="img\right-arrow.png" />
     <Content Include="img\ring.jpg" />
     <Content Include="img\search-icon.jpg" />
+    <Content Include="img\shou.png" />
     <Content Include="img\sm-img-1.jpg" />
     <Content Include="img\sm-img-2.jpg" />
     <Content Include="img\sm-img-3.jpg" />
     <Content Include="img\vector-lab.jpg" />
+    <Content Include="img\wangqiu.jpg" />
+    <Content Include="img\www.png" />
+    <Content Include="img\youyong.jpg" />
+    <Content Include="img\zuqiu.jpg" />
+    <Content Include="index.html" />
     <Content Include="js\additional-methods.min.js" />
     <Content Include="js\advanced-form-components.js" />
     <Content Include="js\all-chartjs.js" />
@@ -1962,6 +1994,7 @@
     <Content Include="js\gritter.js" />
     <Content Include="js\hover-dropdown.js" />
     <Content Include="js\html5shiv.js" />
+    <Content Include="js\index.js" />
     <Content Include="js\jquery-1.8.3.min.js" />
     <Content Include="js\jquery-ui-1.9.2.custom.min.js" />
     <Content Include="js\jquery.cookie.js" />
@@ -1988,6 +2021,7 @@
     <Content Include="js\sparkline-chart.js" />
     <Content Include="js\tasks.js" />
     <Content Include="js\toucheffects.js" />
+    <Content Include="ScriptsLib\AdmServices.js" />
     <Content Include="ScriptsLib\Core\IsTech_core.js" />
     <Content Include="ScriptsLib\Core\IsTech_form.js" />
     <Content Include="ScriptsLib\CustomerServices.js" />
@@ -2092,6 +2126,10 @@
     </Compile>
     <Compile Include="Adm\top.aspx.designer.cs">
       <DependentUpon>top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BussinessService\AdmService.asmx.cs">
+      <DependentUpon>AdmService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BussinessService\CustomerService.asmx.cs">
       <DependentUpon>CustomerService.asmx</DependentUpon>
@@ -2258,7 +2296,6 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".DS_Store" />
     <None Include="assets\advanced-datatable\.DS_Store" />
     <None Include="assets\advanced-datatable\component.json" />
     <None Include="assets\advanced-datatable\docs\media\license\Syntax Highlighter" />
@@ -2511,6 +2548,9 @@
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="font\iconfont.eot" />
+    <None Include="font\iconfont.ttf" />
+    <None Include="font\iconfont.woff" />
     <None Include="img\.DS_Store" />
     <None Include="img\file-search\.DS_Store" />
     <None Include="img\gallery\.DS_Store" />

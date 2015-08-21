@@ -48,22 +48,34 @@
                     <table class="table">
 
                         <tbody>
-                        <tr>
-                            <td>订单号：</td>
-                            <td align="left"><asp:Label ID="lblOrderNo" runat="server"></asp:Label></td>
-                        </tr>
-                        <tr>
-                            <td>商品名称：</td>
-                            <td align="left"><asp:Label ID="lblProductName" runat="server"></asp:Label></td>
-                        </tr>
-                        <tr>
-                            <td>优惠价：</td>
-                            <td align="left"><asp:Label ID="lblPrice" runat="server"></asp:Label></td>
-                        </tr>
-                        <tr>
-                            <td>使用说明：</td>
-                            <td align="left"><asp:Label ID="lblDetails" runat="server"></asp:Label></td>
-                        </tr>
+
+                    <table class="table">
+
+                        <tbody>
+                        <div class="container">
+                            <div class="row col-lg-3 break-word font14">订单号：</div>
+                            <div class="row col-lg-6 border-bottom break-word"><asp:Label ID="lblOrderNo" runat="server"></asp:Label></div>
+                        </div>
+                        <div class="container">
+                            <div class="row col-lg-3 break-word font14">商品名称：</div>
+                            <div class="row col-lg-6 border-bottom break-word"><asp:Label ID="lblProductName" runat="server"></asp:Label></div>
+                        </div>
+                        <div class="container">
+                            <div class="row col-lg-3 break-word font14">支付金额：</div>
+                            <div class="row col-lg-6 border-bottom-none break-word"><span style="color: red"><asp:Label ID="lblPrice" runat="server"></asp:Label>元</span></div>
+                        </div>
+                        <div class="container">
+                            <div class="row col-lg-3 break-word font14">使用说明：</div>
+                            <div class="row col-lg-6 border-bottom-none break-word"><asp:Label ID="lblDetails" runat="server"></asp:Label></div>
+                        </div>
+                        <div class="container">
+                            <div class="row col-lg-3 break-word font14">姓名：</div>
+                            <div class="row col-lg-6 border-bottom-none break-word"><asp:TextBox runat="server" ID="txtName"></asp:TextBox></div>
+                        </div>
+                        <div class="container">
+                            <div class="row col-lg-3 break-word font14">电话：</div>
+                            <div class="row col-lg-6 border-bottom-none break-word"><asp:TextBox runat="server" ID="txtTel"></asp:TextBox></div>
+                        </div>
                         </tbody>
                     </table>
                 </section>
@@ -103,7 +115,7 @@
            }
 
            function SentCustomer() {
-               IsTechForm.Post("/BussinessService/CustomerService.asmx/SentKey", { openid: '<%=o %>', code: '<%=s %>', productid: '<%=p %>' }
+               IsTechForm.Post("/BussinessService/CustomerService.asmx/SentKey", { openid: '<%=o %>', code: '<%=s %>', productid: '<%=p %>', name: $("#txtName").val(), tel: $("#txtTel").val() }
                 , function (response) {
                     if ($("string", response).text() == "true") {
                         //var result = $("string", response).text();
