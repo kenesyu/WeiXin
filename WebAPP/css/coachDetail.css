@@ -1,0 +1,72 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style:none;border:0;}
+body{width:100%;margin:0 auto;font-family: "Microsoft YaHei"}
+
+/* main_image */
+.main_visual{overflow:hidden;position:relative;}
+.main_image{height:100%;overflow:hidden;position:relative;}
+.main_image ul{width:9999px;height:422px;overflow:hidden;position:absolute;top:0;left:0}
+.main_image li{float:left;width:100%;height:422px;}
+.main_image li span{display:block;width:100%;height:422px}
+.main_image li a{display:block;width:100%;height:422px}
+div.flicking_con{position:absolute;bottom:40px;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;}
+div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../img/btn_main_img.png') 0 0 no-repeat;display:block;text-indent:-1000px}
+div.flicking_con a.on{background-position:0 -21px}
+.coachName{
+    width: 100%;
+    height:40px;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,.8);
+}
+.coachNameL{
+    float: left;
+    margin-left: 10px;
+}
+.coachNameR{
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 50px;
+    float: right;
+}
+.coachNameR:after{
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+    margin-left: 5px;
+}
+.coachTel{
+    margin: 3px 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #121212;
+    background: #ececec;
+    overflow: hidden;
+}
+.coachTelL{
+    width: 70px;
+    float: left;
+}
+.coachTelLl{
+    width: 100px;
+    float: left;
+}
+.coachTelR{
+    float: left;
+}
+.coachTelbl{
+    width: 100%;
+}
+.coachTelb{
+    margin-top: 5px;
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+}

@@ -1,0 +1,65 @@
+.stadiumWheel{
+    width: 100%;
+    position: relative;
+}
+.stadiumWheel>img{
+    width: 100%;
+    height:100%;
+}
+.stadiumZe{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0,0,0,.5);
+    line-height: 40px;
+    padding: 0 10px;
+    color: white;
+    font-size: 16px;
+}
+/*hotStadiumListImg*/
+.hotStadiumList{
+    height: 60px!important;
+}
+.hotStadiumListImg{
+    width: 60px!important;
+    height:60px!important;
+}
+.bimg>img{
+    width: 100%;
+    height: 100%;
+}
+.hotStadiumListprise{
+    line-height: 40px!important;
+    margin-right: 20px;
+}
+.ff{
+    float: right!important;
+}
+.stadiumIntroduce{
+    background: white;
+    margin-top: 10px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 12px;
+    line-height: 18px;
+    color: #373737;
+    text-align: justify;
+}
+.introduceTitle{
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 20px;
+    color: #181818;
+    font-weight: 500;
+}
+.introduceContent{
+    padding: 5px 10px;
+}
+.bb{
+    border-bottom:1px solid #eeeeee ;
+}
+.introduceTitle:before{
+    margin-right: 10px;
+}

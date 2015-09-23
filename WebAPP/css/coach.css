@@ -1,0 +1,303 @@
+/*@import url('demo.css');*/
+/* General Demo Style */
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.coachTop{
+    padding:5px 0 0 0!important;
+    margin-left: 0!important;
+    margin-bottom: 10px;
+}
+
+.fleft {
+    float: left!important;
+    width: 49%;
+}
+.flefr {
+    float: right!important;
+    width: 49%;
+}
+
+
+
+/* Demo Buttons Style */
+.codrops-demos {
+    float: right;
+    padding-top: 10px;
+}
+
+.codrops-demos a {
+    display: inline-block;
+    margin: 10px;
+    color: #666;
+    font-weight: 700;
+    line-height: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+.codrops-demos a:hover {
+    color: #000;
+    border-color: #000;
+}
+
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+    color: #aaa;
+    border-color: #aaa;
+}
+
+
+@media screen and (max-width: 730px){
+    .fleft {
+        width: 49%;
+        float: none;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 730px){
+    .flefr {
+        width: 49%;
+        float: right!important;
+        text-align: center;
+    }
+}
+/**/
+/*@import url('common.css');*/
+.cd-dropdown,
+.cd-select {
+    position: relative;
+    width: auto;
+    display: block;
+}
+/*调节高度lineheight*/
+.cd-dropdown > span {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    font-weight: 700;
+    font-size: 16px;
+    background: #fff;
+    display: block;
+    padding: 0 50px 0 30px;
+    position: relative;
+    cursor: pointer;
+}
+/*调节高度lineheight*/
+.cd-dropdown > span:after {
+    content: '\25BC';
+    position: absolute;
+    right: 0px;
+    top: 15%;
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+    height: 70%;
+    line-height: 24px;
+    border-left: 1px solid #ddd;
+}
+
+.cd-dropdown.cd-active > span:after {
+    content: '\25B2';
+}
+
+.cd-dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+}
+
+.cd-dropdown ul li {
+    display: block;
+}
+/*调节高度lineheight*/
+.cd-dropdown ul li span {
+    width: 100%;
+    background: #fff;
+    line-height: 40px;
+    display: block;
+    color: #bcbcbc;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+}
+/*调节高度*/
+.cd-dropdown > span,
+.cd-dropdown ul li span {
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+
+/* Select fallback styling */
+.cd-select {
+    border: 1px solid #ddd;
+}
+
+/**/
+.container{padding: 0;margin: 0;width: 100%!important;}
+.row{padding: 0 15px!important;text-align: center}
+.cd-dropdown ul {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.cd-dropdown > span,
+.cd-dropdown ul li {
+    box-shadow: 0 1px 1px rgba(224, 224, 224, 0.1);
+}
+.cd-dropdown > span,
+.cd-dropdown ul li {
+    box-shadow: 0 1px 1px rgba(156, 156, 156, 0.1);
+}
+
+.cd-dropdown ul li {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+.cd-active.cd-dropdown > span {
+    color: #e66b20;
+}
+
+.cd-active.cd-dropdown ul li {
+    pointer-events: auto;
+}
+
+.cd-active.cd-dropdown ul li span {
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+
+.cd-active.cd-dropdown ul li span:hover {
+    background: #e66b20;
+    color: #fff;
+}
+/*coach*/
+.coachBox{
+    width: 100%;
+    margin-top: 40px;
+}
+.coach:hover{
+    background: #e3efff;
+}
+.coach{
+    width: 100%;
+    padding: 5px;
+    background: #f1f1f1;
+    float: left;
+    margin-top: 5px;
+    box-shadow: 0 1px 1px rgba(126, 126, 126, 0.5);
+
+}
+.coachImg{
+    width: 70px;
+    height: 90px;
+    margin-right: 5px;
+    margin-left: 5px;
+    float: left;
+}
+.coachImg>img{
+    width: 100%;
+    height: 70px;
+    margin-bottom: 4px;
+}
+.coachContent{
+    width: 70%;
+    height: 100%;
+    font-size: 16px;
+    text-align: left;
+    line-height: 30px;
+    float: left!important;
+    color:black;
+}
+.coachContentT{
+    padding: 0 2px;
+    color: #000;
+    font-weight: bold;
+}
+.coachContentT>span{
+    width: 50px;
+    color: #3778a8;
+}
+.coachContentT>span{
+    margin-left: 5px;
+}
+.mmm{
+    margin-left: 2px;
+}
+.ff{
+    float: left;
+    /*border: 1px solid black!important;*/
+}
+.mmm:before{
+    font-size: 17px;
+    text-align: center;
+    margin-right: 6px;
+    color: #01a89e;
+}
+.www:before{
+    font-size: 20px;
+    text-align: center;
+    margin-right: 5px;
+    color: #01a89e;
+}
+.coachContentB{
+    width: 100%;
+    height:30px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+.coachContentB:before{
+    margin-right: 5px;
+    font-size: 20px;
+    color: #01a89e;
+}

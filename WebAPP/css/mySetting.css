@@ -1,0 +1,23 @@
+.mySettingCard{
+    width: 100%;
+    background: white;
+    margin-bottom: 20px;
+}
+.settingCard{
+    padding: 10px;
+    font-size: 16px;
+    line-height: 35px;
+    color: black;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0);
+}
+.settingCard:nth-child(1){
+    border-bottom: 1px solid #efefef
+}
+.settingCard>label{
+    float: right;
+    margin-right: 50px
+}
+.bangding{
+    float: right
+}

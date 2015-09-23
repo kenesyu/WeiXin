@@ -1,0 +1,115 @@
+.container{padding: 0;margin: 0;width: 100%!important;overflow: hidden}
+.row{padding: 0 15px!important;text-align: center}
+.homePage{height:200px;;position:relative;overflow: hidden;width: 100%!important;}
+.homePagee{height:150px!important;position:relative;overflow: hidden;width: 100%!important;}
+.homePageCover{width: 100%;height: 100%;position: absolute;left: 0;top: 0}
+.homePageCover>img{width:100%;height: 100% }
+.homePageHeader{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+.homePageHeader>img{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.headerBox{
+    margin-top: 20px;
+}
+.headerName{
+    font-size: 14px;
+    color: white;
+    line-height: 25px;
+    text-align: center;}
+.personalData{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;top:0;
+    font-size: 18px;
+    line-height: 20px;
+    margin:15px 5px;
+    color:white
+}
+
+
+/*homePageSort*/
+.pd5{padding: 5px}
+.homePageSort{background: white;font-size: 16px;overflow: hidden;color: black;padding: 10px;position: relative;border-bottom:1px solid #CCCCCC }
+.homePageSort:hover{background: #ececec;}
+.homePageSortIcon{float: left;color:#01a89e}
+.homePageSortBadge{
+    top: 0px;
+    left:0;
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+    margin-top: 14px;
+    float: right;
+}
+.homePageSortIcon1{
+    float: right;
+    position: relative;
+}
+.homePageSortName{
+    float: left;
+
+}
+
+.homePageSortNaomal{
+    float: right;
+}
+.naomalBox{
+    background: #01A89E;
+    margin: 3px
+}
+/*homePageNav*/
+.homePageNavBox{
+    width:100%;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    background: #000;
+    border-top: 1px solid white;
+    color: #fff;
+    -moz-box-shadow:-1px -1px 5px #808080; -webkit-box-shadow:-1px -1px 5px #808080; box-shadow:-1px -1px 5px #808080;
+}
+.homePageNav{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    line-height: 18px;
+    margin-top: 4px;
+}
+.font22{
+    font-size: 22px;
+}
+.homePageNav:before{
+    margin-bottom: 0!important;
+}
+.homePageNav>span{
+    font-size: 12px;
+    font-weight: 100;
+}
+.borderM{
+    border-right:0px solid white;
+    }
+.b{
+    border: 1px solid black
+}
+/*.ccc:hover {
+    background: #01A89E;
+    color:white!important;
+}*/
+.ccc:before:hover{
+    color: white
+}
+.ccc{
+    width: 25%;
+    float: left;
+}

@@ -38,9 +38,6 @@ namespace WebAPP.WebApp
                         if (dta.Rows.Count > 0 && dt.Rows[0]["NeedPay"].ToString() != "1")
                         {
                             Response.Write("<font size='24px'>您已经报过名了，请把机会让给其它的小伙伴吧</font>");
-
-                            //this.btnSave.Enabled = false;
-                            //this.btnSave.Text = "您已经报过名了，请把机会让给其它的小伙伴吧";
                             Response.End();
                         }
                         else if (dta.Rows.Count > 0 && dt.Rows[0]["NeedPay"].ToString() == "1" && dta.Rows[0]["IsPay"].ToString() != "1")
@@ -51,8 +48,6 @@ namespace WebAPP.WebApp
                     else
                     {
                         Response.Write("<font size='24px'>您来晚啦，名额已满或活动已结束.</font>");
-                        //this.btnSave.Text = "您来晚啦，名额已满或活动已结束.";
-                        //this.btnSave.Enabled = false;
                         Response.End();
                     }
                     dbHelper.Dispose();

@@ -117,6 +117,13 @@ namespace WeiXin
                 var clicktype = "click";
                 var clickurl = "http://";
 
+                if (s == "往期活动")
+                {
+                    clicktype = "view";
+                    clickurl = "http://mp.weixin.qq.com/mp/homepage?__biz=MzA4Nzc0MTExNw==&hid=1&sn=28565b5f17a562b386d06662a7f00272#wechat_redirect";
+                }
+
+
                 Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
                 {
                     key = "subkey" + keyIndex,
