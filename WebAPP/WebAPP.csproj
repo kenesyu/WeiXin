@@ -1804,6 +1804,13 @@
     <Content Include="css\var.css" />
     <Content Include="css\zyupload-1.0.0.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons\flat-ui-icons-regular.svg" />
+    <Content Include="fonts\lato\lato-black.svg" />
+    <Content Include="fonts\lato\lato-bold.svg" />
+    <Content Include="fonts\lato\lato-bolditalic.svg" />
+    <Content Include="fonts\lato\lato-italic.svg" />
+    <Content Include="fonts\lato\lato-light.svg" />
+    <Content Include="fonts\lato\lato-regular.svg" />
     <Content Include="font\demo.css" />
     <Content Include="font\demo.html" />
     <Content Include="font\iconfont.css" />
@@ -1822,6 +1829,8 @@
     <Content Include="img\55.jpg" />
     <Content Include="img\87-100G0104F10.jpg" />
     <Content Include="img\arrow-up.png" />
+    <Content Include="img\arrow_down.png" />
+    <Content Include="img\arrow_down_hover.png" />
     <Content Include="img\avatar-mini.jpg" />
     <Content Include="img\avatar-mini2.jpg" />
     <Content Include="img\avatar-mini3.jpg" />
@@ -1976,6 +1985,7 @@
     <Content Include="img\map-marker.png" />
     <Content Include="img\mask-square.png" />
     <Content Include="img\mask.png" />
+    <Content Include="img\more_links.png" />
     <Content Include="img\nav-expand.png" />
     <Content Include="img\pro-ac-1.png" />
     <Content Include="img\pro-ac-2.png" />
@@ -2009,6 +2019,7 @@
     <Content Include="js\advanced-form-components.js" />
     <Content Include="js\all-chartjs.js" />
     <Content Include="js\aply.js" />
+    <Content Include="js\application.js" />
     <Content Include="js\bootstrap-switch.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -2019,6 +2030,7 @@
     <Content Include="js\easy-pie-chart.js" />
     <Content Include="js\editable-table.js" />
     <Content Include="js\external-dragging-calendar.js" />
+    <Content Include="js\flat-ui.min.js" />
     <Content Include="js\flot-chart.js" />
     <Content Include="js\form-component.js" />
     <Content Include="js\form-image-crop.js" />
@@ -2064,10 +2076,11 @@
     <Content Include="ScriptsLib\WxPayService.js" />
     <Content Include="WebApp\coach_list.aspx" />
     <Content Include="WebApp\DR\DR_BM.aspx" />
-    <Content Include="WebApp\DR\index.html" />
-    <Content Include="WebApp\DR\logData.html" />
-    <Content Include="WebApp\DR\main.html" />
-    <Content Include="WebApp\DR\resultList.html" />
+    <Content Include="WebApp\DR\DR_Personal.aspx" />
+    <Content Include="WebApp\DR\DR_ResultList.aspx" />
+    <Content Include="WebApp\DR\js\dr.js" />
+    <Content Include="WebApp\DR\ResultInput.aspx" />
+    <Content Include="WebApp\DR\service\drservice.asmx" />
     <Content Include="WebApp\files\icon_loading_white22c04a.gif" />
     <Content Include="WebApp\files\moon264d72.js" />
     <Content Include="WebApp\files\not_in_mm2637ae.css" />
@@ -2222,6 +2235,31 @@
     </Compile>
     <Compile Include="WebApp\DR\DR_BM.aspx.designer.cs">
       <DependentUpon>DR_BM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\DR\DR_Personal.aspx.cs">
+      <DependentUpon>DR_Personal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\DR\DR_Personal.aspx.designer.cs">
+      <DependentUpon>DR_Personal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\DR\DR_ResultList.aspx.cs">
+      <DependentUpon>DR_ResultList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\DR\DR_ResultList.aspx.designer.cs">
+      <DependentUpon>DR_ResultList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\DR\ResultInput.aspx.cs">
+      <DependentUpon>ResultInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\DR\ResultInput.aspx.designer.cs">
+      <DependentUpon>ResultInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\DR\service\drservice.asmx.cs">
+      <DependentUpon>drservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebApp\gym_details.aspx.cs">
       <DependentUpon>gym_details.aspx</DependentUpon>
@@ -2596,6 +2634,28 @@
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons\flat-ui-icons-regular.eot" />
+    <None Include="fonts\glyphicons\flat-ui-icons-regular.ttf" />
+    <None Include="fonts\glyphicons\flat-ui-icons-regular.woff" />
+    <None Include="fonts\glyphicons\selection.json" />
+    <None Include="fonts\lato\lato-black.eot" />
+    <None Include="fonts\lato\lato-black.ttf" />
+    <None Include="fonts\lato\lato-black.woff" />
+    <None Include="fonts\lato\lato-bold.eot" />
+    <None Include="fonts\lato\lato-bold.ttf" />
+    <None Include="fonts\lato\lato-bold.woff" />
+    <None Include="fonts\lato\lato-bolditalic.eot" />
+    <None Include="fonts\lato\lato-bolditalic.ttf" />
+    <None Include="fonts\lato\lato-bolditalic.woff" />
+    <None Include="fonts\lato\lato-italic.eot" />
+    <None Include="fonts\lato\lato-italic.ttf" />
+    <None Include="fonts\lato\lato-italic.woff" />
+    <None Include="fonts\lato\lato-light.eot" />
+    <None Include="fonts\lato\lato-light.ttf" />
+    <None Include="fonts\lato\lato-light.woff" />
+    <None Include="fonts\lato\lato-regular.eot" />
+    <None Include="fonts\lato\lato-regular.ttf" />
+    <None Include="fonts\lato\lato-regular.woff" />
     <None Include="font\iconfont.eot" />
     <None Include="font\iconfont.ttf" />
     <None Include="font\iconfont.woff" />

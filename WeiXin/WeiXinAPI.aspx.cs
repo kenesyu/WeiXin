@@ -425,10 +425,10 @@ namespace WeixinMpSdkTestWeb
             List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
             NewsReplyMessageItem itm = new NewsReplyMessageItem()
             {
-                Description = "",
-                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206365005&idx=1&sn=c64543336b24fa0aa8bc52a617771fc1#rd",
-                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrC4sPfXLziawXuG8fqVMUkfShUyvXUicCqlxkukYdAUuQUicIoyfcQwsMvZuuBVgWPBCBSRu0BviapUTQ/0?wx_fmt=jpeg",
-                Title = "尊敬的用户您好，感谢您关注“大连运动健身网”微信公众平台，我们将竭诚为您服务。"
+                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=207683103&idx=1&sn=95c475f90a08c4c4a34e84f611815d85#rd",
+                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAYSfr4HeP7xQL8Vg7dhsIYcEIfMTrgiceLs7M5envFXNFRwc85uE1hqrxT9FbV4xaEvS8KELfUFeg/0?wx_fmt=jpeg",
+                Title = "撑下去，只配最强者",
+                Description = "第一季东软平板支撑邀请赛"
             };
 
             NewsReplyMessage replyMsg = new NewsReplyMessage()
@@ -625,6 +625,27 @@ namespace WeixinMpSdkTestWeb
                     Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206902104&idx=1&sn=e98881bad586e5424d2a6dc8a1c32b5d#rd",
                     PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrA5FLVbicZfg9bQMbJ7K6PUtenNWFuxtUmP0N6RiaWgJpu3IYKxr2Ka56PjFUDSLpTa95rPmpY7wOWQ/0?wx_fmt=jpeg",
                     Title = "非牛人，不要点"
+                };
+
+                NewsReplyMessage replyMsg = new NewsReplyMessage()
+                {
+                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
+                    FromUserName = msg.ToUserName,
+                    ToUserName = msg.FromUserName,
+                    Articles = items
+                };
+
+                items.Add(itm);
+                MessageHandler.SendReplyMessage(replyMsg);
+            }
+            else if (key == "subkey6") {
+                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
+                NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                {
+                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=207683103&idx=1&sn=95c475f90a08c4c4a34e84f611815d85#rd",
+                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAYSfr4HeP7xQL8Vg7dhsIYcEIfMTrgiceLs7M5envFXNFRwc85uE1hqrxT9FbV4xaEvS8KELfUFeg/0?wx_fmt=jpeg",
+                    Title = "撑下去，只配最强者",
+                    Description = "第一季东软平板支撑邀请赛"
                 };
 
                 NewsReplyMessage replyMsg = new NewsReplyMessage()

@@ -12,7 +12,7 @@ namespace WebAPP.ClassLib
 {
     public class CheckRegisterAndRegister 
     {
-        public Dictionary<string, object> RegisterPushInfo(string appid, string secret, string backurl)
+        public Dictionary<string, object> RegisterPushInfo(string appid, string secret, string backurl , string from)
         {
             var code = HttpContext.Current.Request.QueryString["Code"] ;
             if (string.IsNullOrEmpty(code))
@@ -20,7 +20,6 @@ namespace WebAPP.ClassLib
                 var url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri=" + System.Web.HttpUtility.UrlEncode(backurl) + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect", appid);
                 HttpContext.Current.Response.Redirect(url);
                 return null;
-                Logger.WriteTxtLog("NoCode");
             }
             else
             {
@@ -68,7 +67,7 @@ namespace WebAPP.ClassLib
                         new SqlParameter("@province",userInfo["province"]),
                         new SqlParameter("@country",userInfo["country"]),
                         new SqlParameter("@headimgurl",userInfo["headimgurl"]),
-
+                        new SqlParameter("@from",from)
                     }, true);
                     Logger.WriteTxtLog("OK");
                 }

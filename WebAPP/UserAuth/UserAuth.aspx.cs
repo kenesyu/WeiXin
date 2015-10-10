@@ -19,7 +19,7 @@ namespace WebAPP.UserAuth
 
 
                 CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
-                Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
+                Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString(),"UserAuth");
                 //Response.Write(userinfo["openid"].ToString());
 
                 this.imgProfile.Src = userinfo["headimgurl"].ToString();

@@ -46,7 +46,7 @@ namespace WeiXin
 
             string[] subkeyText1 = { "找教练"};
             string[] subkeyText2 = { "运动场", "协会"};
-            string[] subkeyText3 = { "本期活动","往期活动","关于我们","招贤纳士" };
+            string[] subkeyText3 = { "本期活动", "往期活动", "关于我们", "招贤纳士", "东软专区" };
 
             #region ==== SubMenu 1 ====
             List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey1 = new List<Weixin.Mp.Sdk.Domain.Button>();

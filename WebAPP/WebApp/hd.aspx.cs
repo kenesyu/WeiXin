@@ -17,7 +17,7 @@ namespace WebAPP.WebApp
             if (!IsPostBack)
             {
                 CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
-                Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
+                Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString(),"HD");
                 openid = userinfo["openid"].ToString();
             }
         }

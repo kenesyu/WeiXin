@@ -10,25 +10,16 @@
 namespace WebAPP.WebApp.DR {
     
     
-    public partial class DR_BM {
+    public partial class DR_Personal {
         
         /// <summary>
-        /// form1 控件。
+        /// img 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// txtopenid 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtopenid;
+        protected global::System.Web.UI.HtmlControls.HtmlImage img;
         
         /// <summary>
         /// txtName 控件。
@@ -37,33 +28,33 @@ namespace WebAPP.WebApp.DR {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtName;
+        protected global::System.Web.UI.WebControls.Label txtName;
         
         /// <summary>
-        /// txtTel 控件。
+        /// txtNo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTel;
+        protected global::System.Web.UI.WebControls.Label txtNo;
         
         /// <summary>
-        /// selX 控件。
+        /// txtResult 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect selX;
+        protected global::System.Web.UI.WebControls.Label txtResult;
         
         /// <summary>
-        /// btnSubmit 控件。
+        /// txtCountNum 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Label txtCountNum;
     }
 }

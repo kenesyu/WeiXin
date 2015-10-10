@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DingLongCardGenerate", "Din
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{5DB4DBEF-D107-42C1-B069-FCE0599716D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DR_ResultRank", "DR_ResultRank\DR_ResultRank.csproj", "{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,16 @@ Global
 		{5DB4DBEF-D107-42C1-B069-FCE0599716D4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5DB4DBEF-D107-42C1-B069-FCE0599716D4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5DB4DBEF-D107-42C1-B069-FCE0599716D4}.Release|x86.ActiveCfg = Release|Any CPU
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Debug|x86.ActiveCfg = Debug|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Debug|x86.Build.0 = Debug|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Release|Any CPU.ActiveCfg = Release|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Release|x86.ActiveCfg = Release|x86
+		{61F94B1F-DDD2-4099-84D8-BDF7D0EBC2A3}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

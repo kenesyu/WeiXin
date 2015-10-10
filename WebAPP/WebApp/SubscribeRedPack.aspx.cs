@@ -23,7 +23,7 @@ namespace WebAPP.WebApp
             try
             {
                 CheckRegisterAndRegister aa = new CheckRegisterAndRegister();
-                Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString());
+                Dictionary<string, object> userinfo = aa.RegisterPushInfo(ConfigurationManager.AppSettings["AppID"].ToString(), ConfigurationManager.AppSettings["AppSecret"].ToString(), Request.Url.ToString(), "SubscribeRedPack");
                 DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
 
                 //ViewState.Add("openid", userinfo["openid"].ToString());

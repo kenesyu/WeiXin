@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>报名页面</title>
+    <title>东软平板支撑比赛-报名页面</title>
     <link rel="stylesheet" href="/css/listStyle.css"/>
     <link rel="stylesheet" href="/css/myactive.css"/>
     <link rel="stylesheet" href="/css/select.css"/>
@@ -41,6 +41,7 @@
 <div class="faqiList">
     <div class="faqiListName">姓名</div>
     <div class="chatFootI floatLeft input input--minoru faqiListDist font14" >
+        <input type="text" id="txtopenid" runat="server" value="" style="display:none">
         <input type="text" class="input__field input__field--minoru"  id="txtName" runat="server" placeholder="请输入姓名">
     </div>
 </div>
@@ -68,7 +69,8 @@
     </div>
 </div>
 <!--报名button-->
-    <asp:Button ID="btnSubmit" runat="server" Text="确认报名" class="ui-btn pay-btn"/>
+    <asp:Button ID="btnSubmit" runat="server" Text="确认报名" 
+    class="ui-btn pay-btn" onclick="btnSubmit_Click"/>
 <!--弹出层-->
 <%--<div class="tanBox">
     <div class="innerBox">
