@@ -81,5 +81,32 @@ namespace WebAPP.ClassLib
             }
         }
 
+        public string GetUserOpenId(string appid, string secret, string backurl, string from)
+        {
+            var code = HttpContext.Current.Request.QueryString["Code"];
+            string openid = string.Empty;
+            if (string.IsNullOrEmpty(code))
+            {
+                var url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri=" + System.Web.HttpUtility.UrlEncode(backurl) + "&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect", appid);
+                HttpContext.Current.Response.Redirect(url);
+            }
+            else
+            {
+                var client = new System.Net.WebClient();
+                client.Encoding = System.Text.Encoding.UTF8;
+
+                var url = string.Format("https://api.weixin.qq.com/sns/oauth2/access_token?appid={0}&secret={1}&code={2}&grant_type=authorization_code", appid, secret, code);
+                var data = client.DownloadString(url);
+
+                var serializer = new JavaScriptSerializer();
+                var obj = serializer.Deserialize<Dictionary<string, string>>(data);
+                string accessToken;
+                if (!obj.TryGetValue("access_token", out accessToken))
+                    return null;
+
+                openid = obj["openid"];
+            }
+            return openid;
+        }
     }
 }

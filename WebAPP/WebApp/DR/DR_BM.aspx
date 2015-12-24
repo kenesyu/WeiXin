@@ -106,6 +106,7 @@
             return false;
         }
 
+
         if ($("#selX").val() == "") {
             alert("请选择所属院系");
             return false;

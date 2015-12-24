@@ -1,0 +1,23 @@
+﻿红包2015/12/17 星期四
+
+*******************************************************
+
+System.Collections.Generic.Dictionary`2[System.String,System.Object]
+
+*******************************************************
+
+<xml>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[发放成功]]></return_msg>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<mch_billno><![CDATA[201512179756850482]]></mch_billno>
+<mch_id>1227576402</mch_id>
+<wxappid><![CDATA[wxa3696600232dd38d]]></wxappid>
+<re_openid><![CDATA[ovTALuEgDT2sxXOcGwJ_rBgipgtY]]></re_openid>
+<total_amount>105</total_amount>
+<send_listid><![CDATA[0010075140201512170358450663]]></send_listid>
+<send_time><![CDATA[20151217093448]]></send_time>
+</xml>
+
+*******************************************************
+

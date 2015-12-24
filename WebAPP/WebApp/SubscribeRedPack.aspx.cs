@@ -30,7 +30,6 @@ namespace WebAPP.WebApp
                 string openid = userinfo["openid"].ToString();
                 string city = userinfo["city"].ToString();
 
-
                 this.imgProfile.Src = userinfo["headimgurl"].ToString();
                 this.lblNickname.Text = userinfo["nickname"].ToString();
                 this.lblCity.Text = userinfo["city"].ToString();
@@ -40,10 +39,7 @@ namespace WebAPP.WebApp
                 else { chkSex = "保密"; }
                 this.lblSex.Text = chkSex;
 
-
-  
-
-                this.repList.DataSource = dbHelper.ExecuteDataTable("select top 10 * from T_RedPack a inner join T_UserInfo  b on  a.openid = b.openid where amount > 0 order by amount desc"); ;
+                this.repList.DataSource = dbHelper.ExecuteDataTable("select top 10 * from T_RedPack a inner join T_UserInfo  b on  a.openid = b.openid where amount > 0 order by amount desc");
                 this.repList.DataBind();
 
                 dbHelper.Dispose();

@@ -115,7 +115,8 @@ namespace WeixinMpSdkTestWeb
                     ProcessSubscribeEvent(msg as SubscribeEventMessage, args);
                 }
             }
-            else {
+            else
+            {
                 MessageHandler.TransferToAutoCustomer(msg.ToUserName, msg.FromUserName);
             }
             return true;
@@ -425,10 +426,10 @@ namespace WeixinMpSdkTestWeb
             List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
             NewsReplyMessageItem itm = new NewsReplyMessageItem()
             {
-                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=207683103&idx=1&sn=95c475f90a08c4c4a34e84f611815d85#rd",
-                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAYSfr4HeP7xQL8Vg7dhsIYcEIfMTrgiceLs7M5envFXNFRwc85uE1hqrxT9FbV4xaEvS8KELfUFeg/0?wx_fmt=jpeg",
-                Title = "撑下去，只配最强者",
-                Description = "第一季东软平板支撑邀请赛"
+                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
+                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAt14nR17dURXJMc0rtoWEIhTaU8ib94FoUHOIziaAmlVpWW6Cpn7ZAOOn6wfwOYwFibsE4TPxGAcNpQ/0?wx_fmt=png",
+                Title = "怎样制服你的懒，史上最全解决方案。",
+                Description = "据英国《每日邮报》近期报道，由英国漫步者步行慈善会和麦克米兰癌症援助中心发布的报告显示，每天只需运动20分钟，每年就能帮助3.7万人远离癌症、心脏病和中风导致的过早死亡。在想什么？还不速速动起来"
             };
 
             NewsReplyMessage replyMsg = new NewsReplyMessage()

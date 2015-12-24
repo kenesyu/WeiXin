@@ -44,7 +44,7 @@ namespace WeiXin
 
             List<Weixin.Mp.Sdk.Domain.Button> button = new List<Weixin.Mp.Sdk.Domain.Button>();
 
-            string[] subkeyText1 = { "找教练"};
+            string[] subkeyText1 = { "趣运动" };
             string[] subkeyText2 = { "运动场", "协会"};
             string[] subkeyText3 = { "本期活动", "往期活动", "关于我们", "招贤纳士", "东软专区" };
 
@@ -55,10 +55,10 @@ namespace WeiXin
             {
                 var clicktype = "click";
                 var clickurl = "http://";
-                if (s == "找教练")
+                if (s == "趣运动")
                 {
                     clicktype = "view";
-                    clickurl = hosturl + "/webapp/list.aspx";
+                    clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa&scene=1&srcid=12113M1bX594nZF1FF5sdTVA&from=singlemessage&isappinstalled=0#wechat_redirect";//hosturl + "/webapp/list.aspx";
                 }
                 //else if (s == "找场馆")
                 //{
@@ -140,8 +140,8 @@ namespace WeiXin
             Weixin.Mp.Sdk.Domain.Button btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn1",
-                name = "找教练",
-                url = hosturl + "/WebApp/list.aspx",
+                name = "趣运动",
+                url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
                 type = "view"
 
             };

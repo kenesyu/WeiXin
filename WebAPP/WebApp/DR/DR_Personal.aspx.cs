@@ -33,6 +33,7 @@ namespace WebAPP.WebApp.DR
                             openid = userinfo["openid"].ToString();
                         }
 
+                        #region 是否关注
                         var client = new System.Net.WebClient();
                         client.Encoding = System.Text.Encoding.UTF8;
 
@@ -40,12 +41,6 @@ namespace WebAPP.WebApp.DR
                         var data = client.DownloadString(url);
                         var serializer = new JavaScriptSerializer();
                         Dictionary<string, object> u = serializer.Deserialize<Dictionary<string, object>>(data);
-
-
-                        //if (u == null) {
-                            //Response.Write(u);
-                            //Response.End();
-                        //}
 
                         if (!u.ContainsKey("subscribe"))
                         {
@@ -61,6 +56,8 @@ namespace WebAPP.WebApp.DR
                         {
 
                         }
+
+                        #endregion
 
                         toopenid = Request.QueryString["op"].ToString();
                         GetDetails(Request.QueryString["op"].ToString());

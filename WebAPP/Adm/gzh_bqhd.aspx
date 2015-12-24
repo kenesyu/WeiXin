@@ -43,28 +43,9 @@
         </tbody>
     </table>
     <table class="tablelist">
-        <tr>
-            <td align="center"><input type="button" value="保存" onclick="AdmServices.SaveCurrentHD()" class="btn"></td>
-        </tr>
-    </table>
-    </div>
-<script>
-    function removetr(obj) {
-        if (confirm("确定移除此行？")) {
-            if ($(obj).parent().parent().parent().find("tr").length >= 2) {
-                $(obj).parent().parent().remove();
-            } else {
-                alert("不能全部移除值少保留一行");
-            }
-        }
-    }
-
-    function addtr() {
-        var temp = "<tr isdata='true'><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td width='20%'><input type='text' class='dfinput' style='width:95%'/></td><td><input type='text' class='dfinput' /></td><td><input type='button' class='btn' value='移除' onclick='removetr(this);' /></td></tr> ";
-        $("#tbList").append(temp);
-    }
-
+        <tr>！
 </script>
 
 </body>
 </html>
+

@@ -2111,6 +2111,7 @@
     <Content Include="WebApp\WXPay\ConfirmPay.aspx" />
     <Content Include="WebApp\WXPay\Notify.aspx" />
     <Content Include="WebApp\WXPay\Products.aspx" />
+    <Content Include="WebApp\WXPay\ReadRedPack.aspx" />
     <Content Include="WebApp\WXPay\Send.aspx" />
     <Content Include="WebApp\WXPay\SendRedPack.aspx" />
     <Content Include="WebApp\WXPay\SendTempMessage.aspx" />
@@ -2337,6 +2338,13 @@
     </Compile>
     <Compile Include="WebApp\WXPay\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp\WXPay\ReadRedPack.aspx.cs">
+      <DependentUpon>ReadRedPack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp\WXPay\ReadRedPack.aspx.designer.cs">
+      <DependentUpon>ReadRedPack.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebApp\WXPay\Send.aspx.cs">
       <DependentUpon>Send.aspx</DependentUpon>

@@ -16,6 +16,7 @@ namespace WebAPP.WebApp.WXPay
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             Response.ContentType = "text/plain";
             PayWeiXin model = new PayWeiXin();
             PayForWeiXinHelp PayHelp = new PayForWeiXinHelp();
