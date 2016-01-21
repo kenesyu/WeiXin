@@ -32,13 +32,6 @@ namespace WebAPP.ClassLib
                 var data = client.DownloadString(url);
 
 
-                //using (StreamWriter sw = new StreamWriter(HttpContext.Current.Server.MapPath("/log.txt"), true))
-                //{
-                //    sw.WriteLine("------------- " + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + " ----------------");
-                //    sw.WriteLine("url:" + url);
-                //    sw.WriteLine("date:" + data);
-                //}
-
                 var serializer = new JavaScriptSerializer();
                 var obj = serializer.Deserialize<Dictionary<string, string>>(data);
                 string accessToken;
@@ -69,7 +62,7 @@ namespace WebAPP.ClassLib
                         new SqlParameter("@headimgurl",userInfo["headimgurl"]),
                         new SqlParameter("@from",from)
                     }, true);
-                    Logger.WriteTxtLog("OK");
+                    //Logger.WriteTxtLog("OK");
                 }
                 catch (Exception ex)
                 {
@@ -108,5 +101,13 @@ namespace WebAPP.ClassLib
             }
             return openid;
         }
+
+        //public void CheckRegister(string openid) {
+        //    DBHelper.DataBaseHelper dbHelper = new DBHelper.DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            
+            
+        //    dbHelper.Dispose();
+        //}
+
     }
 }

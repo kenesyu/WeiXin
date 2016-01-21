@@ -44,9 +44,9 @@ namespace WeiXin
 
             List<Weixin.Mp.Sdk.Domain.Button> button = new List<Weixin.Mp.Sdk.Domain.Button>();
 
-            string[] subkeyText1 = { "趣运动" };
+            string[] subkeyText1 = { "玩" };
             string[] subkeyText2 = { "运动场", "协会"};
-            string[] subkeyText3 = { "本期活动", "往期活动", "关于我们", "招贤纳士", "东软专区" };
+            string[] subkeyText3 = { "本期活动", "往期活动", "关于我们", "招贤纳士" };
 
             #region ==== SubMenu 1 ====
             List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey1 = new List<Weixin.Mp.Sdk.Domain.Button>();
@@ -140,7 +140,7 @@ namespace WeiXin
             Weixin.Mp.Sdk.Domain.Button btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn1",
-                name = "趣运动",
+                name = "玩",
                 url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
                 type = "view"
 
@@ -150,7 +150,7 @@ namespace WeiXin
             btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn2",
-                name = "问客服",
+                name = "问",
                 url = "httpbig",
                 type = "click",
                 //sub_button = subBtnForKey2
@@ -160,7 +160,7 @@ namespace WeiXin
             btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn3",
-                name = "资  讯",
+                name = "读",
                 url = "httpbig",
                 type = "click",
                 sub_button = subBtnForKey3

@@ -426,10 +426,21 @@ namespace WeixinMpSdkTestWeb
             List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
             NewsReplyMessageItem itm = new NewsReplyMessageItem()
             {
-                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
-                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAt14nR17dURXJMc0rtoWEIhTaU8ib94FoUHOIziaAmlVpWW6Cpn7ZAOOn6wfwOYwFibsE4TPxGAcNpQ/0?wx_fmt=png",
-                Title = "怎样制服你的懒，史上最全解决方案。",
-                Description = "据英国《每日邮报》近期报道，由英国漫步者步行慈善会和麦克米兰癌症援助中心发布的报告显示，每天只需运动20分钟，每年就能帮助3.7万人远离癌症、心脏病和中风导致的过早死亡。在想什么？还不速速动起来"
+                //Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
+                //PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAt14nR17dURXJMc0rtoWEIhTaU8ib94FoUHOIziaAmlVpWW6Cpn7ZAOOn6wfwOYwFibsE4TPxGAcNpQ/0?wx_fmt=png",
+                //Title = "怎样制服你的懒，史上最全解决方案。",
+                //Description = "据英国《每日邮报》近期报道，由英国漫步者步行慈善会和麦克米兰癌症援助中心发布的报告显示，每天只需运动20分钟，每年就能帮助3.7万人远离癌症、心脏病和中风导致的过早死亡。在想什么？还不速速动起来"
+
+                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=401139557&idx=1&sn=7f19b789113b2f7dfa3245809f01cce3&scene=0&previewkey=knlfheny51%2Fyvf6jovuXdsNS9bJajjJKzz%2F0By7ITJA%3D#wechat_redirect",
+                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrA36c6BI5PZprfBadqJNKibeDecib0IeupdxND5NbRKNjSAiakw6p38EGeyfkuvicEqia3BRUiaIwns4HqA/0?wx_fmt=jpeg",
+                Title = "智道跆拳道2016年度“最佳人气王”评选活动",
+                Description = "为了丰富寒假生活，提供孩子训练热情，本馆与大连运动健身网联合推出“评选”活动。即刻开始，奖品丰厚！"
+
+
+                //Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=401086666&idx=1&sn=41096f957007604d4d9a33aa9ff9ba25&scene=1&srcid=0113FWXaf6xMjMEOS0N11JjS#wechat_redirect",
+                //PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrD37lqFzSmibsIBFSkm9gfUOfHDueA3oRltq5sGEoryv9Nlu47w1RwnaBqLOqoMicsTibgmhovCeB3yA/0?wx_fmt=jpeg",
+                //Title = "瑞龙武道“未来之星”网络评选活动",
+                //Description = "各位家长好！为了丰富即将到来的寒假生活，提高孩子的训练热情！特此开展“瑞龙武道未来之星”的评选活动！快来给你的宝贝投票吧"
             };
 
             NewsReplyMessage replyMsg = new NewsReplyMessage()
