@@ -2105,11 +2105,13 @@
     <Content Include="Personal\images\y-1.png" />
     <Content Include="Personal\images\y-2.png" />
     <Content Include="Personal\js\jquery-1.8.0.js" />
+    <Content Include="Personal\js\jquery.cookie.js" />
     <Content Include="Personal\js\js.js" />
     <Content Include="Personal\js\TouchSlide.1.1.js" />
     <Content Include="Personal\Main.aspx" />
     <Content Include="Personal\Questions.aspx" />
     <Content Include="Personal\RegisterUser.aspx" />
+    <Content Include="Personal\TestResult.aspx" />
     <Content Include="RLWD\.idea\misc.xml" />
     <Content Include="RLWD\.idea\modules.xml" />
     <Content Include="RLWD\.idea\vcs.xml" />
@@ -2205,6 +2207,100 @@
     <Content Include="ScriptsLib\Core\IsTech_form.js" />
     <Content Include="ScriptsLib\CustomerServices.js" />
     <Content Include="ScriptsLib\WxPayService.js" />
+    <Content Include="TP\HGTQD\.idea\misc.xml" />
+    <Content Include="TP\HGTQD\.idea\modules.xml" />
+    <Content Include="TP\HGTQD\.idea\vcs.xml" />
+    <Content Include="TP\HGTQD\.idea\workspace.xml" />
+    <Content Include="TP\HGTQD\css\base.css" />
+    <Content Include="TP\HGTQD\css\style.css" />
+    <Content Include="TP\HGTQD\header\001.jpg" />
+    <Content Include="TP\HGTQD\header\002.jpg" />
+    <Content Include="TP\HGTQD\header\003.jpg" />
+    <Content Include="TP\HGTQD\header\004.jpg" />
+    <Content Include="TP\HGTQD\header\005.jpg" />
+    <Content Include="TP\HGTQD\header\006.jpg" />
+    <Content Include="TP\HGTQD\header\007.jpg" />
+    <Content Include="TP\HGTQD\header\008.jpg" />
+    <Content Include="TP\HGTQD\header\009.jpg" />
+    <Content Include="TP\HGTQD\header\010.jpg" />
+    <Content Include="TP\HGTQD\header\011.jpg" />
+    <Content Include="TP\HGTQD\header\012.jpg" />
+    <Content Include="TP\HGTQD\header\013.jpg" />
+    <Content Include="TP\HGTQD\header\014.jpg" />
+    <Content Include="TP\HGTQD\header\015.jpg" />
+    <Content Include="TP\HGTQD\header\016.jpg" />
+    <Content Include="TP\HGTQD\header\017.jpg" />
+    <Content Include="TP\HGTQD\header\018.jpg" />
+    <Content Include="TP\HGTQD\header\019.jpg" />
+    <Content Include="TP\HGTQD\header\020.jpg" />
+    <Content Include="TP\HGTQD\header\021.jpg" />
+    <Content Include="TP\HGTQD\header\022.jpg" />
+    <Content Include="TP\HGTQD\header\023.jpg" />
+    <Content Include="TP\HGTQD\header\024.jpg" />
+    <Content Include="TP\HGTQD\header\025.jpg" />
+    <Content Include="TP\HGTQD\header\026.jpg" />
+    <Content Include="TP\HGTQD\header\027.jpg" />
+    <Content Include="TP\HGTQD\header\028.jpg" />
+    <Content Include="TP\HGTQD\header\029.jpg" />
+    <Content Include="TP\HGTQD\header\030.jpg" />
+    <Content Include="TP\HGTQD\header\031.jpg" />
+    <Content Include="TP\HGTQD\header\032.jpg" />
+    <Content Include="TP\HGTQD\header\033.jpg" />
+    <Content Include="TP\HGTQD\header\034.jpg" />
+    <Content Include="TP\HGTQD\header\035.jpg" />
+    <Content Include="TP\HGTQD\header\036.jpg" />
+    <Content Include="TP\HGTQD\header\037.jpg" />
+    <Content Include="TP\HGTQD\header\038.jpg" />
+    <Content Include="TP\HGTQD\header\039.jpg" />
+    <Content Include="TP\HGTQD\header\040.jpg" />
+    <Content Include="TP\HGTQD\header\041.jpg" />
+    <Content Include="TP\HGTQD\header\042.jpg" />
+    <Content Include="TP\HGTQD\header\043.jpg" />
+    <Content Include="TP\HGTQD\header\044.jpg" />
+    <Content Include="TP\HGTQD\header\045.jpg" />
+    <Content Include="TP\HGTQD\header\046.jpg" />
+    <Content Include="TP\HGTQD\header\047.jpg" />
+    <Content Include="TP\HGTQD\header\048.jpg" />
+    <Content Include="TP\HGTQD\header\049.jpg" />
+    <Content Include="TP\HGTQD\header\050.jpg" />
+    <Content Include="TP\HGTQD\header\051.jpg" />
+    <Content Include="TP\HGTQD\header\052.jpg" />
+    <Content Include="TP\HGTQD\header\053.jpg" />
+    <Content Include="TP\HGTQD\header\054.jpg" />
+    <Content Include="TP\HGTQD\header\055.jpg" />
+    <Content Include="TP\HGTQD\header\056.jpg" />
+    <Content Include="TP\HGTQD\header\057.jpg" />
+    <Content Include="TP\HGTQD\header\058.jpg" />
+    <Content Include="TP\HGTQD\header\059.jpg" />
+    <Content Include="TP\HGTQD\header\060.jpg" />
+    <Content Include="TP\HGTQD\header\061.jpg" />
+    <Content Include="TP\HGTQD\header\062.jpg" />
+    <Content Include="TP\HGTQD\header\063.jpg" />
+    <Content Include="TP\HGTQD\header\064.jpg" />
+    <Content Include="TP\HGTQD\header\065.jpg" />
+    <Content Include="TP\HGTQD\header\066.jpg" />
+    <Content Include="TP\HGTQD\header\067.jpg" />
+    <Content Include="TP\HGTQD\header\068.jpg" />
+    <Content Include="TP\HGTQD\header\069.jpg" />
+    <Content Include="TP\HGTQD\header\070.jpg" />
+    <Content Include="TP\HGTQD\header\071.jpg" />
+    <Content Include="TP\HGTQD\header\072.jpg" />
+    <Content Include="TP\HGTQD\header\073.jpg" />
+    <Content Include="TP\HGTQD\header\074.jpg" />
+    <Content Include="TP\HGTQD\header\075.jpg" />
+    <Content Include="TP\HGTQD\header\076.jpg" />
+    <Content Include="TP\HGTQD\header\077.jpg" />
+    <Content Include="TP\HGTQD\header\078.jpg" />
+    <Content Include="TP\HGTQD\images\i.png" />
+    <Content Include="TP\HGTQD\images\p.png" />
+    <Content Include="TP\HGTQD\images\s.png" />
+    <Content Include="TP\HGTQD\Index.aspx" />
+    <Content Include="TP\HGTQD\index.html" />
+    <Content Include="TP\HGTQD\js\jaliswall.js" />
+    <Content Include="TP\HGTQD\js\jquery-1.8.0.js" />
+    <Content Include="TP\HGTQD\js\js.js" />
+    <Content Include="TP\HGTQD\js\TouchSlide.1.1.js" />
+    <Content Include="TP\HGTQD\tp.aspx" />
     <Content Include="TP\ZDTQD\.idea\misc.xml" />
     <Content Include="TP\ZDTQD\.idea\modules.xml" />
     <Content Include="TP\ZDTQD\.idea\vcs.xml" />
@@ -2428,6 +2524,13 @@
     <Compile Include="Personal\RegisterUser.aspx.designer.cs">
       <DependentUpon>RegisterUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Personal\TestResult.aspx.cs">
+      <DependentUpon>TestResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personal\TestResult.aspx.designer.cs">
+      <DependentUpon>TestResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RLWD\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -2449,6 +2552,20 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TP\HGTQD\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TP\HGTQD\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TP\HGTQD\tp.aspx.cs">
+      <DependentUpon>tp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TP\HGTQD\tp.aspx.designer.cs">
+      <DependentUpon>tp.aspx</DependentUpon>
     </Compile>
     <Compile Include="TP\ZDTQD\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -2930,6 +3047,8 @@
     <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
     <None Include="RLWD\.idea\.name" />
     <None Include="RLWD\.idea\瑞龙武道.iml" />
+    <None Include="TP\HGTQD\.idea\.name" />
+    <None Include="TP\HGTQD\.idea\瑞龙武道.iml" />
     <None Include="TP\ZDTQD\.idea\.name" />
     <None Include="TP\ZDTQD\.idea\瑞龙武道.iml" />
     <None Include="WebApp\files\640" />

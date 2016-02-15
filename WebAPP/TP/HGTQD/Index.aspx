@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebAPP.TP.ZDTQD.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebAPP.TP.HGTQD.Index" %>
 
 <!doctype html>
 <html lang="en">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>智道跆拳道2016年度“最佳人气王”评选活动</title>
+    <title>宏光跆拳道2016年度“最佳人气王”评选活动</title>
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.8.0.js"></script>

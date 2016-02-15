@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.8.0.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/js.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
     身体健康水平测试
 </header>
 
-<section class="ceshi hz-hid">
+<section class="ceshi hz-hid"  id="sectionPart">
     <%=strHtml %>
 <%--    <section class="t">一、最近两个月持续三十分以上的运动，平均每周几次？</section>
     <div class="time-0 hz-hid">
@@ -44,6 +45,7 @@
             <option value="">身 高</option>
         </select>
     </div>--%>
+    <input type="text" style="display:none"  value="" runat="server" id="txtOpenid">
 </section>
 
 <section class="chu-2">
@@ -52,10 +54,10 @@
     <asp:LinkButton runat="server" ID="LinkPre" CssClass="fl" 
     onclick="LinkPre_Click"></asp:LinkButton>
     <asp:LinkButton runat="server" ID="LinkNextOrSubmit" CssClass="fr" 
-    onclick="LinkNextOrSubmit_Click"></asp:LinkButton>
+    onclick="LinkNextOrSubmit_Click" OnClientClick="return CheckInput()"></asp:LinkButton>
 </section>
 
-<script>
+<script type="text/javascript">
     $(function () {
         var l = $('.time-0 label');
         l.click(function () {
@@ -65,6 +67,13 @@
             $(this).siblings('label').find('input').removeAttr('checked');
         })
     })
+
+    function CheckInput() {
+        <%=strScript %>
+    }
+
+    <%=BindScript %>
+
 </script>
 </form>
 </body>

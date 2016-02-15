@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace WebAPP.Personal {
+namespace WebAPP.TP.HGTQD {
     
     
-    public partial class Questions {
+    public partial class Index {
         
         /// <summary>
         /// form1 控件。
@@ -22,30 +22,21 @@ namespace WebAPP.Personal {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtOpenid 控件。
+        /// searchKey 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtOpenid;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText searchKey;
         
         /// <summary>
-        /// LinkPre 控件。
+        /// repList 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkPre;
-        
-        /// <summary>
-        /// LinkNextOrSubmit 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkNextOrSubmit;
+        protected global::System.Web.UI.WebControls.Repeater repList;
     }
 }

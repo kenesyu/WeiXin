@@ -66,7 +66,7 @@
     <li>我的消费</li>
     <li>我的活动</li>
     <li>运动日记</li>
-    <li><a href='Questions.aspx?p=1&openid=<%=openid %>'>健康测试</a></li>
+    <li><a href='Questions.aspx'>健康测试</a></li>
 </ul>
 
 <script>

@@ -369,7 +369,9 @@ header .add{
     line-height: 0.36rem;
     text-align: center;
 }
-.top .img{
+.top .img
+{
+    border-radius: 50%;
     margin-left: 0.4rem;
     margin-top: 0.3rem;
     width:1.38rem;
