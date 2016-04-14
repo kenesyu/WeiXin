@@ -10,7 +10,7 @@ using System.Data;
 
 namespace WebAPP.Adm
 {
-    public partial class gzh_bqhd : System.Web.UI.Page
+    public partial class gzh_gzts : System.Web.UI.Page
     {
         public string retHtml = string.Empty;
 
@@ -31,7 +31,7 @@ namespace WebAPP.Adm
 
         private void Bind() {
             DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
-            DataTable dt = dbHelper.ExecuteDataTable("select * from T_HD_Current order by indexOrder");
+            DataTable dt = dbHelper.ExecuteDataTable("select * from T_Subscribe_Msg order by indexOrder");
             foreach (DataRow dr in dt.Rows)
             {
                retHtml +="<tr isdata='true'>";

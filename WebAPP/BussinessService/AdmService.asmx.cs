@@ -52,5 +52,30 @@ namespace WebAPP.BussinessService
             dbHelper.Dispose();
             return "保存成功";
         }
+
+        [WebMethod]
+        public string SaveSubscribeMsg(string Data) {
+            string[] DataList = Data.Split('|');
+            DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            dbHelper.ExecuteNonQuery("truncate table T_Subscribe_Msg");
+            foreach (string s in DataList)
+            {
+                string[] ss = s.Split('~');
+                if (ss.Length == 6)
+                {
+                    dbHelper.ExecuteNonQuery("INSERT INTO [T_Subscribe_Msg] ([IndexOrder],[Title],[Descriptions],[Url],[PicUrl]) VALUES (@IndexOrder,@Title,@Descriptions,@Url,@PicUrl)",
+                        new SqlParameter[]{
+                            new SqlParameter("@IndexOrder",ss[4]),
+                            new SqlParameter("@Title",ss[0]),
+                            new SqlParameter("@Descriptions",ss[1]),
+                            new SqlParameter("@Url",ss[3]),
+                            new SqlParameter("@PicUrl",ss[2])
+                        }
+                        );
+                }
+            }
+            dbHelper.Dispose();
+            return "保存成功";
+        }
     }
 }

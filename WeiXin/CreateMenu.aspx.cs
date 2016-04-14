@@ -44,28 +44,49 @@ namespace WeiXin
 
             List<Weixin.Mp.Sdk.Domain.Button> button = new List<Weixin.Mp.Sdk.Domain.Button>();
 
-            string[] subkeyText1 = { "玩" };
-            string[] subkeyText2 = { "运动场", "协会"};
-            string[] subkeyText3 = { "本期活动", "往期活动", "关于我们", "招贤纳士" };
+            //string[] subkeyText1 = { "去运动" };
+            string[] subkeyText2 = { "这周玩啥", "玩过什么"};
+            string[] subkeyText3 = { "老王原创", "问老王", "关于我们", "招贤纳士" };
 
             #region ==== SubMenu 1 ====
-            List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey1 = new List<Weixin.Mp.Sdk.Domain.Button>();
+            //List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey1 = new List<Weixin.Mp.Sdk.Domain.Button>();
             int keyIndex = 1;
-            foreach (string s in subkeyText1)
+            //foreach (string s in subkeyText1)
+            //{
+            //    var clicktype = "click";
+            //    var clickurl = "http://";
+            //    if (s == "去运动")
+            //    {
+            //        clicktype = "view";
+            //        clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa&scene=1&srcid=12113M1bX594nZF1FF5sdTVA&from=singlemessage&isappinstalled=0#wechat_redirect";//hosturl + "/webapp/list.aspx";
+            //    }
+
+            //    Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
+            //    {
+            //        key = "subkey" + keyIndex,
+            //        name = s,
+            //        sub_button = null,
+            //        type = clicktype,
+            //        url = clickurl    //"http://dede.dlyssoft.com/WebApp/list.aspx?r=&s=" + keyIndex
+            //    };
+            //    subBtnForKey1.Add(subBtn);
+            //    keyIndex++;
+
+            //}
+            #endregion
+
+            #region ==== SubMenu 2 ====
+            List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey2 = new List<Weixin.Mp.Sdk.Domain.Button>();
+            //int keyIndex = 1;
+            foreach (string s in subkeyText2)
             {
                 var clicktype = "click";
                 var clickurl = "http://";
-                if (s == "趣运动")
+                if (s == "玩过什么")
                 {
                     clicktype = "view";
-                    clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa&scene=1&srcid=12113M1bX594nZF1FF5sdTVA&from=singlemessage&isappinstalled=0#wechat_redirect";//hosturl + "/webapp/list.aspx";
+                    clickurl = "http://mp.weixin.qq.com/mp/homepage?__biz=MzA4Nzc0MTExNw==&hid=1&sn=28565b5f17a562b386d06662a7f00272#wechat_redirect";
                 }
-                //else if (s == "找场馆")
-                //{
-                //    clicktype = "view";
-                //    clickurl = hosturl + "/webapp/gym_list.aspx"; //"http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd";
-                //}
-
 
                 Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
                 {
@@ -75,54 +96,24 @@ namespace WeiXin
                     type = clicktype,
                     url = clickurl    //"http://dede.dlyssoft.com/WebApp/list.aspx?r=&s=" + keyIndex
                 };
-                subBtnForKey1.Add(subBtn);
+                subBtnForKey2.Add(subBtn);
                 keyIndex++;
-
             }
             #endregion
 
-            //List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey2 = new List<Weixin.Mp.Sdk.Domain.Button>();
-
-            //foreach (string s in subkeyText2)
-            //{
-            //    var clicktype = "click";
-            //    var clickurl = "http://";
-            //    if (s == "运动场")
-            //    {
-            //        clicktype = "view";
-            //        clickurl = hosturl + "/webapp/gym_list.aspx";
-            //    }
-            //    else if (s == "协会") {
-            //        clicktype = "view";
-            //        clickurl = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=203884252&idx=1&sn=26f6323d4b8f9da1046e5c126c796ebd#rd";
-            //    }
-            //    Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
-            //    {
-            //        key = "subkey" + keyIndex,
-            //        name = s,
-            //        sub_button = null,
-            //        type = clicktype,
-            //        url = clickurl
-            //    };
-            //    subBtnForKey2.Add(subBtn);
-            //    keyIndex++;
-            //}
-
-
+            #region ==== SubMenu 3 ====
             List<Weixin.Mp.Sdk.Domain.Button> subBtnForKey3 = new List<Weixin.Mp.Sdk.Domain.Button>();
-
 
             foreach (string s in subkeyText3)
             {
                 var clicktype = "click";
                 var clickurl = "http://";
 
-                if (s == "往期活动")
+                if (s == "老王原创")
                 {
                     clicktype = "view";
-                    clickurl = "http://mp.weixin.qq.com/mp/homepage?__biz=MzA4Nzc0MTExNw==&hid=1&sn=28565b5f17a562b386d06662a7f00272#wechat_redirect";
+                    clickurl = "http://mp.weixin.qq.com/mp/homepage?__biz=MzA4Nzc0MTExNw==&hid=2&sn=a54d0a139d059a5822581b6b7b9d55e8#wechat_redirect";
                 }
-
 
                 Weixin.Mp.Sdk.Domain.Button subBtn = new Weixin.Mp.Sdk.Domain.Button()
                 {
@@ -136,11 +127,12 @@ namespace WeiXin
                 keyIndex++;
             }
 
+            #endregion
 
             Weixin.Mp.Sdk.Domain.Button btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn1",
-                name = "玩",
+                name = "去运动",
                 url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
                 type = "view"
 
@@ -150,17 +142,17 @@ namespace WeiXin
             btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn2",
-                name = "问",
+                name = "去玩",
                 url = "httpbig",
                 type = "click",
-                //sub_button = subBtnForKey2
+                sub_button = subBtnForKey2
             };
             button.Add(btn);
 
             btn = new Weixin.Mp.Sdk.Domain.Button()
             {
                 key = "btn3",
-                name = "读",
+                name = "千万别点",
                 url = "httpbig",
                 type = "click",
                 sub_button = subBtnForKey3

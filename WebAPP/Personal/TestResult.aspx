@@ -22,8 +22,8 @@
 <section class="top por">
     <img runat="server" id="imgheader" alt="" class="img"/>
     <div class="txt hz-hid">
-        <p>身体年龄为<asp:Label runat="server" ID="lblstAge"></asp:Label>岁 超过了30%同龄人</p>
-        <p>预计寿命<asp:Label runat="server" ID="lblyjAge"></asp:Label>岁 超过了70%（大连）人</p>
+        <p>身体年龄为<asp:Label runat="server" ID="lblstAge"></asp:Label>岁 超过了<asp:Label runat="server" ID="lblstAgeP"></asp:Label>同龄人</p>
+        <p>预计寿命<asp:Label runat="server" ID="lblyjAge"></asp:Label>岁 超过了<asp:Label runat="server" ID="lblyjAgeP"></asp:Label>（大连）人</p>
     </div>
     <div class="topbottom">
         <span class="dib fl"><asp:Label runat="server" ID="lblName"></asp:Label></span>
@@ -80,7 +80,7 @@
     <p>个性化解决方案</p>
 </section>
 
-<a href="" class="zhidao-btn">健康指导</a>
+<a href="ChooseSport.aspx" class="zhidao-btn">健康指导</a>
 
 </body>
 </html>

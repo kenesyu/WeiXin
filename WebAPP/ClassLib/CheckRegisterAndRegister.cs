@@ -62,7 +62,7 @@ namespace WebAPP.ClassLib
                         new SqlParameter("@headimgurl",userInfo["headimgurl"]),
                         new SqlParameter("@from",from)
                     }, true);
-                    //Logger.WriteTxtLog("OK");
+                    dbHelper.Dispose();
                 }
                 catch (Exception ex)
                 {

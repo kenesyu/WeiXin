@@ -7,135 +7,99 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace WebAPP.Personal {
+namespace WebAPP.Adm {
     
     
-    public partial class TestResult {
+    public partial class hd_create {
         
         /// <summary>
-        /// imgheader 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgheader;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblstAge 控件。
+        /// txtid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblstAge;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtid;
         
         /// <summary>
-        /// lblstAgeP 控件。
+        /// txthdName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblstAgeP;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txthdName;
         
         /// <summary>
-        /// lblyjAge 控件。
+        /// txtQuantity 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblyjAge;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtQuantity;
         
         /// <summary>
-        /// lblyjAgeP 控件。
+        /// txtNewPrice 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblyjAgeP;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNewPrice;
         
         /// <summary>
-        /// lblName 控件。
+        /// txtOldPrice 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtOldPrice;
         
         /// <summary>
-        /// lblBMI 控件。
+        /// txtHDTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBMI;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtHDTime;
         
         /// <summary>
-        /// lblWHR 控件。
+        /// txtEndTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWHR;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtEndTime;
         
         /// <summary>
-        /// lblXL 控件。
+        /// txtDetails 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblXL;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDetails;
         
         /// <summary>
-        /// lblBQSY 控件。
+        /// btnSave 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBQSY;
-        
-        /// <summary>
-        /// lblPHNL 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPHNL;
-        
-        /// <summary>
-        /// lblXYZS 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblXYZS;
-        
-        /// <summary>
-        /// lblYDXG 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblYDXG;
-        
-        /// <summary>
-        /// lblYJKZZ 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblYJKZZ;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

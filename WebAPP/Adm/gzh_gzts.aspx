@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gzh_bqhd.aspx.cs" Inherits="WebAPP.Adm.gzh_bqhd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gzh_gzts.aspx.cs" Inherits="WebAPP.Adm.gzh_gzts" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,10 +7,10 @@
 <title>无标题文档</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.js" ></script>
-<script src="../ScriptsLib/Core/IsTech_core.js" ></script>
-<script src="../ScriptsLib/Core/IsTech_form.js" ></script>
+<script src="/ScriptsLib/Core/IsTech_core.js" ></script>
+<script src="/ScriptsLib/Core/IsTech_form.js" ></script>
 <script src="js/jquery.js" ></script>
-<script src="../ScriptsLib/AdmServices.js?ver=20150821_2"></script>
+<script src="/ScriptsLib/AdmServices.js?ver=20150821_2"></script>
 </head>
 <body>
 
@@ -18,13 +18,13 @@
     <span>位置：</span>
     <ul class="placeul">
     <li><a href="#">公众号设置</a></li>
-    <li><a href="#">本期活动</a></li>
+    <li><a href="#">关注推送</a></li>
     </ul>
     </div>
     
     <div class="formbody">
     
-    <div class="formtitle"><span>本期活动</span></div>
+    <div class="formtitle"><span>关注推送</span></div>
     <input type="button" value="添加一条" onclick="addtr()" class="btn">
     <br /><br />
         <table class="tablelist" id="tbList">
@@ -44,7 +44,7 @@
     </table>
     <table class="tablelist">
         <tr>
-            <td align="center"><input type="button" value="保存" onclick="AdmServices.SaveCurrentHD()" class="btn"></td>
+            <td align="center"><input type="button" value="保存" onclick="AdmServices.SaveSubscribeMsg()" class="btn"></td>
         </tr>
     </table>
     </div>

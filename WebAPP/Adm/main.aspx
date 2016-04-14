@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大连市全民健身公共信息服务管理系统</title>
+<title>大连运动健身网</title>
 </head>
 <frameset rows="88,*" cols="*" frameborder="no" border="0" framespacing="0">
   <frame src="top.aspx" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame"  />

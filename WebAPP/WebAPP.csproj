@@ -47,9 +47,29 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DllReference\AspNetPager.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLRef\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\DllReference\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLRef\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLRef\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLRef\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLRef\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -68,6 +88,9 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Adm\hd_create.aspx" />
+    <Content Include="Adm\hd_list.aspx" />
+    <Content Include="Adm\TP_Create.aspx" />
     <Content Include="Adm\css\select.css" />
     <Content Include="Adm\css\style.css" />
     <Content Include="Adm\editor\kindeditor.js" />
@@ -271,7 +294,6 @@
     <Content Include="Adm\left.aspx" />
     <Content Include="Adm\Login.aspx" />
     <Content Include="Adm\main.aspx" />
-    <Content Include="Adm\main.htm" />
     <Content Include="Adm\message.htm" />
     <Content Include="Adm\oa_file.htm" />
     <Content Include="Adm\oa_list.htm" />
@@ -281,11 +303,13 @@
     <Content Include="Adm\ss_list.htm" />
     <Content Include="Adm\ss_zhanshi.htm" />
     <Content Include="Adm\top.aspx" />
-    <Content Include="Adm\top.htm" />
+    <Content Include="Adm\TP_Extract.aspx" />
+    <Content Include="Adm\TP_List.aspx" />
     <Content Include="Adm\xt_mima.htm" />
     <Content Include="Adm\zz_gongwen.htm" />
     <Content Include="Adm\zz_search.htm" />
     <Content Include="Adm\zz_weihui.htm" />
+    <Content Include="Adm\gzh_gzts.aspx" />
     <Content Include="assets\advanced-datatable\docs\34cdb56b2c.html" />
     <Content Include="assets\advanced-datatable\docs\DataTable.defaults.columns.html" />
     <Content Include="assets\advanced-datatable\docs\DataTable.defaults.html" />
@@ -1803,6 +1827,14 @@
     <Content Include="css\tasks.css" />
     <Content Include="css\var.css" />
     <Content Include="css\zyupload-1.0.0.css" />
+    <Content Include="DLLRef\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="DLLRef\NPOI.dll" />
+    <Content Include="DLLRef\NPOI.OOXML.dll" />
+    <Content Include="DLLRef\NPOI.OOXML.XML" />
+    <Content Include="DLLRef\NPOI.OpenXml4Net.dll" />
+    <Content Include="DLLRef\NPOI.OpenXml4Net.XML" />
+    <Content Include="DLLRef\NPOI.OpenXmlFormats.dll" />
+    <Content Include="DLLRef\NPOI.XML" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons\flat-ui-icons-regular.svg" />
     <Content Include="fonts\lato\lato-black.svg" />
@@ -1837,31 +1869,6 @@
     <Content Include="img\avatar-mini4.jpg" />
     <Content Include="img\avatar1.jpg" />
     <Content Include="img\avatar1_small.jpg" />
-    <Content Include="img\avatar\1.jpg" />
-    <Content Include="img\avatar\10.jpg" />
-    <Content Include="img\avatar\11.jpg" />
-    <Content Include="img\avatar\12.jpg" />
-    <Content Include="img\avatar\13.jpg" />
-    <Content Include="img\avatar\14.jpg" />
-    <Content Include="img\avatar\15.jpg" />
-    <Content Include="img\avatar\16.jpg" />
-    <Content Include="img\avatar\17.jpg" />
-    <Content Include="img\avatar\18.jpg" />
-    <Content Include="img\avatar\19.jpg" />
-    <Content Include="img\avatar\2.jpg" />
-    <Content Include="img\avatar\20.jpg" />
-    <Content Include="img\avatar\21.jpg" />
-    <Content Include="img\avatar\22.jpg" />
-    <Content Include="img\avatar\23.jpg" />
-    <Content Include="img\avatar\24.jpg" />
-    <Content Include="img\avatar\25.jpg" />
-    <Content Include="img\avatar\3.jpg" />
-    <Content Include="img\avatar\4.jpg" />
-    <Content Include="img\avatar\5.jpg" />
-    <Content Include="img\avatar\6.jpg" />
-    <Content Include="img\avatar\7.jpg" />
-    <Content Include="img\avatar\8.jpg" />
-    <Content Include="img\avatar\9.jpg" />
     <Content Include="img\black.png" />
     <Content Include="img\chart-texture.jpg" />
     <Content Include="img\chat-avatar.jpg" />
@@ -2078,8 +2085,9 @@
     <Content Include="Personal\2.html" />
     <Content Include="Personal\3.html" />
     <Content Include="Personal\4.html" />
-    <Content Include="Personal\5.html" />
-    <Content Include="Personal\6.html" />
+    <Content Include="Personal\运动日记.html" />
+    <Content Include="Personal\个人主页.html" />
+    <Content Include="Personal\ChooseSport.aspx" />
     <Content Include="Personal\css\base.css" />
     <Content Include="Personal\css\style.css" />
     <Content Include="Personal\images\a-2.png" />
@@ -2206,176 +2214,30 @@
     <Content Include="ScriptsLib\Core\IsTech_core.js" />
     <Content Include="ScriptsLib\Core\IsTech_form.js" />
     <Content Include="ScriptsLib\CustomerServices.js" />
+    <Content Include="ScriptsLib\jedate\jedate.js" />
+    <Content Include="ScriptsLib\jedate\jedate.min.js" />
+    <Content Include="ScriptsLib\jedate\skin\gray.css" />
+    <Content Include="ScriptsLib\jedate\skin\green.css" />
+    <Content Include="ScriptsLib\jedate\skin\jedate.css" />
+    <Content Include="ScriptsLib\jedate\skin\red.css" />
     <Content Include="ScriptsLib\WxPayService.js" />
-    <Content Include="TP\HGTQD\.idea\misc.xml" />
-    <Content Include="TP\HGTQD\.idea\modules.xml" />
-    <Content Include="TP\HGTQD\.idea\vcs.xml" />
-    <Content Include="TP\HGTQD\.idea\workspace.xml" />
-    <Content Include="TP\HGTQD\css\base.css" />
-    <Content Include="TP\HGTQD\css\style.css" />
-    <Content Include="TP\HGTQD\header\001.jpg" />
-    <Content Include="TP\HGTQD\header\002.jpg" />
-    <Content Include="TP\HGTQD\header\003.jpg" />
-    <Content Include="TP\HGTQD\header\004.jpg" />
-    <Content Include="TP\HGTQD\header\005.jpg" />
-    <Content Include="TP\HGTQD\header\006.jpg" />
-    <Content Include="TP\HGTQD\header\007.jpg" />
-    <Content Include="TP\HGTQD\header\008.jpg" />
-    <Content Include="TP\HGTQD\header\009.jpg" />
-    <Content Include="TP\HGTQD\header\010.jpg" />
-    <Content Include="TP\HGTQD\header\011.jpg" />
-    <Content Include="TP\HGTQD\header\012.jpg" />
-    <Content Include="TP\HGTQD\header\013.jpg" />
-    <Content Include="TP\HGTQD\header\014.jpg" />
-    <Content Include="TP\HGTQD\header\015.jpg" />
-    <Content Include="TP\HGTQD\header\016.jpg" />
-    <Content Include="TP\HGTQD\header\017.jpg" />
-    <Content Include="TP\HGTQD\header\018.jpg" />
-    <Content Include="TP\HGTQD\header\019.jpg" />
-    <Content Include="TP\HGTQD\header\020.jpg" />
-    <Content Include="TP\HGTQD\header\021.jpg" />
-    <Content Include="TP\HGTQD\header\022.jpg" />
-    <Content Include="TP\HGTQD\header\023.jpg" />
-    <Content Include="TP\HGTQD\header\024.jpg" />
-    <Content Include="TP\HGTQD\header\025.jpg" />
-    <Content Include="TP\HGTQD\header\026.jpg" />
-    <Content Include="TP\HGTQD\header\027.jpg" />
-    <Content Include="TP\HGTQD\header\028.jpg" />
-    <Content Include="TP\HGTQD\header\029.jpg" />
-    <Content Include="TP\HGTQD\header\030.jpg" />
-    <Content Include="TP\HGTQD\header\031.jpg" />
-    <Content Include="TP\HGTQD\header\032.jpg" />
-    <Content Include="TP\HGTQD\header\033.jpg" />
-    <Content Include="TP\HGTQD\header\034.jpg" />
-    <Content Include="TP\HGTQD\header\035.jpg" />
-    <Content Include="TP\HGTQD\header\036.jpg" />
-    <Content Include="TP\HGTQD\header\037.jpg" />
-    <Content Include="TP\HGTQD\header\038.jpg" />
-    <Content Include="TP\HGTQD\header\039.jpg" />
-    <Content Include="TP\HGTQD\header\040.jpg" />
-    <Content Include="TP\HGTQD\header\041.jpg" />
-    <Content Include="TP\HGTQD\header\042.jpg" />
-    <Content Include="TP\HGTQD\header\043.jpg" />
-    <Content Include="TP\HGTQD\header\044.jpg" />
-    <Content Include="TP\HGTQD\header\045.jpg" />
-    <Content Include="TP\HGTQD\header\046.jpg" />
-    <Content Include="TP\HGTQD\header\047.jpg" />
-    <Content Include="TP\HGTQD\header\048.jpg" />
-    <Content Include="TP\HGTQD\header\049.jpg" />
-    <Content Include="TP\HGTQD\header\050.jpg" />
-    <Content Include="TP\HGTQD\header\051.jpg" />
-    <Content Include="TP\HGTQD\header\052.jpg" />
-    <Content Include="TP\HGTQD\header\053.jpg" />
-    <Content Include="TP\HGTQD\header\054.jpg" />
-    <Content Include="TP\HGTQD\header\055.jpg" />
-    <Content Include="TP\HGTQD\header\056.jpg" />
-    <Content Include="TP\HGTQD\header\057.jpg" />
-    <Content Include="TP\HGTQD\header\058.jpg" />
-    <Content Include="TP\HGTQD\header\059.jpg" />
-    <Content Include="TP\HGTQD\header\060.jpg" />
-    <Content Include="TP\HGTQD\header\061.jpg" />
-    <Content Include="TP\HGTQD\header\062.jpg" />
-    <Content Include="TP\HGTQD\header\063.jpg" />
-    <Content Include="TP\HGTQD\header\064.jpg" />
-    <Content Include="TP\HGTQD\header\065.jpg" />
-    <Content Include="TP\HGTQD\header\066.jpg" />
-    <Content Include="TP\HGTQD\header\067.jpg" />
-    <Content Include="TP\HGTQD\header\068.jpg" />
-    <Content Include="TP\HGTQD\header\069.jpg" />
-    <Content Include="TP\HGTQD\header\070.jpg" />
-    <Content Include="TP\HGTQD\header\071.jpg" />
-    <Content Include="TP\HGTQD\header\072.jpg" />
-    <Content Include="TP\HGTQD\header\073.jpg" />
-    <Content Include="TP\HGTQD\header\074.jpg" />
-    <Content Include="TP\HGTQD\header\075.jpg" />
-    <Content Include="TP\HGTQD\header\076.jpg" />
-    <Content Include="TP\HGTQD\header\077.jpg" />
-    <Content Include="TP\HGTQD\header\078.jpg" />
-    <Content Include="TP\HGTQD\images\i.png" />
-    <Content Include="TP\HGTQD\images\p.png" />
-    <Content Include="TP\HGTQD\images\s.png" />
-    <Content Include="TP\HGTQD\Index.aspx" />
-    <Content Include="TP\HGTQD\index.html" />
-    <Content Include="TP\HGTQD\js\jaliswall.js" />
-    <Content Include="TP\HGTQD\js\jquery-1.8.0.js" />
-    <Content Include="TP\HGTQD\js\js.js" />
-    <Content Include="TP\HGTQD\js\TouchSlide.1.1.js" />
-    <Content Include="TP\HGTQD\tp.aspx" />
-    <Content Include="TP\ZDTQD\.idea\misc.xml" />
-    <Content Include="TP\ZDTQD\.idea\modules.xml" />
-    <Content Include="TP\ZDTQD\.idea\vcs.xml" />
-    <Content Include="TP\ZDTQD\.idea\workspace.xml" />
-    <Content Include="TP\ZDTQD\css\base.css" />
-    <Content Include="TP\ZDTQD\css\style.css" />
-    <Content Include="TP\ZDTQD\header\001.jpg" />
-    <Content Include="TP\ZDTQD\header\002.jpg" />
-    <Content Include="TP\ZDTQD\header\003.jpg" />
-    <Content Include="TP\ZDTQD\header\004.jpg" />
-    <Content Include="TP\ZDTQD\header\005.jpg" />
-    <Content Include="TP\ZDTQD\header\006.jpg" />
-    <Content Include="TP\ZDTQD\header\007.jpg" />
-    <Content Include="TP\ZDTQD\header\008.jpg" />
-    <Content Include="TP\ZDTQD\header\009.jpg" />
-    <Content Include="TP\ZDTQD\header\010.jpg" />
-    <Content Include="TP\ZDTQD\header\011.jpg" />
-    <Content Include="TP\ZDTQD\header\012.jpg" />
-    <Content Include="TP\ZDTQD\header\013.jpg" />
-    <Content Include="TP\ZDTQD\header\014.jpg" />
-    <Content Include="TP\ZDTQD\header\015.jpg" />
-    <Content Include="TP\ZDTQD\header\016.jpg" />
-    <Content Include="TP\ZDTQD\header\017.jpg" />
-    <Content Include="TP\ZDTQD\header\018.jpg" />
-    <Content Include="TP\ZDTQD\header\019.jpg" />
-    <Content Include="TP\ZDTQD\header\020.jpg" />
-    <Content Include="TP\ZDTQD\header\021.jpg" />
-    <Content Include="TP\ZDTQD\header\022.jpg" />
-    <Content Include="TP\ZDTQD\header\023.jpg" />
-    <Content Include="TP\ZDTQD\header\024.jpg" />
-    <Content Include="TP\ZDTQD\header\025.jpg" />
-    <Content Include="TP\ZDTQD\header\026.jpg" />
-    <Content Include="TP\ZDTQD\header\027.jpg" />
-    <Content Include="TP\ZDTQD\header\028.jpg" />
-    <Content Include="TP\ZDTQD\header\029.JPG" />
-    <Content Include="TP\ZDTQD\header\030.JPG" />
-    <Content Include="TP\ZDTQD\header\031.JPG" />
-    <Content Include="TP\ZDTQD\header\032.JPG" />
-    <Content Include="TP\ZDTQD\header\033.jpg" />
-    <Content Include="TP\ZDTQD\header\034.jpg" />
-    <Content Include="TP\ZDTQD\header\035.jpg" />
-    <Content Include="TP\ZDTQD\header\036.jpg" />
-    <Content Include="TP\ZDTQD\header\037.jpg" />
-    <Content Include="TP\ZDTQD\header\038.jpg" />
-    <Content Include="TP\ZDTQD\header\039.jpg" />
-    <Content Include="TP\ZDTQD\header\040.JPG" />
-    <Content Include="TP\ZDTQD\header\041.jpg" />
-    <Content Include="TP\ZDTQD\header\042.jpg" />
-    <Content Include="TP\ZDTQD\header\043.jpg" />
-    <Content Include="TP\ZDTQD\header\044.JPG" />
-    <Content Include="TP\ZDTQD\header\045.jpg" />
-    <Content Include="TP\ZDTQD\header\046.jpg" />
-    <Content Include="TP\ZDTQD\header\047.jpg" />
-    <Content Include="TP\ZDTQD\header\048.jpg" />
-    <Content Include="TP\ZDTQD\header\049.jpg" />
-    <Content Include="TP\ZDTQD\header\050.jpg" />
-    <Content Include="TP\ZDTQD\header\051.JPG" />
-    <Content Include="TP\ZDTQD\header\052.JPG" />
-    <Content Include="TP\ZDTQD\header\053.JPG" />
-    <Content Include="TP\ZDTQD\header\054.jpg" />
-    <Content Include="TP\ZDTQD\header\055.jpg" />
-    <Content Include="TP\ZDTQD\header\056.jpg" />
-    <Content Include="TP\ZDTQD\header\057.jpg" />
-    <Content Include="TP\ZDTQD\header\058.jpg" />
-    <Content Include="TP\ZDTQD\header\059.jpg" />
-    <Content Include="TP\ZDTQD\images\i.png" />
-    <Content Include="TP\ZDTQD\images\p.png" />
-    <Content Include="TP\ZDTQD\images\s.png" />
-    <Content Include="TP\ZDTQD\Index.aspx" />
-    <Content Include="TP\ZDTQD\index.html" />
-    <Content Include="TP\ZDTQD\js\jaliswall.js" />
-    <Content Include="TP\ZDTQD\js\jquery-1.8.0.js" />
-    <Content Include="TP\ZDTQD\js\js.js" />
-    <Content Include="TP\ZDTQD\js\TouchSlide.1.1.js" />
-    <Content Include="TP\ZDTQD\tp.aspx" />
+    <Content Include="TP\.idea\misc.xml" />
+    <Content Include="TP\.idea\modules.xml" />
+    <Content Include="TP\.idea\vcs.xml" />
+    <Content Include="TP\.idea\workspace.xml" />
+    <Content Include="TP\css\base.css" />
+    <Content Include="TP\css\style.css" />
+    <Content Include="TP\images\i.png" />
+    <Content Include="TP\images\p.png" />
+    <Content Include="TP\images\s.png" />
+    <Content Include="TP\Index.aspx" />
+    <Content Include="TP\index.html" />
+    <Content Include="TP\js\jaliswall.js" />
+    <Content Include="TP\js\jquery-1.8.0.js" />
+    <Content Include="TP\js\js.js" />
+    <Content Include="TP\js\TouchSlide.1.1.js" />
+    <Content Include="TP\tp.aspx" />
+    <Content Include="Adm\TP_Person.aspx" />
     <Content Include="WebApp\coach_list.aspx" />
     <Content Include="WebApp\DR\DR_BM.aspx" />
     <Content Include="WebApp\DR\DR_Personal.aspx" />
@@ -2421,6 +2283,27 @@
     <Content Include="WebApp\WeiPayHD.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adm\hd_create.aspx.cs">
+      <DependentUpon>hd_create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\hd_create.aspx.designer.cs">
+      <DependentUpon>hd_create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\hd_list.aspx.cs">
+      <DependentUpon>hd_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\hd_list.aspx.designer.cs">
+      <DependentUpon>hd_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\TP_Create.aspx.cs">
+      <DependentUpon>TP_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\TP_Create.aspx.designer.cs">
+      <DependentUpon>TP_Create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adm\gzh_bqhd.aspx.cs">
       <DependentUpon>gzh_bqhd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2484,6 +2367,27 @@
     <Compile Include="Adm\top.aspx.designer.cs">
       <DependentUpon>top.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adm\TP_Extract.aspx.cs">
+      <DependentUpon>TP_Extract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\TP_Extract.aspx.designer.cs">
+      <DependentUpon>TP_Extract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\TP_List.aspx.cs">
+      <DependentUpon>TP_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\TP_List.aspx.designer.cs">
+      <DependentUpon>TP_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adm\gzh_gzts.aspx.cs">
+      <DependentUpon>gzh_gzts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm\gzh_gzts.aspx.designer.cs">
+      <DependentUpon>gzh_gzts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BussinessService\AdmService.asmx.cs">
       <DependentUpon>AdmService.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -2503,6 +2407,14 @@
     </Compile>
     <Compile Include="Handler\UploadAvatar.cs" />
     <Compile Include="Handler\UploadMulti.cs" />
+    <Compile Include="Handler\UploadTP.cs" />
+    <Compile Include="Personal\ChooseSport.aspx.cs">
+      <DependentUpon>ChooseSport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personal\ChooseSport.aspx.designer.cs">
+      <DependentUpon>ChooseSport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Personal\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2553,33 +2465,26 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="TP\HGTQD\Index.aspx.cs">
+    <Compile Include="TP\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TP\HGTQD\Index.aspx.designer.cs">
+    <Compile Include="TP\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TP\HGTQD\tp.aspx.cs">
+    <Compile Include="TP\tp.aspx.cs">
       <DependentUpon>tp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TP\HGTQD\tp.aspx.designer.cs">
+    <Compile Include="TP\tp.aspx.designer.cs">
       <DependentUpon>tp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TP\ZDTQD\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Adm\TP_Person.aspx.cs">
+      <DependentUpon>TP_Person.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TP\ZDTQD\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TP\ZDTQD\tp.aspx.cs">
-      <DependentUpon>tp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TP\ZDTQD\tp.aspx.designer.cs">
-      <DependentUpon>tp.aspx</DependentUpon>
+    <Compile Include="Adm\TP_Person.aspx.designer.cs">
+      <DependentUpon>TP_Person.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserAuth\UserAuth.aspx.cs">
       <DependentUpon>UserAuth.aspx</DependentUpon>
@@ -2757,6 +2662,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\jquery-file-upload\server\php\files\thumbnail\" />
+    <Folder Include="Download\" />
+    <Folder Include="img\avatar\" />
+    <Folder Include="img\tp\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -3047,10 +2955,8 @@
     <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
     <None Include="RLWD\.idea\.name" />
     <None Include="RLWD\.idea\瑞龙武道.iml" />
-    <None Include="TP\HGTQD\.idea\.name" />
-    <None Include="TP\HGTQD\.idea\瑞龙武道.iml" />
-    <None Include="TP\ZDTQD\.idea\.name" />
-    <None Include="TP\ZDTQD\.idea\瑞龙武道.iml" />
+    <None Include="TP\.idea\.name" />
+    <None Include="TP\.idea\瑞龙武道.iml" />
     <None Include="WebApp\files\640" />
     <None Include="WebApp\files\640%281%29" />
     <None Include="WebApp\files\640%282%29" />

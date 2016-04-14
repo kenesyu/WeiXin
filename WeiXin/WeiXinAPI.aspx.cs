@@ -423,14 +423,22 @@ namespace WeixinMpSdkTestWeb
             //这里回应1条文本消息，当然您也可以回应其他消息
             Logger.WriteTxtLog("关注开始");
 
+            DataBaseHelper dbHelper = new DataBaseHelper(ConfigurationManager.ConnectionStrings["DB"].ToString());
+            DataTable dt = dbHelper.ExecuteDataTable("select * from T_Subscribe_Msg order by IndexOrder");
             List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
-            NewsReplyMessageItem itm = new NewsReplyMessageItem()
+
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=400048887&idx=1&sn=f061fbdefc29a8200172480f75b3c7aa#rd",
-                PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAt14nR17dURXJMc0rtoWEIhTaU8ib94FoUHOIziaAmlVpWW6Cpn7ZAOOn6wfwOYwFibsE4TPxGAcNpQ/0?wx_fmt=png",
-                Title = "点开这个，你将受益一生。",
-                Description = "据英国《每日邮报》近期报道，由英国漫步者步行慈善会和麦克米兰癌症援助中心发布的报告显示，每天只需运动20分钟，每年就能帮助3.7万人远离癌症、心脏病和中风导致的过早死亡。"
-            };
+                NewsReplyMessageItem itm = new NewsReplyMessageItem()
+                {
+                    Description = dt.Rows[i]["Descriptions"].ToString(),
+                    Url = dt.Rows[i]["Url"].ToString(),
+                    PicUrl = dt.Rows[i]["PicUrl"].ToString(),
+                    Title = dt.Rows[i]["Title"].ToString()
+                };
+                items.Add(itm);
+            }
+            dbHelper.Dispose();
 
             NewsReplyMessage replyMsg = new NewsReplyMessage()
             {
@@ -440,7 +448,7 @@ namespace WeixinMpSdkTestWeb
                 Articles = items
             };
 
-            items.Add(itm);
+            //items.Add(itm);
             MessageHandler.SendReplyMessage(replyMsg);
 
             //MessageHandler.SendTextReplyMessage(msg.ToUserName, msg.FromUserName, "<a href=\"" + ConfigurationManager.AppSettings["Host"].ToString() + "/webapp/SubscribeRedPack.aspx\">点此领取现金红包</a>");
@@ -510,11 +518,12 @@ namespace WeixinMpSdkTestWeb
         {
             //这里回应1条文本消息，当然您也可以回应其他消息
             string key = msg.EventKey.ToString();
-            if (key == "btn2") {
+            if (key == "subkey4")
+            {
                 MessageHandler.TransferToAutoCustomer(msg.ToUserName, msg.FromUserName);
                 return true;
             }
-            else if (key == "subkey2")
+            else if (key == "subkey1")
             {
                 //本期活动
 
@@ -554,48 +563,7 @@ namespace WeixinMpSdkTestWeb
                 //items.Add(itm);
                 MessageHandler.SendReplyMessage(replyMsg);
             }
-            else if (key == "subkey3")
-            {
-                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
-
-                NewsReplyMessageItem itm = new NewsReplyMessageItem()
-                {
-                    //Description = "汽车描述1",
-                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206962114&idx=1&sn=04f6542cc971ebb39b5c2910a6a2b3b2#rd",
-                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAasic0wM17lCN7kKDBoVorst3MlJx9z54vcz9IjunJbozXJDmr0Vs5AerWfggosKpLakkhlYkhOzQ/0?wx_fmt=jpeg",
-                    Title = "妹子没了。7月第三期活动回顾"
-                };
-                items.Add(itm);
-
-
-                itm = new NewsReplyMessageItem()
-                {
-                    //Description = "汽车描述1",
-                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206871537&idx=1&sn=4c811e2c760abc09bca2bf928b01306c#rd",
-                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrBOtXcdqJjgVNAM1JI9qjTwaH7AN5j1BLoQVkAZWgoGG5XfTnjb3gmSy7AYw4yPL9HuA1XwkMia6sA/0?wx_fmt=jpeg",
-                    Title = "盛夏光年。7月第二期活动回顾"
-                };
-                items.Add(itm);
-
-                itm = new NewsReplyMessageItem()
-                {
-                    //Description = "汽车描述2",
-                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=206871537&idx=2&sn=00a0fa8d8764092b98109aa4ff00a2c8#rd",
-                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrBOtXcdqJjgVNAM1JI9qjTwNCA2rm0LTwtvWAHib6JwZH3OWklqGiaJCkvU0W5k1gnCJrEOpvw0ORyg/0?wx_fmt=jpeg",
-                    Title = "本趴首秀。7月第一期活动回顾"
-                };
-                items.Add(itm);
-
-                NewsReplyMessage replyMsg = new NewsReplyMessage()
-                {
-                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
-                    FromUserName = msg.ToUserName,
-                    ToUserName = msg.FromUserName,
-                    Articles = items
-                };
-                MessageHandler.SendReplyMessage(replyMsg);
-            }
-            else if (key == "subkey4")
+            else if (key == "subkey5")
             {
                 List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
                 NewsReplyMessageItem itm = new NewsReplyMessageItem()
@@ -617,7 +585,7 @@ namespace WeixinMpSdkTestWeb
                 items.Add(itm);
                 MessageHandler.SendReplyMessage(replyMsg);
             }
-            else if (key == "subkey5")
+            else if (key == "subkey6")
             {
                 List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
                 NewsReplyMessageItem itm = new NewsReplyMessageItem()
@@ -639,29 +607,6 @@ namespace WeixinMpSdkTestWeb
                 items.Add(itm);
                 MessageHandler.SendReplyMessage(replyMsg);
             }
-            else if (key == "subkey6") {
-                List<NewsReplyMessageItem> items = new List<NewsReplyMessageItem>();
-                NewsReplyMessageItem itm = new NewsReplyMessageItem()
-                {
-                    Url = "http://mp.weixin.qq.com/s?__biz=MzA4Nzc0MTExNw==&mid=207683103&idx=1&sn=95c475f90a08c4c4a34e84f611815d85#rd",
-                    PicUrl = "https://mmbiz.qlogo.cn/mmbiz/wiawsQjia0DrAYSfr4HeP7xQL8Vg7dhsIYcEIfMTrgiceLs7M5envFXNFRwc85uE1hqrxT9FbV4xaEvS8KELfUFeg/0?wx_fmt=jpeg",
-                    Title = "撑下去，只配最强者",
-                    Description = "第一季东软平板支撑邀请赛"
-                };
-
-                NewsReplyMessage replyMsg = new NewsReplyMessage()
-                {
-                    CreateTime = Tools.ConvertDateTimeInt(DateTime.Now),
-                    FromUserName = msg.ToUserName,
-                    ToUserName = msg.FromUserName,
-                    Articles = items
-                };
-
-                items.Add(itm);
-                MessageHandler.SendReplyMessage(replyMsg);
-            }
-
-
             return true;
         }
 

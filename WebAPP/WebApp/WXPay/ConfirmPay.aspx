@@ -92,6 +92,12 @@
 <script type="text/javascript">
 
     function SavePay() {
+        if ($("#txtName").val() == "" || $("#txtTel").val() == "") {
+            alert("请添写姓名和联系电话!");
+            return false;
+        }    
+
+        
         WeixinJSBridge.invoke('getBrandWCPayRequest', {
             "appId": "<%= WeiPay.PayConfig.AppId %>", //公众号名称，由商户传入
             "timeStamp": "<%= TimeStamp %>", //时间戳

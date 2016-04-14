@@ -36,13 +36,10 @@ namespace WebAPP.Personal
 
                 DataTable dtCheckTable = dbHelper.ExecuteDataTable("select * from T_Question_DropData");
                 DataTable dtResult = dbHelper.ExecuteDataTable("select * from T_Question_Result");
-
-
+                double Age = Convert.ToDouble(dt.Rows[0]["age"].ToString());
+                double stAge = Convert.ToDouble(dt.Rows[0]["age"].ToString());
+                double yjAge = Convert.ToDouble(dt.Rows[0]["sex"].ToString());
                 if (dt.Rows.Count > 0) {
-                    this.lblName.Text = dt.Rows[0]["Nickname"].ToString();
-                    this.imgheader.Src = dt.Rows[0]["headimgurl"].ToString();
-                    this.lblstAge.Text = dt.Rows[0]["Age"].ToString();
-
                     #region ==== BMI ====
                     string BMI = (Convert.ToDouble(dt.Rows[0]["weight"].ToString()) / (Convert.ToDouble(dt.Rows[0]["height"].ToString()) * Convert.ToDouble(dt.Rows[0]["height"].ToString())) * 10000).ToString("0.0");
                     DataRow[] dr = dtResult.Select("queryKey='BMI' and maxValue >= '" + BMI + "' and minValue <= '" + BMI + "'");
@@ -90,6 +87,16 @@ namespace WebAPP.Personal
                     {
                         this.lblBQSY.Text = "<p>" + dr[0]["Result"].ToString() + "</p><p>" + dr[0]["RefSource"].ToString() + "</p>";
                     }
+
+
+                    DataRow[] drCheck = dtCheckTable.Select("DropData = 'BQSY' and Point='" + BQSY + "'");
+
+                    if (drCheck.Length > 0) {
+                        stAge += Convert.ToDouble(drCheck[0]["Point1"].ToString());
+                        yjAge += Convert.ToDouble(drCheck[0]["Point"].ToString());
+                    }
+
+
                     #endregion
 
                     #region ==== 平衡能力 ====
@@ -98,6 +105,14 @@ namespace WebAPP.Personal
                     if (dr.Length > 0)
                     {
                         this.lblPHNL.Text = "<p>" + dr[0]["Result"].ToString() + "</p><p>" + dr[0]["RefSource"].ToString() + "</p>";
+                    }
+
+                    drCheck = dtCheckTable.Select("DropData = 'PHNL' and Point='" + PHNL + "'");
+
+                    if (drCheck.Length > 0)
+                    {
+                        stAge += Convert.ToDouble(drCheck[0]["Point1"].ToString());
+                        yjAge += Convert.ToDouble(drCheck[0]["Point"].ToString());
                     }
                     #endregion
 
@@ -108,6 +123,14 @@ namespace WebAPP.Personal
                     {
                         this.lblXYZS.Text = "<p>" + dr[0]["Result"].ToString() + "</p><p>" + dr[0]["RefSource"].ToString() + "</p>";
                     }
+
+                    drCheck = dtCheckTable.Select("DropData = 'XYZS' and Point='" + XYZS + "'");
+
+                    if (drCheck.Length > 0)
+                    {
+                        stAge += Convert.ToDouble(drCheck[0]["Point1"].ToString());
+                        yjAge += Convert.ToDouble(drCheck[0]["Point"].ToString());
+                    }
                     #endregion
 
                     #region ==== 运动习惯 ====
@@ -116,6 +139,15 @@ namespace WebAPP.Personal
                     if (dr.Length > 0)
                     {
                         this.lblYDXG.Text = "<p>" + dr[0]["Result"].ToString() + "</p><p>" + dr[0]["RefSource"].ToString() + "</p>";
+                    }
+
+
+                    drCheck = dtCheckTable.Select("DropData = 'YDXG' and Point='" + YDXG + "'");
+
+                    if (drCheck.Length > 0)
+                    {
+                        stAge += Convert.ToDouble(drCheck[0]["Point1"].ToString());
+                        yjAge += Convert.ToDouble(drCheck[0]["Point"].ToString());
                     }
                     #endregion
 
@@ -126,6 +158,37 @@ namespace WebAPP.Personal
                     {
                         this.lblYJKZZ.Text = "<p>" + dr[0]["Result"].ToString() + "</p><p>" + dr[0]["RefSource"].ToString() + "</p>";
                     }
+
+                    drCheck = dtCheckTable.Select("DropData = 'YJKZZ' and Point='" + YJKZZ + "'");
+
+                    if (drCheck.Length > 0)
+                    {
+                        stAge += Convert.ToDouble(drCheck[0]["Point1"].ToString());
+                        yjAge += Convert.ToDouble(drCheck[0]["Point"].ToString());
+                    }
+                    #endregion
+
+                    #region 计算
+                    this.lblName.Text = dt.Rows[0]["Nickname"].ToString();
+                    this.imgheader.Src = dt.Rows[0]["headimgurl"].ToString();
+
+                    this.lblstAge.Text = stAge.ToString("0.0");
+                    this.lblyjAge.Text = yjAge.ToString("0.0");
+                    //this.lblstAge.Text = dt.Rows[0]["Age"].ToString();
+
+
+                    double stp = (1 - ((stAge-Age) + 7.9) / 20.8) * 100;
+                    double yjp = (((yjAge - Convert.ToDouble(dt.Rows[0]["sex"].ToString())) + 25.1) / 47.8) * 100;
+
+                    if (stp > 99.8) { stp = 99.8; }
+                    if (stp < 10) { stp = 10; }
+
+                    if (yjp > 99.8) { yjp = 99.8; }
+                    if (yjp < 10) { yjp = 10; }
+
+                    this.lblstAgeP.Text = (stp).ToString("0,0") + "%";
+                    this.lblyjAgeP.Text = (yjp).ToString("0,0") + "%";
+
                     #endregion
 
                 }
